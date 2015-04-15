@@ -1,53 +1,79 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!–[if gt IE 7]>
-	<link rel="stylesheet" type="text/CSS" href="style-for-IE7.css">
-	<![endif]–>
-
+	
+	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/onepage.css">
-
+	<link rel="stylesheet" href="css/style.css">
 	
 </head>
 
 <body> <!-- -->
 
 	<div class="wrapper">
-		<div class="container">
-			<nav>
-				<ul>
-					<li><a href='about'>ABOUT US</a></li>
-					<li><a href='about'>PARTNERS</a></li>
-					<li><a href='about'>PROVIDERS</a></li>
-					<li><a href='about'>SUPPORTERS</a></li>
-					<li><a href='about'>CONTACTS</a></li>
-				</ul>
-			</nav>
+		<nav>
+			<ul>
+				<li><a href='javascript:$(".main").moveTo(1);'>ABOUT US</a></li>
+				<li><a href='javascript:$(".main").moveTo(2);'>PARTNERS</a></li>
+				<li><a href='javascript:$(".main").moveTo(3);'>PROVIDERS</a></li>
+				<a href='javascript:$(".main").moveTo(1);'><div class="logo"></div></a>
+				<li><a href='javascript:$(".main").moveTo(4);'>SUPPORTERS</a></li>
+				<li><a href='javascript:$(".main").moveTo(5);'>WHAT IS FTS</a></li>
+				<li><a href='javascript:$(".main").moveTo(6);'>CONTACTS</a></li>
+			</ul>
+		</nav>
+		<div class="main">
 			<!-- About us / Map d3 -->
-			<section class="page1" id="about"> 
-			</section>
+			<div class="page_container">
+				<section data-index="1" class="page1" id="about">		<div class="about_text">
+						<p>If you want Fair Trade software, we can show you how to do it, or find people who will do it for you.
+						</p>
+						<div class="line"></div>
+					</div>
+				</section>
+			</div>
 			<!-- Partners -->
-			<section class="page2" id="partners"> 
-			</section>
+			<div class="page_container">
+				<section data-index="2" class="page2" id="partners">
+					<div class="partners_text">
+						<p>Our partners are ready. Ready to grow their businesses, ready to expand their knowledge and ready to improve their skillset. They are ready to be a meaningful part of the global economic system and they want to improve their countries economies. 
+						</br>All we need to do is to connect them.
+						</p>
+						<div class="line"></div>
+					</div>
+					<div class="icons">
+						<img src="img/icon_hands.png" class="margin_right">
+						<img src="img/icon_path.png" class="margin_right">
+						<img src="img/icon_graph.png">
+					</div>
+				</section>
+			</div>
 			<!-- Providers -->
-			<section class="page3" id="providers">
-			</section>
+			<div class="page_container">
+				<section class="page3" id="providers">
+				</section>
+			</div>
 			<!-- Supporters -->
-			<section class="page4" id="supporters">
-			</section>
+			<div class="page_container">
+				<section class="page4" id="supporters">
+				</section>
+			</div>
 			<!-- Contacts -->
-			<section class="page5" id="contacts">
-			</section>
+			<div class="page_container">
+				<section class="page5" id="contacts">
+				</section>
+			</div>
 		</div>
+
 	</div>
 
 
-<script type="text/javascript" src="html5shiv-printshiv.js"></script>
-<script type="text/javascript" src="html5shiv.js"></script>
+<script type="text/javascript" src="js/html5shiv-printshiv.js"></script>
+<script type="text/javascript" src="js/html5shiv.js"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script type="text/javascript" src="js/modernizr.js"></script>
 <script type="text/javascript" src="js/onepage.js"></script>
-<script type="text/javascript" src="js/my-js/scroll.js"></script>
+<script type="text/javascript" src="js/scroll.js"></script>
 
 </body>
 </html>
