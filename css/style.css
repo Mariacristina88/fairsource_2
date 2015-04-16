@@ -11,8 +11,8 @@ body {
 	height: 100%;
 	font-family: "Signika";
 	font-weight: 300;
-	font-size: 17px;
-	line-height: 25px;
+	font-size: 22px;
+	line-height: 30px;
 }
 
 
@@ -160,7 +160,7 @@ nav li a:hover {
 	color:white;
 	padding: 10px 20px 15px 20px;
 	text-align: center;
-	max-width: 470px;
+	max-width: 500px;
 	min-width: 200px;
 	margin: auto;
 	
@@ -195,7 +195,7 @@ nav li a:hover {
 
 .text p {
 	text-align: center;
-	max-width: 442px;
+	max-width: 571px;
 	min-width: 200px;
 	margin: auto;
 	padding: 0 0 20px 0;
@@ -203,11 +203,30 @@ nav li a:hover {
 
 .icons {
 	margin: 15px auto 0 auto;
-	max-width: 306px;
+	max-width: 308px;
 }
 
 .margin_right {
 	margin-right: 35px;
+}
+
+.skylines {
+	margin: 15px auto 0 auto;
+	max-width: 374px;
+}
+
+.skylines span {
+	width: 166px;
+	display: block;
+	float: left;
+}
+
+.skylines span h1 {
+	font-size: 13px;
+	font-family: "Play";
+	font-weight: 400;
+	color: white;
+	text-align: center;
 }
 
 /*--------------------*/
