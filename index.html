@@ -25,21 +25,22 @@
 		<div class="main">
 			<!-- About us / Map d3 -->
 			<div class="page_container">
-				<section data-index="1" class="page1" id="about">		<div class="about_text">
+				<section class="page1" id="about">		
+					<div class="about_text">
 						<p>If you want Fair Trade software, we can show you how to do it, or find people who will do it for you.
 						</p>
-						<div class="line"></div>
+						<div class="line white_bord"></div>
 					</div>
 				</section>
 			</div>
 			<!-- Partners -->
 			<div class="page_container">
-				<section data-index="2" class="page2" id="partners">
-					<div class="partners_text">
+				<section class="page2" id="partners">
+					<div class="text white">
 						<p>Our partners are ready. Ready to grow their businesses, ready to expand their knowledge and ready to improve their skillset. They are ready to be a meaningful part of the global economic system and they want to improve their countries economies. 
 						</br>All we need to do is to connect them.
 						</p>
-						<div class="line"></div>
+						<div class="line green_bord"></div>
 					</div>
 					<div class="icons">
 						<img src="img/icon_hands.png" class="margin_right">
@@ -51,6 +52,17 @@
 			<!-- Providers -->
 			<div class="page_container">
 				<section class="page3" id="providers">
+					<div class="text green">
+						<p>Our providers are innovative companies producing high quality software. They are global citizens aiming to become part of better, fairer world. They want you to join and help to achieve this while achieving your own goals.
+						</p>
+						<div class="line green_bord"></div>
+					</div>
+						<div class="icons">
+						<img src="img/pc.png" class="margin_right">
+						<img src="img/world.png" class="margin_right">
+						<img src="img/phone.png">
+					</div>
+
 				</section>
 			</div>
 			<!-- Supporters -->
@@ -58,9 +70,54 @@
 				<section class="page4" id="supporters">
 				</section>
 			</div>
+		<!--
+			<div class="page_container">
+				<section class="page5" id="fts">
+				</section>
+			</div>
+		-->
 			<!-- Contacts -->
 			<div class="page_container">
-				<section class="page5" id="contacts">
+				<section class="page6" id="contacts">
+					<div class="content">
+					<div id="contacts-info">
+						<h3>Fair Source<span><br/>sustainable software</span></h3>		
+						<a href="mailto:contact@fairsource.co.uk">contact@fairsource.co.uk</a>
+						<p>Registered in England 
+						<span><br/>No 9060026</span></p>
+						<address>
+							Registered address:
+							<br/>2 Maple Court, 
+							<br/>Davenport Street, 
+							<br/>Macclesfield, 
+							<br/>SK10 1JE
+						</address>
+					</div>
+					<form name="contactform" method="POST">
+						<label>Name</label>
+						<input type="text" name="name">
+						<p id="error_name"></p>
+
+						<label>Email</label>
+						<input type="email" name="email">
+						<p id="error_email"></p>
+
+						<label>Telephone</label>
+						<input type="text" name="telephone">
+						<p id="error_telephone"></p>
+
+						<label>Subject</label>
+						<input type="text" name="subject">
+						<p id="error_subject"></p>
+
+						<label>Message</label>
+						<textarea type="text" name="message"></textarea>
+						<p id="error_message" class="margin"></p>
+
+						<button type="button" id="submit">Submit</button>
+
+					</form>
+				</div>
 				</section>
 			</div>
 		</div>
@@ -74,6 +131,8 @@
 <script type="text/javascript" src="js/modernizr.js"></script>
 <script type="text/javascript" src="js/onepage.js"></script>
 <script type="text/javascript" src="js/scroll.js"></script>
+<script type="text/javascript" src="js/contactFormValidation.js"></script>
+<script type="text/javascript" src="js/formValidator.js"></script>
 
 </body>
 </html>
