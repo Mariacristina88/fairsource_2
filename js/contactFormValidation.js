@@ -59,7 +59,6 @@ var showError = function(field, value, validator, errorElement) {
 document.getElementById('submit').addEventListener('click', function() {
     fields = ['name', 'email', 'telephone', 'subject', 'message'];
     fields.forEach(validateField);
-});
 
 /**
 * Form elements
@@ -81,3 +80,4 @@ var onKeyUpValidate = function(event) {
 for (var i = 0; i < formElems.length; i++) {
     formElems[i].addEventListener('keyup', onKeyUpValidate.bind(formElems[i]), false);
 }
+});
