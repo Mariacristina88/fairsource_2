@@ -1,0 +1,355 @@
+
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	font-family: "Signika";
+	font-weight: 300;
+	font-size: 22px;
+	line-height: 30px;
+}
+
+
+nav {
+
+	width: 100%;
+	height: 90px;
+	background-color: white;
+	padding: 0;
+	margin: auto;
+	position: fixed;
+	z-index: 1;
+
+	-webkit-box-shadow: -1px 7px 23px 2px rgba(0,0,0,0.46);
+	-moz-box-shadow: -1px 7px 23px 2px rgba(0,0,0,0.46);
+	box-shadow: -1px 7px 23px 2px rgba(0,0,0,0.46);
+
+	ul {
+		margin: 0 auto;
+		width: 736px;
+		height: 100%;
+		padding: 10px;
+		display: block;
+	}
+
+	li {
+		float: left;
+		margin: 30px 3% 0 0;
+		padding: 0px;
+		list-style: none;
+		font-size: 14px;
+		font-family: "Play";
+	}
+
+	a {
+		color: $green;
+		text-decoration: none;
+	}
+
+	a:hover {
+		border-bottom: 2px solid #fcdb3d;
+	}
+
+}
+
+.onepage-wrapper {
+	height: 100%;
+	min-height: 700px;
+  	max-height: 100%;
+}
+
+.wrapper {
+	height: 100%;
+}
+
+.logo {
+	background: url("../img/logo.png") no-repeat;
+	width: 140px;
+	height: 66px;
+	margin: 0 20px 0 0;
+	padding: 0px;
+	float: left;
+}
+
+.page1{
+	@include sectpage;
+	background-size: 3000px auto;
+	background-image: url("../img/map.jpg");
+}
+
+
+.page2 {
+	@include sectpage;
+	background-size: cover;
+	background-image: url("../img/partners.jpg");
+}
+
+.page3 {
+	@include sectpage;
+	background-image: url("../img/providers.jpg");
+	background-size: cover;
+/*	transform: skew(0deg, -4deg); */
+}
+
+.page4 {
+	@include sectpage;
+	background-image: url("../img/euroflag.jpg");
+	background-size: cover;
+}
+
+.page6 {
+	@include sectpage;
+	background-color: $green;
+
+}
+
+.about_text {
+	max-width: 550px;
+	min-width: 100px;
+	height: auto;
+	background-color: rgba(72, 89, 86, 0.7);
+	margin: 30% auto auto auto;
+	padding: 30px 0;
+	border: 3px $green solid;
+
+	p {
+		color:white;
+		padding: 10px 20px 15px 20px;
+		text-align: center;
+		max-width: 500px;
+		min-width: 200px;
+		margin: auto;	
+	}
+}
+
+.line {
+	border-top: 2px solid;
+	width: 100px;
+	margin: auto;
+	padding: 0 0 10px 0;
+}
+
+.white_bord {
+	border-color: #fff;
+}
+
+.green_bord {
+	border-color: $green;
+}
+
+.white {
+	color: white;
+}
+
+.green {
+	color: $green;
+}
+
+.text {
+	margin: 300px 0 0 0;
+}
+
+.text p {
+	text-align: center;
+	max-width: 571px;
+	min-width: 200px;
+	margin: auto;
+	padding: 0 0 20px 0;
+}
+
+.icons {
+	margin: 15px auto 0 auto;
+	max-width: 308px;
+}
+
+.margin_right {
+	margin-right: 35px;
+}
+
+.skylines {
+	margin: 15px auto 0 auto;
+	max-width: 374px;
+}
+
+
+.skylines span {
+
+	width: 166px;
+	display: block;
+	float: left;
+
+	h1 {
+		font-size: 13px;
+		font-family: "Play";
+		font-weight: 400;
+		color: white;
+		text-align: center;
+	}
+}
+
+.icons span{
+	width: 100px;
+	height: 100px;
+}
+
+.path {
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      -webkit-animation: dash 5s linear forwards;
+    }
+
+@-webkit-keyframes dash {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+
+/*--------------------*/
+
+.content {
+	margin: 130px auto 0 auto;
+	max-width: 900px;
+	height: 448px;
+}
+
+.page6 {
+
+	form {
+		width: 57%;
+		height: 62%;
+		margin: 0 27px;
+		float:left;
+	}
+
+	label {
+		@include label;
+		float: left;
+		width: 90px;
+		height: 26px;
+		padding-top: 4px;
+		color: white;
+		margin: 0 15px 22px 0;
+	}
+
+	input {
+		@include label;
+		margin:0 0 30px 0;
+		height: 30px;
+		width: 300px;
+		background-color: transparent;
+		border: solid 1px white;
+		color: $yellow;
+		padding:0 5px;
+		position: relative;
+	}
+
+	textarea {
+		@include label;
+		clear: both;
+		width: 100%;
+		max-width: 100%;
+		height: 170px;
+		border: solid 1px #fcdb3d;
+		color: $green;
+		padding: 10px;
+	}
+}
+
+#submit {
+	background-color: transparent;
+	width: 150px;
+	height: 40px;
+	border: solid 1px #fcdb3d;
+	color: #fcdb3d;
+	font-family: "Play";
+	font-size: 18px;
+	text-transform: uppercase;
+	padding: 0;
+	margin: 40px auto;
+}			
+
+#submit:hover {
+	
+	background-color: #fcdb3d;
+	color: white;
+}		
+
+#contacts-info {
+
+	display: block;
+	float: left;
+	height: 100%;
+	max-width: 50.5%;
+	background-color: white;
+	margin: 0 0 27px 27px;
+	padding: 22px;
+
+	h3 {
+		font-family: "Signika";
+		font-weight: normal;
+		font-size: 18px;
+		color: $green;
+		margin: 0 0 30px 0;
+	}
+
+	span {
+		font-family: "Play";
+		font-size: 13px;
+		color: $green;
+		margin-top: 0;
+		margin-bottom: 20px;
+		text-transform: uppercase;
+	}		
+
+	a {
+		color: $green;
+		font-size: 15px;
+		text-align: left;
+		font-family: "Play";
+		font-weight: bold;
+		background-image: url("../img/angle-brackets.png");
+		background-position: 0% 50%;
+		background-repeat: no-repeat;
+	}
+
+	a:hover {
+		color: #fcdb3d;
+	}
+
+	p {
+		color: $green;
+		font-size: 15px;
+		text-align: left;
+		font-family: "Play";
+		background-image: url("../img/angle-brackets.png");
+		background-position: 0% 20%;
+		background-repeat: no-repeat;
+	}
+
+	address {
+		color: $green;
+		font-size: 15px;
+		text-align: left;
+		font-family: "Play";
+		font-style: normal;
+		background-image: url("../img/angle-brackets.png");
+		background-position: 0% 5%;
+		background-repeat: no-repeat;
+	}
+
+}
+
+
+form p {
+	margin: 0;
+	position: absolute;
+	font-size: 12px;
+	color: $yellow;
+	margin: -23px 0 0 0;
+	position: absolute;
+	font-family: "Signika";
+}
+
+.margin {
+	margin-top: 0px;
+}
