@@ -23,12 +23,11 @@ module.exports = function(grunt) {
     },
 
     gruntfile: {
-        src: 'Gruntfile.js'
-      },
+        src: {'Gruntfile.js'},
       lib_test: {
-        src: ['lib/**/*.js', 'test/**/*.js']
-      }
-    },
+        src: ['lib/**/*.js', 'test/**/*.js']}
+    
+  },
     
     nodeunit: {
       files: ['test/**/*_test.js']
