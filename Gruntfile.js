@@ -1,18 +1,11 @@
 /*global module:false*/
+'use strict';
+
 module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
     // Task configuration.
-    jshint: {
-          files: ['js/*.js'],
-          options: { jshintrc: '.jshintrc',
-            globals: {  
-               
-            },
-            ignores : []
-          }
-      },
 
       sass: {
       build: {
@@ -21,13 +14,6 @@ module.exports = function(grunt) {
           }
       }
     },
-
-    gruntfile: {
-        src: {'Gruntfile.js'},
-      lib_test: {
-        src: ['lib/**/*.js', 'test/**/*.js']}
-    
-  },
     
     nodeunit: {
       files: ['test/**/*_test.js']
@@ -58,6 +44,16 @@ module.exports = function(grunt) {
         }
     },
 
+    jshint: {
+          files: ['js/*.js'],
+          options: { jshintrc: '.jshintrc',
+            globals: {  
+               
+            },
+            ignores : []
+          }
+      },
+
     watch: {
       html: {
             files: ['index.html'],
@@ -72,8 +68,8 @@ module.exports = function(grunt) {
   });
 
   // These plugins provide necessary tasks.
-  grunt.loadNpmTasks('grunt-contrib-nodeunit');
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-nodeunit');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass');
 
