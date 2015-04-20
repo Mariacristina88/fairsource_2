@@ -26,15 +26,16 @@ nav {
 
 	ul {
 		margin: 0 auto;
-		width: 736px;
+		width: auto;
 		height: 100%;
 		padding: 10px;
-		display: block;
+		float: left;
+		
 	}
 
 	li {
 		float: left;
-		margin: 30px 3% 0 0;
+		margin: 30px 30px 0 0;
 		padding: 0px;
 		list-style: none;
 		font-size: 14px;
@@ -52,6 +53,12 @@ nav {
 
 }
 
+.navigation {
+	margin: 0 auto;
+	width: 794px;
+  	height: 100%;
+}
+
 .onepage-wrapper {
 	height: 100%;
 	min-height: 700px;
@@ -66,9 +73,13 @@ nav {
 	background: url("../img/logo.png") no-repeat;
 	width: 140px;
 	height: 66px;
-	margin: 0 20px 0 0;
+	margin: 10px 20px 0 0;
 	padding: 0px;
 	float: left;
+
+	@media screen and (max-width: 410px) {
+	  	clear:both;
+  	}
 }
 
 .page1{
@@ -166,6 +177,10 @@ nav {
 	margin-right: 35px;
 }
 
+.remove_mright {
+	margin-right: 0px;
+}
+
 .skylines {
 	margin: 15px auto 0 auto;
 	max-width: 374px;
@@ -204,12 +219,12 @@ nav {
       }
     }
 
-/*--------------------*/
+/*---------CONTACTS SECTION-----------*/
 
 .content {
 	margin: 130px auto 0 auto;
 	max-width: 900px;
-	height: 448px;
+	height: 372px;
 }
 
 .page6 {
