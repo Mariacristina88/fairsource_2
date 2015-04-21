@@ -85,9 +85,9 @@ var formValidator = (function() {
     var showError = function(field, value, validator, limit) {
         if (limit > 0) {
             validation = validatorMapping[validator](value, limit);
-        }
-        else
+        } else {
             validation = validatorMapping[validator](value);
+        }
 
         if (validation) {
             return '';
