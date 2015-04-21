@@ -11,7 +11,7 @@
 <body> <!-- -->
 
 	<div class="wrapper">
-		<nav>
+		<nav class="desktop">
 			<div class='navigation'>
 				<ul>
 					<li><a href='javascript:$(".main").moveTo(1);'>ABOUT US</a></li>
@@ -26,6 +26,10 @@
 				</ul>
 			</div>
 		</nav>
+
+		<nav class="mobile">
+		</nav>
+
 		<div class="main">
 			<!-- About us / Map d3 -->
 			<div class="page_container">
@@ -75,10 +79,13 @@
 						<div class="line white_bord"></div>
 					</div>
 					<div class="skylines">
-						<span class="margin_right"><img src="img/manchester.png"><h1>MANCHESTER UNIVERSITY</h1></span>
+						<!-- <span class="margin_right"><img src="img/manchester.png"><h1>MANCHESTER UNIVERSITY</h1></span>
 						<span><img src="img/oxford.png"><h1>OXFORD UNIVERSITY</h1></span>
-						<span class="margin_right"><img src="img/denhaag.png"><h1>MANCHESTER UNIVERSITY</h1></span>
-						<span><img src="img/oxford.png"><h1>OXFORD UNIVERSITY</h1></span>
+						<span class="margin_right"><img src="img/denhaag.png"><h1>THE HAGUE UNIVERSITY</h1></span> -->
+						<div id="skyline" class="manchester margin_right"><h1>MANCHESTER UNIVERSITY</h1></div>
+						<div id="skyline" class="oxford"><h1>OXFORD UNIVERSITY</h1></div>
+						<div id="skyline" class="denhaag margin_right"><h1>THE HAGUE UNIVERSITY</h1></div>
+						<div id="skyline" class="milan"><h1>FAIR TRADE WEEK - WFTO</h1></div>
 					</div>
 				</section>
 			</div>
@@ -125,21 +132,33 @@
 
 					</form>
 				</div>
+				<footer>
+					<p class="text-left">World Fair Trade Organisation membership is applied for.</p>
+					<p>2015 Fair Source</p>
+				</footer>
 				</section>
 			</div>
 		</div>
 
 	</div>
 
-
-<script type="text/javascript" src="js/html5shiv-printshiv.js"></script>
-<script type="text/javascript" src="js/html5shiv.js"></script>
+<script type="text/javascript" src="js/global/html5shiv-printshiv.js"></script>
+<script type="text/javascript" src="js/global/html5shiv.js"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-<script type="text/javascript" src="js/modernizr.js"></script>
-<script type="text/javascript" src="js/onepage.js"></script>
+<script type="text/javascript" src="js/global/modernizr.js"></script>
+<script type="text/javascript" src="js/global/onepage.js"></script>
 <script type="text/javascript" src="js/scroll.js"></script>
 <script type="text/javascript" src="js/contactFormValidation.js"></script>
 <script type="text/javascript" src="js/formValidator.js"></script>
+
+<script>
+$(window).scroll(function(){
+    if($(this).scroll() > 100) {
+    	console.log("x");
+        $('.logo').animate({'background-postion': '+=10px 0'}, 500);
+    }
+});  
+</script>
 
 </body>
 </html>

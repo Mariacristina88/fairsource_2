@@ -76,13 +76,10 @@ nav {
 	margin: 10px 20px 0 0;
 	padding: 0px;
 	float: left;
-
-	@media screen and (max-width: 410px) {
-	  	clear:both;
-  	}
+	display: block;
 }
 
-.page1{
+.page1 {
 	@include sectpage;
 	background-size: 3000px auto;
 	background-image: url("../img/map.jpg");
@@ -119,7 +116,7 @@ nav {
 	min-width: 100px;
 	height: auto;
 	background-color: rgba(72, 89, 86, 0.7);
-	margin: 30% auto auto auto;
+	margin: 340px auto auto auto;
 	padding: 30px 0;
 	border: 3px $green solid;
 
@@ -174,33 +171,13 @@ nav {
 }
 
 .margin_right {
-	margin-right: 35px;
+	margin-right: 34px;
 }
 
 .remove_mright {
 	margin-right: 0px;
 }
 
-.skylines {
-	margin: 15px auto 0 auto;
-	max-width: 374px;
-}
-
-
-.skylines span {
-
-	width: 166px;
-	display: block;
-	float: left;
-
-	h1 {
-		font-size: 13px;
-		font-family: "Play";
-		font-weight: 400;
-		color: white;
-		text-align: center;
-	}
-}
 
 .icons span{
 	width: 100px;
@@ -219,12 +196,89 @@ nav {
       }
     }
 
+.text-left {
+	text-align: left;
+}
+
+
+/*----------------- SKYLINE BUTTONS ------------------*/
+
+
+
+.skylines {
+	margin: 15px auto 0 auto;
+	max-width: 374px;
+}
+
+
+#skyline {
+
+	width: 170px;
+	height: 102px;
+	display: block;
+	float: left;
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+
+
+	h1 {
+		height: 31%;
+		font-size: 13px;
+		font-family: "Play";
+		font-weight: 700;
+		color: white;
+		text-align: center;
+		margin: 0;
+  		padding: 58px 0 0 0;
+	}
+
+	:hover {
+		font-weight: 700;
+		color: $yellow;
+	}
+
+}
+
+
+.milan {
+	background-image: url("../img/milan.png");
+}
+
+.milan:hover {
+	background-image: url("../img/milan-hover.png");
+}
+
+.oxford {
+	background-image: url("../img/oxford.png");
+}
+
+.oxford:hover {
+	background-image: url("../img/oxford-hover.png");
+}
+
+.manchester {
+	background-image: url("../img/manchester.png");
+}
+
+.manchester:hover {
+	background-image: url("../img/manchester-hover.png");
+}
+
+.denhaag {
+	background-image: url("../img/denhaag.png");
+}
+
+.denhaag:hover {
+	background-image: url("../img/denhaag-hover.png");
+}
+
+
 /*---------CONTACTS SECTION-----------*/
 
 .content {
 	margin: 130px auto 0 auto;
 	max-width: 900px;
-	height: 372px;
+	height: 73%;
 }
 
 .page6 {
@@ -263,7 +317,7 @@ nav {
 		clear: both;
 		width: 100%;
 		max-width: 100%;
-		height: 170px;
+		height: 95px;
 		border: solid 1px #fcdb3d;
 		color: $green;
 		padding: 10px;
@@ -293,7 +347,7 @@ nav {
 
 	display: block;
 	float: left;
-	height: 100%;
+	height: 373px;
 	max-width: 50.5%;
 	background-color: white;
 	margin: 0 0 27px 27px;
@@ -367,4 +421,28 @@ form p {
 
 .margin {
 	margin-top: 0px;
+}
+
+
+footer {
+	width: 100%;
+	height: 80px;
+	background-color: darken($green, 15%);
+
+	p {
+		font-size: 11pt;
+	  font-family: "Signika";
+	  font-weight: lighter;
+	  width: 45%;
+	  height: 30px;
+	  float: left;
+	  margin: 29px 0px 0px 40px;
+	  color: white;
+	  text-align: right;
+	}
+}
+
+
+.mobile {
+	display: none;
 }
