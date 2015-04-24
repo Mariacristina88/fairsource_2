@@ -2,13 +2,18 @@
 body {
 	margin: 0;
 	padding: 0;
-	height: 100%;
 	font-family: "Signika";
 	font-weight: 300;
 	font-size: 22px;
 	line-height: 30px;
+	height: auto;
 }
 
+.main {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
 
 nav {
 
@@ -18,14 +23,14 @@ nav {
 	padding: 0;
 	margin: auto;
 	position: fixed;
-	z-index: 1;
+	z-index: 7;
 
 	-webkit-box-shadow: -1px 7px 23px 2px rgba(0,0,0,0.46);
 	-moz-box-shadow: -1px 7px 23px 2px rgba(0,0,0,0.46);
 	box-shadow: -1px 7px 23px 2px rgba(0,0,0,0.46);
 
 	ul {
-		margin: 0 auto;
+		margin: 30px 0 auto 0;
 		width: auto;
 		height: 100%;
 		padding: 10px;
@@ -35,7 +40,7 @@ nav {
 
 	li {
 		float: left;
-		margin: 30px 30px 0 0;
+		margin: 0 30px 0 0;
 		padding: 0px;
 		list-style: none;
 		font-size: 14px;
@@ -65,12 +70,11 @@ nav {
   	max-height: 100%;
 }
 
-.wrapper {
-	height: 100%;
-}
+
 
 .logo {
 	background: url("../img/logo.png") no-repeat;
+	background-position: top center;
 	width: 140px;
 	height: 66px;
 	margin: 10px 20px 0 0;
@@ -79,10 +83,36 @@ nav {
 	display: block;
 }
 
+.logo-small {
+	background: url("../img/logo-small.png") no-repeat;
+	background-position: top center;
+	width: 140px;
+	height: 66px;
+	margin: 10px 20px 0 0;
+	padding: 0px;
+	float: left;
+	display: none;
+	-webkit-transition: all .1s ease;
+	-moz-transition: all .1s ease;
+	-ms-transition: all .1s ease;
+	-o-transition: all .1s ease;
+	transition: all .1s ease;
+}
+
+
+.logo-small:hover {
+	
+	-webkit-transform: rotateY(350deg); /* Safari */
+    transform: rotateY(350deg); /* Standard syntax */
+	}
+
+
 .page1 {
 	@include sectpage;
 	background-size: 3000px auto;
 	background-image: url("../img/map.jpg");
+	background-position:center;
+	z-index: 3;
 }
 
 
@@ -90,12 +120,16 @@ nav {
 	@include sectpage;
 	background-size: cover;
 	background-image: url("../img/partners.jpg");
+	z-index: 1;
 }
 
 .page3 {
 	@include sectpage;
-	background-image: url("../img/providers.jpg");
+	background-image: url("../img/europeans_flags.png");
 	background-size: cover;
+	z-index: 2;
+	height: 115%;
+	height: 115vh;
 /*	transform: skew(0deg, -4deg); */
 }
 
@@ -103,11 +137,13 @@ nav {
 	@include sectpage;
 	background-image: url("../img/euroflag.jpg");
 	background-size: cover;
+	z-index: 3;
 }
 
 .page6 {
 	@include sectpage;
 	background-color: $green;
+	z-index: 4;
 
 }
 
@@ -131,7 +167,6 @@ nav {
 }
 
 .line {
-	border-top: 2px solid;
 	width: 100px;
 	margin: auto;
 	padding: 0 0 10px 0;
@@ -170,6 +205,19 @@ nav {
 	max-width: 308px;
 }
 
+.path {
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      -webkit-animation: dash 15s ease forwards;
+      -webkit-animation-play-state:paused;
+	    }
+
+    @-webkit-keyframes dash {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+
 .margin_right {
 	margin-right: 34px;
 }
@@ -184,17 +232,6 @@ nav {
 	height: 100px;
 }
 
-.path {
-      stroke-dasharray: 1000;
-      stroke-dashoffset: 1000;
-      -webkit-animation: dash 5s linear forwards;
-    }
-
-@-webkit-keyframes dash {
-      to {
-        stroke-dashoffset: 0;
-      }
-    }
 
 .text-left {
 	text-align: left;
@@ -211,7 +248,7 @@ nav {
 }
 
 
-#skyline {
+.skyline {
 
 	width: 170px;
 	height: 102px;
@@ -240,35 +277,35 @@ nav {
 }
 
 
-.milan {
+#milan {
 	background-image: url("../img/milan.png");
 }
 
-.milan:hover {
+#milan:hover {
 	background-image: url("../img/milan-hover.png");
 }
 
-.oxford {
+#oxford {
 	background-image: url("../img/oxford.png");
 }
 
-.oxford:hover {
+#oxford:hover {
 	background-image: url("../img/oxford-hover.png");
 }
 
-.manchester {
+#manchester {
 	background-image: url("../img/manchester.png");
 }
 
-.manchester:hover {
+#manchester:hover {
 	background-image: url("../img/manchester-hover.png");
 }
 
-.denhaag {
+#denhaag {
 	background-image: url("../img/denhaag.png");
 }
 
-.denhaag:hover {
+#denhaag:hover {
 	background-image: url("../img/denhaag-hover.png");
 }
 
@@ -379,6 +416,7 @@ nav {
 		background-image: url("../img/angle-brackets.png");
 		background-position: 0% 50%;
 		background-repeat: no-repeat;
+		padding: 0 0 0 15px;
 	}
 
 	a:hover {
@@ -393,6 +431,7 @@ nav {
 		background-image: url("../img/angle-brackets.png");
 		background-position: 0% 20%;
 		background-repeat: no-repeat;
+		padding: 0 0 0 15px;
 	}
 
 	address {
@@ -404,6 +443,7 @@ nav {
 		background-image: url("../img/angle-brackets.png");
 		background-position: 0% 5%;
 		background-repeat: no-repeat;
+		padding: 0 0 0 15px;
 	}
 
 }
