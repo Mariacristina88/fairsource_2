@@ -92,15 +92,16 @@ nav {
 	padding: 0px;
 	float: left;
 	display: none;
+	-webkit-transition: all .1s ease;
+	-moz-transition: all .1s ease;
+	-ms-transition: all .1s ease;
+	-o-transition: all .1s ease;
+	transition: all .1s ease;
 }
 
 
 .logo-small:hover {
-	-webkit-transition: all 2s ease;
-	-moz-transition: all 2s ease;
-	-ms-transition: all 2s ease;
-	-o-transition: all 2s ease;
-	transition: all 2s ease;
+	
 	-webkit-transform: rotateY(350deg); /* Safari */
     transform: rotateY(350deg); /* Standard syntax */
 	}
@@ -111,9 +112,6 @@ nav {
 	background-size: 3000px auto;
 	background-image: url("../img/map.jpg");
 	background-position:center;
-	margin: auto;
-  	right: 0;
-  	left: 0;
 	z-index: 3;
 }
 

@@ -4,7 +4,7 @@
 	
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/onepage.css">
-	<link rel="stylesheet" href="sass/style.css">
+	<link rel="stylesheet" href="css/style.css">
 	
 </head>
 
@@ -23,9 +23,12 @@
 					data-0="height:68px; display:block;"
 					data-100="height:40px; display:none;">
 				</div></a>
-				<a href='#about' onmouseover="rotateYDIV()"><div class="logo-small" 
-					data-0="height:68px; display:none;"
-					data-100="height:40px; display:block;">
+				<a href="#about"><div class="logo-small" 
+					data-0="height:68px; display:none;transform[bounce]:rotateY(0deg);"
+					data-100="height:40px; display:block;"
+					
+					data-4800="transform[bounce]:rotateY(650deg);"
+					>
 				</div></a>
 
 				<ul data-0="margin-top:30px" data-100="margin-top:3px">
@@ -40,7 +43,7 @@
 		
 			<!-- About us / Map d3 -->
 			<div class="page_container">
-				<section class="page1" id="about" data-700="width:100%;" data-1800="width:0%;">		
+				<section class="page1" id="about" data-700="bottom:0%;" data-1800="bottom:100%;">		
 					<div class="about_text" data-0="opacity:0;margin-top:400px" data-500="opacity:1;margin-top:336px">
 						<p>If you want Fair Trade software, we can show you how to do it, or find people who will do it for you.
 						</p>
@@ -129,20 +132,7 @@
 			<!-- Supporters -->
 			<div class="page_container">
 				<section class="page4" id="supporters" data-3800="top:100%;" data-4300="top:0%;">
-					<div style="position: absolute; z-index: -1;" id="carousel">
-						<div id="frame">
-		        			<div id="slider">
-		        				<div class="slide"><img src="img/oxford.jpg"/></div>
-								<div class="slide"><img src="img/manchester.jpg"/></div>
-								<div class="slide"><img src="img/oxford.jpg"/></div>
-								<div class="slide"><img src="img/denhaag.jpg"/></div>
-								<div class="slide"><img src="img/denhaag.jpg"/></div>
-							</div>
-						</div>
-					</div>
 					<div id= "three" class="text white" data-4100="opacity:0;" data-4400="opacity:1;">
-					<img src="img/arrow_l.png" class='left'/>
-					<img src="img/arrow_r.png" class='right'/>
 						<p>Other people believe we can improve the global economic system sustainably. We are pleased to work with like minded people who believe in our vision.</p>
 						<div class="line white_bord"></div>
 					</div>
@@ -214,7 +204,6 @@
 <script type="text/javascript" src="js/contactFormValidation.js"></script>
 <script type="text/javascript" src="js/formValidator.js"></script>
 <script type="text/javascript" src="js/global/skrollr.js"></script>
-<script type="text/javascript" src="js/slider.js"></script>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.29/skrollr.min.js"></script>
     <script type="text/javascript">

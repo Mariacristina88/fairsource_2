@@ -7,11 +7,19 @@ module.exports = function(grunt) {
   grunt.initConfig({
     // Task configuration.
 
-      sass: {
+    sass: {
       build: {
           files: {
-              'build/css/master.css': 'assets/sass/master.scss'
+              'css/style.css': 'sass/main.scss'
           }
+      }
+    },
+    connect: {
+      server: {
+        options: {
+          port: 9001,
+          base: './'
+        }
       }
     },
     
@@ -55,14 +63,20 @@ module.exports = function(grunt) {
       },
 
     watch: {
+      options: {
+        livereload: true,
+      },
       html: {
-            files: ['index.html'],
-            tasks: ['htmlhint']
-          },
-        js: {
-            files: ['/js/*.js'],
-            tasks: ['uglify']
-        }
+        files: ['index.html']
+      },
+      js: {
+          files: ['/js/*.js'],
+          tasks: ['uglify']
+      },
+      sass: {
+        files: ['sass/*.scss'],
+        tasks: ['css']
+      }
     }
     
   });
@@ -71,11 +85,16 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-nodeunit');
+grunt.loadNpmTasks('grunt-contrib-watch');
+grunt.loadNpmTasks('grunt-htmlhint');
+grunt.loadNpmTasks('grunt-contrib-connect');
 
   // Default task.
-  grunt.registerTask('default', ['jshint']);
+  grunt.registerTask('default', ['css', 'js', 'connect:server', 'watch']);
   grunt.registerTask('css', ['sass']);
-  grunt.registerTask('js', ['jshint','jsdoc', 'uglify']);
-  grunt.registerTask('html', ['htmlhint']);
+  grunt.registerTask('js', ['jshint', 'uglify']);
+  grunt.registerTask('preview', ['connect:server','watch']);
 
 };
