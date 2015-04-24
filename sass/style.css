@@ -2,11 +2,16 @@
 body {
   margin: 0;
   padding: 0;
-  height: 100%;
   font-family: "Signika";
   font-weight: 300;
   font-size: 22px;
-  line-height: 30px; }
+  line-height: 30px;
+  height: auto; }
+
+.main {
+  width: 100%;
+  height: 100%;
+  position: fixed; }
 
 nav {
   width: 100%;
@@ -15,19 +20,19 @@ nav {
   padding: 0;
   margin: auto;
   position: fixed;
-  z-index: 1;
+  z-index: 7;
   -webkit-box-shadow: -1px 7px 23px 2px rgba(0, 0, 0, 0.46);
   -moz-box-shadow: -1px 7px 23px 2px rgba(0, 0, 0, 0.46);
   box-shadow: -1px 7px 23px 2px rgba(0, 0, 0, 0.46); }
   nav ul {
-    margin: 0 auto;
+    margin: 30px 0 auto 0;
     width: auto;
     height: 100%;
     padding: 10px;
     float: left; }
   nav li {
     float: left;
-    margin: 30px 30px 0 0;
+    margin: 0 30px 0 0;
     padding: 0px;
     list-style: none;
     font-size: 14px;
@@ -48,70 +53,87 @@ nav {
   min-height: 700px;
   max-height: 100%; }
 
-.wrapper {
-  height: 100%; }
-
 .logo {
   background: url("../img/logo.png") no-repeat;
+  background-position: top center;
   width: 140px;
   height: 66px;
   margin: 10px 20px 0 0;
   padding: 0px;
   float: left;
-  display: block;
-  -webkit-animation: mymove 5s infinite;
-  /* Chrome, Safari, Opera */
-  animation: mymove 5s infinite; }
+  display: block; }
 
-@-webkit-keyframes mymove {
-  from {
-    top: 0px; }
-  to {
-    top: 1000px; } }
-/* Standard syntax */
-@keyframes mymove {
-  from {
-    top: 0px; }
-  to {
-    top: 1000px; } }
+.logo-small {
+  background: url("../img/logo-small.png") no-repeat;
+  background-position: top center;
+  width: 140px;
+  height: 66px;
+  margin: 10px 20px 0 0;
+  padding: 0px;
+  float: left;
+  display: none; }
+
+.logo-small:hover {
+  -webkit-transition: all 2s ease;
+  -moz-transition: all 2s ease;
+  -ms-transition: all 2s ease;
+  -o-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-transform: rotateY(350deg);
+  /* Safari */
+  transform: rotateY(350deg);
+  /* Standard syntax */ }
+
 .page1 {
   height: 100%;
   width: 100%;
   height: 100vh;
   width: 100vw;
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat;
   padding: 0;
   margin: 0;
+  position: absolute;
   min-height: 730px;
   background-size: 3000px auto;
-  background-image: url("../img/map.jpg"); }
+  background-image: url("../img/map.jpg");
+  background-position: center;
+  margin: auto;
+  right: 0;
+  left: 0;
+  z-index: 3; }
 
 .page2 {
   height: 100%;
   width: 100%;
   height: 100vh;
   width: 100vw;
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat;
   padding: 0;
   margin: 0;
+  position: absolute;
   min-height: 730px;
   background-size: cover;
-  background-image: url("../img/partners.jpg"); }
+  background-image: url("../img/partners.jpg");
+  z-index: 1; }
 
 .page3 {
   height: 100%;
   width: 100%;
   height: 100vh;
   width: 100vw;
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat;
   padding: 0;
   margin: 0;
+  position: absolute;
   min-height: 730px;
-  background-image: url("../img/providers.jpg");
+  background-image: url("../img/europeans_flags.png");
   background-size: cover;
+  z-index: 2;
+  height: 115%;
+  height: 115vh;
   /*	transform: skew(0deg, -4deg); */ }
 
 .page4 {
@@ -119,25 +141,29 @@ nav {
   width: 100%;
   height: 100vh;
   width: 100vw;
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat;
   padding: 0;
   margin: 0;
+  position: absolute;
   min-height: 730px;
   background-image: url("../img/euroflag.jpg");
-  background-size: cover; }
+  background-size: cover;
+  z-index: 3; }
 
 .page6 {
   height: 100%;
   width: 100%;
   height: 100vh;
   width: 100vw;
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat;
   padding: 0;
   margin: 0;
+  position: absolute;
   min-height: 730px;
-  background-color: #485956; }
+  background-color: #485956;
+  z-index: 4; }
 
 .about_text {
   max-width: 550px;
@@ -156,7 +182,6 @@ nav {
     margin: auto; }
 
 .line {
-  border-top: 2px solid;
   width: 100px;
   margin: auto;
   padding: 0 0 10px 0; }
@@ -187,6 +212,15 @@ nav {
   margin: 15px auto 0 auto;
   max-width: 308px; }
 
+.path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: dash 15s ease forwards;
+  -webkit-animation-play-state: paused; }
+
+@-webkit-keyframes dash {
+  to {
+    stroke-dashoffset: 0; } }
 .margin_right {
   margin-right: 34px; }
 
@@ -197,14 +231,6 @@ nav {
   width: 100px;
   height: 100px; }
 
-.path {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  -webkit-animation: dash 5s linear forwards; }
-
-@-webkit-keyframes dash {
-  to {
-    stroke-dashoffset: 0; } }
 .text-left {
   text-align: left; }
 
@@ -213,14 +239,14 @@ nav {
   margin: 15px auto 0 auto;
   max-width: 374px; }
 
-#skyline {
+.skyline {
   width: 170px;
   height: 102px;
   display: block;
   float: left;
   background-position: 0px 0px;
   background-repeat: no-repeat; }
-  #skyline h1 {
+  .skyline h1 {
     height: 31%;
     font-size: 13px;
     font-family: "Play";
@@ -229,32 +255,32 @@ nav {
     text-align: center;
     margin: 0;
     padding: 58px 0 0 0; }
-  #skyline :hover {
+  .skyline :hover {
     font-weight: 700;
     color: #fcdb3d; }
 
-.milan {
+#milan {
   background-image: url("../img/milan.png"); }
 
-.milan:hover {
+#milan:hover {
   background-image: url("../img/milan-hover.png"); }
 
-.oxford {
+#oxford {
   background-image: url("../img/oxford.png"); }
 
-.oxford:hover {
+#oxford:hover {
   background-image: url("../img/oxford-hover.png"); }
 
-.manchester {
+#manchester {
   background-image: url("../img/manchester.png"); }
 
-.manchester:hover {
+#manchester:hover {
   background-image: url("../img/manchester-hover.png"); }
 
-.denhaag {
+#denhaag {
   background-image: url("../img/denhaag.png"); }
 
-.denhaag:hover {
+#denhaag:hover {
   background-image: url("../img/denhaag-hover.png"); }
 
 /*---------CONTACTS SECTION-----------*/
@@ -350,7 +376,8 @@ nav {
     font-weight: bold;
     background-image: url("../img/angle-brackets.png");
     background-position: 0% 50%;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    padding: 0 0 0 15px; }
   #contacts-info a:hover {
     color: #fcdb3d; }
   #contacts-info p {
@@ -360,7 +387,8 @@ nav {
     font-family: "Play";
     background-image: url("../img/angle-brackets.png");
     background-position: 0% 20%;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    padding: 0 0 0 15px; }
   #contacts-info address {
     color: #485956;
     font-size: 15px;
@@ -369,7 +397,8 @@ nav {
     font-style: normal;
     background-image: url("../img/angle-brackets.png");
     background-position: 0% 5%;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    padding: 0 0 0 15px; }
 
 form p {
   margin: 0;
@@ -400,5 +429,39 @@ footer {
 
 .mobile {
   display: none; }
+
+.left {
+  float: left;
+  cursor: pointer;
+  margin: 25px 0 0 20px; }
+
+.right {
+  float: right;
+  cursor: pointer;
+  margin: 25px 40px 0 0; }
+
+.frame {
+  white-space: nowrap;
+  overflow: hidden; }
+
+#slider {
+  left: 0px;
+  position: relative;
+  transition: 1s; }
+
+.slide {
+  width: 100%;
+  height: 100%;
+  margin: 0 -0.36% 0 0;
+  padding: 0;
+  display: inline-block;
+  transition: 1s; }
+
+.slide img {
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%; }
 
 /*# sourceMappingURL=style.css.map */
