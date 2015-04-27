@@ -98,6 +98,9 @@ nav {
   background-size: 3000px auto;
   background-image: url("../img/map.jpg");
   background-position: center;
+  margin: auto;
+  right: 0;
+  left: 0;
   z-index: 3; }
 
 .page2 {
@@ -426,5 +429,39 @@ footer {
 
 .mobile {
   display: none; }
+
+.left {
+  float: left;
+  cursor: pointer;
+  margin: 25px 0 0 20px; }
+
+.right {
+  float: right;
+  cursor: pointer;
+  margin: 25px 40px 0 0; }
+
+.frame {
+  white-space: nowrap;
+  overflow: hidden; }
+
+#slider {
+  left: 0px;
+  position: relative;
+  transition: 1s; }
+
+.slide {
+  width: 100%;
+  height: 100%;
+  margin: 0 -0.36% 0 0;
+  padding: 0;
+  display: inline-block;
+  transition: 1s; }
+
+.slide img {
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%; }
 
 /*# sourceMappingURL=style.css.map */
