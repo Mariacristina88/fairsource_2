@@ -80,7 +80,7 @@ nav {
 	margin: 10px 20px 0 0;
 	padding: 0px;
 	float: left;
-	display: block;
+	
 }
 
 .logo-small {
@@ -151,8 +151,7 @@ nav {
 }
 
 .about_text {
-	max-width: 550px;
-	min-width: 100px;
+	width: 550px;
 	height: auto;
 	background-color: rgba(72, 89, 86, 0.7);
 	margin: 340px auto auto auto;
@@ -211,14 +210,22 @@ nav {
 .path {
       stroke-dasharray: 1000;
       stroke-dashoffset: 1000;
+      animation: dash 15s ease forwards;
+      animation-play-state:paused;
+      transition-delay: 2s;
+    animation-direction: alternate;
+     -webkit-animation-direction: alternate; /* Chrome, Safari, Opera */
       -webkit-animation: dash 15s ease forwards;
       -webkit-animation-play-state:paused;
+      -webkit-transition-delay: 2s; 
 	    }
 
     @-webkit-keyframes dash {
-      to {
-        stroke-dashoffset: 0;
-      }
+      to {stroke-dashoffset: 0;}
+    }
+
+    @keyframes dash{
+    	to {stroke-dashoffset: 0;}
     }
 
 .margin_right {
@@ -248,6 +255,7 @@ nav {
 .skylines {
 	margin: 15px auto 0 auto;
 	max-width: 374px;
+	cursor:pointer;
 }
 
 
