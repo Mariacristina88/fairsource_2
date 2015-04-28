@@ -60,8 +60,7 @@ nav {
   height: 66px;
   margin: 10px 20px 0 0;
   padding: 0px;
-  float: left;
-  display: block; }
+  float: left; }
 
 .logo-small {
   background: url("../img/logo-small.png") no-repeat;
@@ -166,8 +165,7 @@ nav {
   z-index: 4; }
 
 .about_text {
-  max-width: 550px;
-  min-width: 100px;
+  width: 550px;
   height: auto;
   background-color: rgba(72, 89, 86, 0.7);
   margin: 340px auto auto auto;
@@ -215,10 +213,20 @@ nav {
 .path {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
+  animation: dash 15s ease forwards;
+  animation-play-state: paused;
+  transition-delay: 2s;
+  animation-direction: alternate;
+  -webkit-animation-direction: alternate;
+  /* Chrome, Safari, Opera */
   -webkit-animation: dash 15s ease forwards;
-  -webkit-animation-play-state: paused; }
+  -webkit-animation-play-state: paused;
+  -webkit-transition-delay: 2s; }
 
 @-webkit-keyframes dash {
+  to {
+    stroke-dashoffset: 0; } }
+@keyframes dash {
   to {
     stroke-dashoffset: 0; } }
 .margin_right {
@@ -237,7 +245,8 @@ nav {
 /*----------------- SKYLINE BUTTONS ------------------*/
 .skylines {
   margin: 15px auto 0 auto;
-  max-width: 374px; }
+  max-width: 374px;
+  cursor: pointer; }
 
 .skyline {
   width: 170px;
@@ -433,7 +442,7 @@ footer {
 .left {
   float: left;
   cursor: pointer;
-  margin: 25px 0 0 20px; }
+  margin: 25px 0 0 0; }
 
 .right {
   float: right;
