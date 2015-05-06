@@ -15,8 +15,6 @@ var Carousel = function (frameSelector, sliderSelector, slidesSelector, btnLeftS
 
 	    frame.classList.add('frame');
 
-	    var visibleBackground = true;
-
 	    leftButton.addEventListener("click", function(){ 
 	    	carousel.previous(); 
 	    });
@@ -24,7 +22,6 @@ var Carousel = function (frameSelector, sliderSelector, slidesSelector, btnLeftS
 		rightButton.addEventListener("click", function(){ 
 			carousel.next(); 
 		});
-
 	    
 	    for (var i = 0; i < slidesNumber; i++) 
 		{
@@ -40,8 +37,38 @@ var Carousel = function (frameSelector, sliderSelector, slidesSelector, btnLeftS
 	    var moveSlide = function (value)
 	    {    
 	        leftPosition += value*100;
-	        slider.style.left = leftPosition + '%';     
+	        slider.style.left = leftPosition + '%'; 
+
+		        highlightCity(Math.abs(leftPosition/100));     
 	    };
+
+	    var highlightCity = function (value)
+		    {    
+		        if (value === 1)
+		        {
+		        	removeActive('#oxford', '#denhaag', '#milan');
+					makeActive('manchester');
+		        }   
+		        else if (value === 2)
+		        {
+					removeActive('#manchester', '#denhaag', '#milan');
+					makeActive('oxford');
+		        }
+		        else if (value === 3)
+		        {
+					removeActive('#manchester', '#oxford', '#milan');
+					makeActive('denhaag');
+		        }
+		        else if (value === 4)
+		        {
+					removeActive('#manchester', '#oxford', '#denhaag');
+					makeActive('milan');
+		        }
+		        else
+		        {
+					removeActive('#manchester', '#oxford', '#milan');
+		        }
+		    };
 	    
 	    return {
 	        next: function() {
@@ -52,7 +79,8 @@ var Carousel = function (frameSelector, sliderSelector, slidesSelector, btnLeftS
 				else
 				{
 					leftPosition = 0;
-					slider.style.left = leftPosition + '%';  
+					slider.style.left = leftPosition + '%'; 
+					highlightCity(0); 
 				}
 	        },
 	        previous: function() {
@@ -64,12 +92,13 @@ var Carousel = function (frameSelector, sliderSelector, slidesSelector, btnLeftS
 				{
 					leftPosition = (slidesNumber-1)*-100;
 					slider.style.left = leftPosition + '%';  
+					highlightCity(4);
 				}
 	        },
 	        moveToSlide: function (value)
 		    {    
 		        leftPosition = value*100;
-		        slider.style.left = leftPosition + '%';     
+		        slider.style.left = leftPosition + '%';    
 		    }
 	    };
 	};
@@ -77,17 +106,38 @@ var Carousel = function (frameSelector, sliderSelector, slidesSelector, btnLeftS
 	var carousel = new Carousel('#frame', '#slider', '#slider .slide', '.left', '.right');
 
 	document.querySelector('#manchester').addEventListener("click", function(){ 
+		removeActive('#oxford', '#denhaag', '#milan');
+		makeActive('manchester');
 		carousel.moveToSlide(-1); 
 	});
 
 	document.querySelector('#oxford').addEventListener("click", function(){ 
+		removeActive('#manchester', '#denhaag', '#milan');
+		makeActive('oxford');
 		carousel.moveToSlide(-2); 
 	});
 
 	document.querySelector('#denhaag').addEventListener("click", function(){ 
+		removeActive('#manchester', '#oxford', '#milan');
+		makeActive('denhaag');
 		carousel.moveToSlide(-3); 
 	});
 
 	document.querySelector('#milan').addEventListener("click", function(){ 
+		removeActive('#manchester', '#oxford', '#denhaag');
+		makeActive('milan');
 		carousel.moveToSlide(-4); 
 	});
+
+	function makeActive(city) {
+		document.querySelector('#' + city).style.color = '#fcdb3d';
+		document.querySelector('#' + city).style.background = 'url("../img/' + city + '-hover.png") center top no-repeat';
+	}
+
+	function removeActive(city1, city2, city3) {
+		document.querySelector(city1).removeAttribute('style');
+	    document.querySelector(city2).removeAttribute('style');
+		document.querySelector(city3).removeAttribute('style');
+	}
+
+

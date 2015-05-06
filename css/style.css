@@ -247,15 +247,14 @@ nav {
   margin: 15px auto 0 auto;
   max-width: 374px;
   cursor: pointer; }
-
-.skyline {
-  width: 170px;
-  height: 102px;
-  display: block;
-  float: left;
-  background-position: 0px 0px;
-  background-repeat: no-repeat; }
-  .skyline h1 {
+  .skylines div {
+    width: 170px;
+    height: 102px;
+    display: block;
+    float: left;
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    text-transform: uppercase;
     height: 31%;
     font-size: 13px;
     font-family: "Play";
@@ -264,33 +263,35 @@ nav {
     text-align: center;
     margin: 0;
     padding: 58px 0 0 0; }
-  .skyline :hover {
-    font-weight: 700;
-    color: #fcdb3d; }
+    .skylines div:hover {
+      font-weight: 700;
+      color: #fcdb3d; }
+  .skylines .margin_right {
+    margin-right: 34px; }
 
 #milan {
-  background-image: url("../img/milan.png"); }
+  background: url("../img/milan.png") center top no-repeat; }
 
 #milan:hover {
-  background-image: url("../img/milan-hover.png"); }
+  background: url("../img/milan-hover.png") center top no-repeat; }
 
 #oxford {
-  background-image: url("../img/oxford.png"); }
+  background: url("../img/oxford.png") center top no-repeat; }
 
 #oxford:hover {
-  background-image: url("../img/oxford-hover.png"); }
+  background: url("../img/oxford-hover.png") center top no-repeat; }
 
 #manchester {
-  background-image: url("../img/manchester.png"); }
+  background: url("../img/manchester.png") center top no-repeat; }
 
 #manchester:hover {
-  background-image: url("../img/manchester-hover.png"); }
+  background: url("../img/manchester-hover.png") center top no-repeat; }
 
 #denhaag {
-  background-image: url("../img/denhaag.png"); }
+  background: url("../img/denhaag.png") center top no-repeat; }
 
 #denhaag:hover {
-  background-image: url("../img/denhaag-hover.png"); }
+  background: url("../img/denhaag-hover.png") center top no-repeat; }
 
 /*---------CONTACTS SECTION-----------*/
 .content {
@@ -442,12 +443,12 @@ footer {
 .left {
   float: left;
   cursor: pointer;
-  margin: 25px 0 0 0; }
+  margin-top: 25px; }
 
 .right {
   float: right;
   cursor: pointer;
-  margin: 25px 40px 0 0; }
+  margin-top: 25px; }
 
 .frame {
   white-space: nowrap;
@@ -456,7 +457,8 @@ footer {
 #slider {
   left: 0px;
   position: relative;
-  transition: 1s; }
+  transition: 1s;
+  margin-top: -14%; }
 
 .slide {
   width: 100%;

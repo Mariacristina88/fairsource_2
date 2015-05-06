@@ -135,9 +135,6 @@
 							c1.656,0,3-1.344,3-3v-2.894H25.808z"/>
 						<rect class="path" data-3200="-webkit-animation-play-state: paused;" data-3300="-webkit-animation-play-state: running;" x="25.808" y="20.067" fill="none" stroke="#485956" stroke-width="2" stroke-miterlimit="10" width="24.622" height="34.37"/>
 						</svg>
-
-
-
 					</div>
 
 				</section>
@@ -148,12 +145,11 @@
 						<div style="position: absolute; z-index: -1;" id="carousel">
 						<div id="frame">
 		        			<div id="slider">
-		        				<div class="slide"><img src="img/oxford.jpg"/></div>
+		        				<div class="slide"><img src="img/euroflag2.jpg"/></div>
 								<div class="slide"><img src="img/manchester.jpg"/></div>
 								<div class="slide"><img src="img/oxford.jpg"/></div>
 								<div class="slide"><img src="img/denhaag.jpg"/></div>
 								<div class="slide"><img src="img/milan_2.jpg"/></div>
-
 							</div>
 						</div>
 					</div>
@@ -164,10 +160,18 @@
 						<div class="line white_bord"></div>
 					</div>
 					<div class="skylines">
-						<div id="manchester" class="skyline margin_right" data-4000="margin-top:20%; opacity:0;" data-4300="margin-top:0%; opacity:1;"><h1>MANCHESTER UNIVERSITY</h1></div>
-						<div id="oxford" class="skyline" data-4000="margin-top:20%;opacity:0;" data-4300="margin-top:0%;opacity:1;"><h1>OXFORD UNIVERSITY</h1></div>
-						<div id="denhaag" class="skyline margin_right" data-4000="opacity:0;" data-4300="opacity:1;"><h1>THE HAGUE UNIVERSITY</h1></div>
-						<div id="milan" class="skyline" data-4000="opacity:0;" data-4300="opacity:1;"><h1>FAIR TRADE WEEK - WFTO</h1></div>
+						<div id="manchester" class="margin_right" data-4000="margin-top:20%; opacity:0;" data-4300="margin-top:0%; opacity:1;">
+							Manchester University
+						</div>
+						<div id="oxford" data-4000="margin-top:20%;opacity:0;" data-4300="margin-top:0%;opacity:1;">
+							Oxford University
+						</div>
+						<div id="denhaag" class="margin_right" data-4000="opacity:0;" data-4300="opacity:1;">
+							The Hague University
+						</div>
+						<div id="milan" data-4000="opacity:0;" data-4300="opacity:1;">
+							Fair Trade Week - WFTO
+						</div>
 					</div>
 				</section>
 			
@@ -176,54 +180,51 @@
 			
 				<section class="page6" id="contacts" data-4500="top:100%;" data-4800="top:0%;">
 					<div class="content">
-					<div id="contacts-info">
-						<h3>Fair Source<span><br/>sustainable software</span></h3>		
-						<a href="mailto:contact@fairsource.co.uk">contact@fairsource.co.uk</a>
-						<p>Registered in England 
-						<span><br/>No 9060026</span></p>
-						<address>
-							Registered address:
-							<br/>2 Maple Court, 
-							<br/>Davenport Street, 
-							<br/>Macclesfield, 
-							<br/>SK10 1JE
-						</address>
+						<div id="contacts-info">
+							<h3>Fair Source<span><br/>sustainable software</span></h3>		
+							<a href="mailto:contact@fairsource.co.uk">contact@fairsource.co.uk</a>
+							<p>Registered in England 
+							<span><br/>No 9060026</span></p>
+							<address>
+								Registered address:
+								<br/>2 Maple Court, 
+								<br/>Davenport Street, 
+								<br/>Macclesfield, 
+								<br/>SK10 1JE
+							</address>
+						</div>
+						<form name="contactform" method="POST">
+							<label>Name</label>
+							<input type="text" name="name" data-4500="width:0px;" data-4800="width:300px;">
+							<p id="error_name"></p>
+
+							<label>Email</label>
+							<input type="email" name="email" data-4500="width:0px;" data-4800="width:300px;">
+							<p id="error_email"></p>
+
+							<label>Telephone</label>
+							<input type="text" name="telephone" data-4500="width:0px;" data-4800="width:300px;">
+							<p id="error_telephone"></p>
+
+							<label>Subject</label>
+							<input type="text" name="subject" data-4500="width:0px;" data-4800="width:300px;">
+							<p id="error_subject"></p>
+
+							<label>Message</label>
+							<textarea type="text" name="message" data-4500="width:0%;" data-4800="width:100%;"></textarea>
+							<p id="error_message" class="margin"></p>
+
+							<button type="button" id="submit">Submit</button>
+
+						</form>
 					</div>
-					<form name="contactform" method="POST">
-						<label>Name</label>
-						<input type="text" name="name" data-4500="width:0px;" data-4800="width:300px;">
-						<p id="error_name"></p>
-
-						<label>Email</label>
-						<input type="email" name="email" data-4500="width:0px;" data-4800="width:300px;">
-						<p id="error_email"></p>
-
-						<label>Telephone</label>
-						<input type="text" name="telephone" data-4500="width:0px;" data-4800="width:300px;">
-						<p id="error_telephone"></p>
-
-						<label>Subject</label>
-						<input type="text" name="subject" data-4500="width:0px;" data-4800="width:300px;">
-						<p id="error_subject"></p>
-
-						<label>Message</label>
-						<textarea type="text" name="message" data-4500="width:0%;" data-4800="width:100%;"></textarea>
-						<p id="error_message" class="margin"></p>
-
-						<button type="button" id="submit">Submit</button>
-
-					</form>
-				</div>
-				<footer>
-					<p class="text-left">World Fair Trade Organisation membership is applied for.</p>
-					<p>2015 Fair Source</p>
-				</footer>
+					<footer>
+						<p class="text-left">World Fair Trade Organisation membership is applied for.</p>
+						<p>2015 Fair Source</p>
+					</footer>
 				</section>
 			</div>
 		
-
-	
-
 <script type="text/javascript" src="js/global/html5shiv-printshiv.js"></script>
 <script type="text/javascript" src="js/global/html5shiv.js"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
@@ -237,27 +238,22 @@
 <script type="text/javascript" src="js/formValidator.js"></script>
 <script type="text/javascript" src="js/slider.js"></script>
 
-    <script type="text/javascript">
+<script type="text/javascript">
     var s = skrollr.init();
 
     //The options (second parameter) are all optional. The values shown are the default values.
-skrollr.menu.init(s, {
+	skrollr.menu.init(s, {
 
+	    //How long the animation should take in ms.
+	    duration: function(currentTop, targetTop) {
+	        //By default, the duration is hardcoded at 500ms.
+	        return 2000;
 
-
-    //How long the animation should take in ms.
-    duration: function(currentTop, targetTop) {
-        //By default, the duration is hardcoded at 500ms.
-        return 2000;
-
-        //But you could calculate a value based on the current scroll position (`currentTop`) and the target scroll position (`targetTop`).
-        //return Math.abs(currentTop - targetTop) * 10;
-    }
-});
-
-
-    </script>
-
+	        //But you could calculate a value based on the current scroll position (`currentTop`) and the target scroll position (`targetTop`).
+	        //return Math.abs(currentTop - targetTop) * 10;
+	    }
+	});
+</script>
 
 </body>
 </html>
