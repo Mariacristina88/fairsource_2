@@ -42,6 +42,8 @@ nav {
     text-decoration: none; }
   nav a:hover {
     border-bottom: 2px solid #fcdb3d; }
+  nav .active {
+    border-bottom: 2px solid #fcdb3d; }
 
 .navigation {
   margin: 0 auto;
@@ -168,7 +170,8 @@ nav {
   width: 550px;
   height: auto;
   background-color: rgba(72, 89, 86, 0.7);
-  margin: 340px auto auto auto;
+  position: absolute;
+  left: 28%;
   padding: 30px 0;
   border: 3px #485956 solid; }
   .about_text p {
@@ -368,9 +371,10 @@ nav {
   #contacts-info h3 {
     font-family: "Signika";
     font-weight: normal;
-    font-size: 18px;
+    font-size: 23px;
     color: #485956;
-    margin: 0 0 30px 0; }
+    margin: 0 0 30px 0;
+    line-height: 18px; }
   #contacts-info span {
     font-family: "Play";
     font-size: 13px;

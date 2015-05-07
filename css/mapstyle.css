@@ -1,0 +1,86 @@
+@import url(http://fonts.googleapis.com/css?family=Play:400,700|Signika:400,300,600,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto:500,300,400);
+
+.map-path {
+  stroke: white;
+  stroke-width: 1px;
+  fill: #FFE4A3;
+}
+
+.map {
+  background-color: #2d8593;
+}
+
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+.controls {
+  position: absolute; 
+  margin-right: 20px;
+  top: 120px; 
+  right: 20px; 
+}
+
+#scene {
+  position: absolute;
+}
+
+button {
+  width: 50px;
+  height: 50px;
+}
+
+text {
+  fill:grey;
+  font-family:"Roboto";
+  font-weight: 300;
+  letter-spacing: 3px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#zoomBtn { 
+  position: absolute; 
+  top: 10px; 
+  right: 20px; 
+}
+
+#map { 
+  width: 1366px; 
+  height: 764px; 
+}
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.8);
+  font: lighter 18px "Signika";
+  color: #787777;
+  border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 20px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
