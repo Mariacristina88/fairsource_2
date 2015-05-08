@@ -16,8 +16,12 @@
   pointer-events: all;
 }
 
+.container {
+  width: 100%;
+}
+
 .controls {
-  position: absolute; 
+  position: fixed;c 
   margin-right: 20px;
   top: 120px; 
   right: 20px; 

@@ -25,9 +25,8 @@
 					data-100="height:40px; display:none;">
 				</div></a>
 				<a href="#about" data-menu-top="0"><div class="logo-small" 
-					data-0="height:68px; display:none;transform[bounce]:rotateY(0deg);"
+					data-0="height:68px; display:none;"
 					data-100="height:40px; display:block;"
-					data-4800="transform[bounce]:rotateY(550deg);"
 					>
 				</div></a>
 
@@ -44,18 +43,33 @@
 			<!-- About us / Map d3 -->
 			
 				<section class="page1" id="about" data-900="width:100%;" data-1800="width:0%;">
-				<div class="about_text" data-0="opacity:0;margin-top:400px;" data-500="opacity:1;margin-top:336px;" data-1150="opacity:1;margin-top:336px;" data-1250="opacity:0;margin-top:280px;">
-							<p>If you want Fair Trade software, we can show you how to do it, or find people who will do it for you.
-							</p>
-							<div class="line white_bord"></div>
-						</div>	
-					<div class="container">
-					  <div class="controls" data-0="display:block" data-500="display:none">
+				
+					<div class="container"
+					data-900="position:absolute; left:0px;" 
+					data-1800="left:-600px;">
+					  <div class="controls" data-0="display:block" data-200="display:none">
 					    <button id="zoom_in">+</button>
 					    <button id="zoom_out">-</button>
 					  </div>
+					  <div class="arrow-container"><a href="#about" data-menu-top="500" class="arrow-down" 
+					  	data-300="opacity:1;" data-500="opacity:0;";
+					  	></a></div>
   					</div>
 				</section>
+
+				<div class="box" 
+				data-100="top:100%; opacity:0;"
+				data-190="height:0%;" 
+				data-200="top:0%; opacity:1; height:120%"
+				data-1000="opacity:1"
+				data-1200="opacity:0">
+				<div class="about_text">
+							<p>If you want Fair Trade software, we can show you how to do it, or find people who will do it for you.
+							</p>
+							<div class="line white_bord"></div>
+						</div>
+				</div>
+
 			
 			<!-- Partners -->
 			
@@ -231,11 +245,19 @@
 					</footer>
 				</section>
 			</div>
-		
+
+
+	
 <script type="text/javascript" src="js/global/html5shiv-printshiv.js"></script>
 <script type="text/javascript" src="js/global/html5shiv.js"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script type="text/javascript" src="js/global/modernizr.js"></script>
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/topojson.v0.min.js"></script>
+<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+<script src="js/global/parallax.js"></script>
+<script src="js/global/mapd3.js"></script>
 
 <script type="text/javascript" src="js/global/skrollr.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.29/skrollr.min.js"></script>
@@ -245,11 +267,7 @@
 <script type="text/javascript" src="js/formValidator.js"></script>
 <script type="text/javascript" src="js/slider.js"></script>
 
-<script src="http://d3js.org/d3.v3.min.js"></script>
-<script src="http://d3js.org/topojson.v0.min.js"></script>
-<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
-<script src="js/global/parallax.js"></script>
-<script src="js/global/mapd3.js"></script>
+
 
 <script type="text/javascript">
     var s = skrollr.init();
@@ -266,6 +284,7 @@
 	        //return Math.abs(currentTop - targetTop) * 10;
 	    }
 	});
+
 </script>
 
 </body>

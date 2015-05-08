@@ -16,9 +16,18 @@ var data = d3.range(2000).map(function() {
 var zoom = d3.behavior.zoom().scaleExtent([0.6, 1.5]).on("zoom", zoomed);
 
 var svg = d3.select(".container").append("svg")
+
+      .on("mousewheel", function(){})
+      .on("DOMMouseScroll",  function(){}) // disables older versions of Firefox
+      .on("wheel",  function(){}) // disables newer versions of Firefox
+      .on("touchstart",  function(){})
+      .on("wheel",  function(){})
+      .on("mousewheel",  function(){})
+      .on("MozMousePixelScroll",  function(){})
+
     .attr("class", "map")
     .attr("width", width)
-    .attr("height", height)
+    .attr("height", height);
 
 var g = svg.append("g")
           .call(zoom)
@@ -70,10 +79,12 @@ d3.json("world.json", function(error, topology) {
   //Pupup blocks with the names of the cities 
   var tip = d3.tip()
     .attr('class', 'd3-tip')
+    .attr('data-0','display:block;')
+    .attr('data-300','display:none;')
     .offset([-23, 0])
     .html(function(d) {
       return "<span>" + d.country + ": " + "</span> <span style='color:#8DC63F'>" + d.city + "</span>";
-    })
+    });
 
     var circles = g.selectAll("circle")
                   .data(mainCircles)
@@ -273,7 +284,7 @@ var textAttributes = g.append("g").selectAll("image")
 
 function zoomed() {
 
-    var t = zoom.translate();
+      var t = zoom.translate();
         var s = zoom.scale();
 
         //those 2 values ajust the limits of the drag, so the map dont exit completly the visible zone.
