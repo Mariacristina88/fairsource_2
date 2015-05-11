@@ -111,7 +111,7 @@ nav {
 	    to {-webkit-transform: rotateY(+ 180deg);}
 	}
 
-
+/*HOME*/
 .page1 {
 	@include sectpage;
 	background-size: 3000px auto;
@@ -123,7 +123,7 @@ nav {
 	z-index: 3;
 }
 
-
+/*PARTNERS*/
 .page2 {
 	@include sectpage;
 	background-size: cover;
@@ -131,6 +131,7 @@ nav {
 	z-index: 1;
 }
 
+/*PROVIDERS*/
 .page3 {
 	@include sectpage;
 	background-image: url("../img/europeans_flags.png");
@@ -141,17 +142,19 @@ nav {
 /*	transform: skew(0deg, -4deg); */
 }
 
-.page4 {
+/*SUPPORTERS*/
+.page4 { 
 	@include sectpage;
 	background-image: url("../img/euroflag.jpg");
 	background-size: cover;
-	z-index: 3;
+	z-index: 5;
 }
 
-.page6 {
+/*CONTACTS*/
+.page6 { 
 	@include sectpage;
 	background-color: $green;
-	z-index: 4;
+	z-index: 6;
 
 }
 
@@ -226,13 +229,6 @@ nav {
 	padding: 0 0 10px 0;
 }
 
-.white_bord {
-	border-color: #fff;
-}
-
-.green_bord {
-	border-color: $green;
-}
 
 .white {
 	color: white;

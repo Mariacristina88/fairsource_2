@@ -88,6 +88,7 @@ nav {
     -webkit-transform: rotateY(); }
   to {
     -webkit-transform: rotateY(180deg); } }
+/*HOME*/
 .page1 {
   height: 100%;
   width: 100%;
@@ -107,6 +108,7 @@ nav {
   left: 0;
   z-index: 3; }
 
+/*PARTNERS*/
 .page2 {
   height: 100%;
   width: 100%;
@@ -122,6 +124,7 @@ nav {
   background-image: url("../img/partners.jpg");
   z-index: 1; }
 
+/*PROVIDERS*/
 .page3 {
   height: 100%;
   width: 100%;
@@ -140,6 +143,7 @@ nav {
   height: 115vh;
   /*	transform: skew(0deg, -4deg); */ }
 
+/*SUPPORTERS*/
 .page4 {
   height: 100%;
   width: 100%;
@@ -153,8 +157,9 @@ nav {
   min-height: 730px;
   background-image: url("../img/euroflag.jpg");
   background-size: cover;
-  z-index: 3; }
+  z-index: 5; }
 
+/*CONTACTS*/
 .page6 {
   height: 100%;
   width: 100%;
@@ -167,7 +172,7 @@ nav {
   position: absolute;
   min-height: 730px;
   background-color: #485956;
-  z-index: 4; }
+  z-index: 6; }
 
 .box {
   height: 100%;
@@ -236,12 +241,6 @@ nav {
   width: 100px;
   margin: auto;
   padding: 0 0 10px 0; }
-
-.white_bord {
-  border-color: #fff; }
-
-.green_bord {
-  border-color: #485956; }
 
 .white {
   color: white; }
