@@ -92,11 +92,7 @@ nav {
 	padding: 0px;
 	float: left;
 	display: none;
-	-webkit-transition: all .1s ease;
-	-moz-transition: all .1s ease;
-	-ms-transition: all .1s ease;
-	-o-transition: all .1s ease;
-	transition: all .1s ease;
+	
 }
 
 .logo-small {
@@ -106,13 +102,13 @@ nav {
 	}
 
 	@-webkit-keyframes rotate {
-		from {-webkit-transform: rotateY(0deg);}
-	    to {-webkit-transform: rotateY(360deg);}
+		from {-webkit-transform: rotateY();}
+	    to {-webkit-transform: rotateY(+ 180deg);}
 	}
 
 	@keyframes rotate {
-		from {-webkit-transform: rotateY(0deg);}
-	    to {-webkit-transform: rotateY(360deg);}
+		from {-webkit-transform: rotateY();}
+	    to {-webkit-transform: rotateY(+ 180deg);}
 	}
 
 
@@ -196,15 +192,17 @@ nav {
 .arrow-container{
 	width: 100%;
 	height: 35px;
-	top:85%;
-	position: absolute;
+	bottom: 5%;
+	position: fixed;
+	z-index: 7;
 
 	polygon {
 		fill: #FFF;
 		cursor: pointer;
-		animation: arrow linear 2s infinite ;
-		-webkit-animation: arrow linear 2s infinite ;
+		animation: arrow linear 2s infinite alternate;
+		-webkit-animation: arrow linear 2s infinite alternate;
 	}
+
 	polygon:hover {
 		fill: #485956;
 	}
@@ -212,12 +210,14 @@ nav {
 
 @keyframes arrow {
 	0% {fill:white;}
-	100% {fill:red;}
+	50% {fill:red;}
+	100% {fill:white;}
 }
 
 @-webkit-keyframes arrow {
 	0% {fill:white;}
-	100% {fill:red;}
+	50% {fill:red;}
+	100% {fill:white;}
 }
 
 .line {

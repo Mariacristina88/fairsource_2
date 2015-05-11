@@ -72,12 +72,7 @@ nav {
   margin: 10px 20px 0 0;
   padding: 0px;
   float: left;
-  display: none;
-  -webkit-transition: all .1s ease;
-  -moz-transition: all .1s ease;
-  -ms-transition: all .1s ease;
-  -o-transition: all .1s ease;
-  transition: all .1s ease; }
+  display: none; }
 
 .logo-small {
   -webkit-animation: rotate linear 2s forwards alternate;
@@ -85,14 +80,14 @@ nav {
 
 @-webkit-keyframes rotate {
   from {
-    -webkit-transform: rotateY(0deg); }
+    -webkit-transform: rotateY(); }
   to {
-    -webkit-transform: rotateY(360deg); } }
+    -webkit-transform: rotateY(180deg); } }
 @keyframes rotate {
   from {
-    -webkit-transform: rotateY(0deg); }
+    -webkit-transform: rotateY(); }
   to {
-    -webkit-transform: rotateY(360deg); } }
+    -webkit-transform: rotateY(180deg); } }
 .page1 {
   height: 100%;
   width: 100%;
@@ -212,26 +207,31 @@ nav {
 .arrow-container {
   width: 100%;
   height: 35px;
-  top: 85%;
-  position: absolute; }
+  bottom: 5%;
+  position: fixed;
+  z-index: 7; }
   .arrow-container polygon {
     fill: #FFF;
     cursor: pointer;
-    animation: arrow linear 2s infinite;
-    -webkit-animation: arrow linear 2s infinite; }
+    animation: arrow linear 2s infinite alternate;
+    -webkit-animation: arrow linear 2s infinite alternate; }
   .arrow-container polygon:hover {
     fill: #485956; }
 
 @keyframes arrow {
   0% {
     fill: white; }
+  50% {
+    fill: red; }
   100% {
-    fill: red; } }
+    fill: white; } }
 @-webkit-keyframes arrow {
   0% {
     fill: white; }
+  50% {
+    fill: red; }
   100% {
-    fill: red; } }
+    fill: white; } }
 .line {
   width: 100px;
   margin: auto;
