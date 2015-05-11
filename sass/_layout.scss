@@ -185,10 +185,10 @@ nav {
 }
 
 .arrow-down {
-	background-image: url("../img/arrow_d.png");
+	
 	width: 60px;
 	height: 35px;
-	background-repeat: no-repeat;
+	
 	display: block;
 	margin: 0 auto 0 auto;
 }
@@ -199,12 +199,25 @@ nav {
 	top:85%;
 	position: absolute;
 
-	a {
+	polygon {
+		fill: #FFF;
 		cursor: pointer;
+		animation: arrow linear 2s infinite ;
+		-webkit-animation: arrow linear 2s infinite ;
 	}
-	a:hover {
-		background-image: url("../img/arrow_d_hover.png")
+	polygon:hover {
+		fill: #485956;
 	}
+}
+
+@keyframes arrow {
+	0% {fill:white;}
+	100% {fill:red;}
+}
+
+@-webkit-keyframes arrow {
+	0% {fill:white;}
+	100% {fill:red;}
 }
 
 .line {

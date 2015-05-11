@@ -16,15 +16,6 @@ var data = d3.range(2000).map(function() {
 var zoom = d3.behavior.zoom().scaleExtent([0.6, 1.5]).on("zoom", zoomed);
 
 var svg = d3.select(".container").append("svg")
-
-      .on("mousewheel", function(){})
-      .on("DOMMouseScroll",  function(){}) // disables older versions of Firefox
-      .on("wheel",  function(){}) // disables newer versions of Firefox
-      .on("touchstart",  function(){})
-      .on("wheel",  function(){})
-      .on("mousewheel",  function(){})
-      .on("MozMousePixelScroll",  function(){})
-
     .attr("class", "map")
     .attr("width", width)
     .attr("height", height);
@@ -55,8 +46,8 @@ d3.json("world.json", function(error, topology) {
                  { "x_axis": 1000, "y_axis": 250, "name": "ASIA" },
                  { "x_axis": 1300, "y_axis": 740, "name": "OCEANIA" },
                  { "x_axis": 500, "y_axis": 450, "name": "AFRICA" },
-                 { "x_axis": -365, "y_axis": 150, "name": "NORTH AMERICA" },
-                 { "x_axis": -60, "y_axis": 650, "name": "SOUTH AMERICA" }];
+                 { "x_axis": -375, "y_axis": 150, "name": "NORTH AMERICA" },
+                 { "x_axis": -90, "y_axis": 650, "name": "SOUTH AMERICA" }];
   
   //Names of the countries
   var label = g.selectAll("text")
@@ -280,6 +271,8 @@ var textAttributes = g.append("g").selectAll("image")
                       .attr("height", function (d) { return d.height})
                       .attr("x", function (d) { return d.x})
                       .attr("y", function (d) { return d.y});
+
+g.attr("transform", "translate(70,70)");
 
 
 function zoomed() {
