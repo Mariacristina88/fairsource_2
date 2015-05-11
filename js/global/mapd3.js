@@ -18,7 +18,7 @@ var zoom = d3.behavior.zoom().scaleExtent([0.6, 1.5]).on("zoom", zoomed);
 var svg = d3.select(".container").append("svg")
     .attr("class", "map")
     .attr("width", width)
-    .attr("height", height)
+    .attr("height", height);
 
 var g = svg.append("g")
           .call(zoom)
@@ -46,8 +46,8 @@ d3.json("world.json", function(error, topology) {
                  { "x_axis": 1000, "y_axis": 250, "name": "ASIA" },
                  { "x_axis": 1300, "y_axis": 740, "name": "OCEANIA" },
                  { "x_axis": 500, "y_axis": 450, "name": "AFRICA" },
-                 { "x_axis": -365, "y_axis": 150, "name": "NORTH AMERICA" },
-                 { "x_axis": -60, "y_axis": 650, "name": "SOUTH AMERICA" }];
+                 { "x_axis": -375, "y_axis": 150, "name": "NORTH AMERICA" },
+                 { "x_axis": -90, "y_axis": 650, "name": "SOUTH AMERICA" }];
   
   //Names of the countries
   var label = g.selectAll("text")
@@ -70,10 +70,12 @@ d3.json("world.json", function(error, topology) {
   //Pupup blocks with the names of the cities 
   var tip = d3.tip()
     .attr('class', 'd3-tip')
+    .attr('data-0','display:block;')
+    .attr('data-300','display:none;')
     .offset([-23, 0])
     .html(function(d) {
       return "<span>" + d.country + ": " + "</span> <span style='color:#8DC63F'>" + d.city + "</span>";
-    })
+    });
 
     var circles = g.selectAll("circle")
                   .data(mainCircles)
@@ -270,10 +272,12 @@ var textAttributes = g.append("g").selectAll("image")
                       .attr("x", function (d) { return d.x})
                       .attr("y", function (d) { return d.y});
 
+g.attr("transform", "translate(70,70)");
+
 
 function zoomed() {
 
-    var t = zoom.translate();
+      var t = zoom.translate();
         var s = zoom.scale();
 
         //those 2 values ajust the limits of the drag, so the map dont exit completly the visible zone.
