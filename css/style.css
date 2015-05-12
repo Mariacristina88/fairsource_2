@@ -40,6 +40,8 @@ nav {
   nav a {
     color: #485956;
     text-decoration: none; }
+    nav a .active {
+      border-bottom: 2px solid #fcdb3d; }
   nav a:hover {
     border-bottom: 2px solid #fcdb3d; }
   nav .active {

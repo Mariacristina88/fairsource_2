@@ -17,6 +17,7 @@ var zoom = d3.behavior.zoom().scaleExtent([0.6, 1.5]).on("zoom", zoomed);
 
 var svg = d3.select(".container").append("svg")
     .attr("class", "map")
+    .attr("cursor", "move")
     .attr("width", width)
     .attr("height", height);
 

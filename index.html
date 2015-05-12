@@ -15,7 +15,7 @@
 		<nav data-200="height:90px;" data-300="height:55px;">
 			<div class='navigation'>
 				<ul data-200="margin-top:30px" data-300="margin-top:3px">
-					<li><a href="#about" data-menu-top="300">ABOUT US</a></li>
+					<li><a href="#about" data-menu-top="300" class="active">ABOUT US</a></li>
 					<li><a href="#partners" data-menu-top="1900">PARTNERS</a></li>
 					<li><a href='#providers' data-menu-top="3450">PROVIDERS</a></li>
 				</ul>
@@ -295,6 +295,11 @@
 	        //But you could calculate a value based on the current scroll position (`currentTop`) and the target scroll position (`targetTop`).
 	        //return Math.abs(currentTop - targetTop) * 10;
 	    }
+	});
+
+	$(".navigation a").click(function(){
+    	$("a").removeClass("active");
+    	$(this).addClass("active");
 	});
 
 </script>

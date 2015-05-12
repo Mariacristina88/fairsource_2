@@ -50,6 +50,10 @@ nav {
 	a {
 		color: $green;
 		text-decoration: none;
+
+		.active {
+			border-bottom: 2px solid #fcdb3d;
+		}
 	}
 
 	a:hover {
