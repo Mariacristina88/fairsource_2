@@ -234,8 +234,11 @@ d3.json("world.json", function(error, topology) {
                 if (a.attr("class") == "layer cloudanim") {         
                       a.attr("class", "layer");
                 } else {
-                a.attr("class", "layer cloudanim");
-                console.log("a");
+                      a.attr("class", "layer cloudanim");
+                      setTimeout(function(){
+                          a.attr("class", "layer");
+                      },5000);
+                      console.log("a");
                 }
               });
 
