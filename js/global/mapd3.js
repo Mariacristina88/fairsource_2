@@ -67,7 +67,7 @@ d3.json("world.json", function(error, topology) {
               .text(function (d) {return d.name;});
 
   var mainCircles = [
-               { "x_axis": 447, "y_axis": 125, "radius": 4, "color" : "orange", "country":"The Netherlands", "city":"The Hague" }, //orange
+               { "x_axis": 447, "y_axis": 125, "radius": 4, "color" : "orange", "country":"The Netherlands", "image":"../img/den-haag-thumbnail.jpg", "city":"The Hague" }, //orange
                { "x_axis": 475, "y_axis": 200, "radius": 4, "color" : "red", "country":"Italy", "city":"Milan"},     //red
                { "x_axis": 485, "y_axis": 130, "radius": 4, "color" : "#006838", "country":"Germany","city":"Germany"}, //green
                { "x_axis": 390, "y_axis": 120, "radius": 4, "color" : "#27AAE1", "country":"England","city":"Manchester"}, //blue
@@ -81,7 +81,7 @@ d3.json("world.json", function(error, topology) {
     .attr('data-300','display:none;')
     .offset([-23, 0])
     .html(function(d) {
-      return "<span>" + d.country + ": " + "</span> <span style='color:#8DC63F'>" + d.city + "</span>";
+      return "<span>" + d.country + ": " + "</span> <span style='color:#8DC63F'>" + d.city + "</span><div><img src='" + d.image + "'/></div>";
     });
 
     var circles = g.selectAll("circle")
@@ -100,7 +100,8 @@ d3.json("world.json", function(error, topology) {
                           .attr("cy", function (d) { return d.y_axis; })
                           .attr("r", function (d) { return d.radius; })
                           .style("fill", function(d) { return d.color; })
-
+                          .attr("transform", "translate(140,100)")
+                          .attr("cursor","pointer")
                           .on("mouseover", tip.show                           
                              /* d3.select(this).transition()
                               .duration(500)
@@ -119,7 +120,21 @@ d3.json("world.json", function(error, topology) {
                       .data(mainCircles)
                       .enter()
                       .append("circle")
-                      .attr("transform", "translate(140,100)");
+                      .attr("transform", "translate(140,100)")
+                      .attr("cursor","pointer")
+                          .on("mouseover", tip.show                           
+                             /* d3.select(this).transition()
+                              .duration(500)
+                              .style("fill", "#8DC63F")
+                              .style("cursor", "pointer") */
+                            )
+
+                          .on("mouseout", tip.hide
+                          /*  d3.select(this).transition()
+                            .duration(500)
+                            .style("fill", function(d) { return d.color; }) */                         
+                          );
+                      
 
     var linecircleAttributes = linecircles
                               .attr("cx", function (d) { return d.x_axis; })
@@ -127,12 +142,14 @@ d3.json("world.json", function(error, topology) {
                               .attr("r", 8)
                               .style("stroke", "#8DC63F")
                               .style("stroke-width", "2px")
-                              .style("fill", "none");
+                              .style("fill", "rgba(0,0,0,0)");
 
     line1 = [{"x":445, "y":132},{"x":470, "y":350},{"x":670, "y":544}]; //To Kenya
     line2 = [{"x":443, "y":118},{"x":420, "y":110},{"x":398, "y":117}]; //To Manchester
     line3 = [{"x":452, "y":130},{"x":470, "y":165},{"x":473, "y":193}]; //To Milan
     line4 = [{"x":455, "y":123},{"x":478, "y":127},{"x":478, "y":127}]; // To Germany
+    line5 = [{"x":455, "y":127},{"x":700, "y":300},{"x":1133, "y":468}]; // To Cambodia
+
 
     var lineFunction = d3.svg.line()
                       .x(function(d){return d.x;})
@@ -153,7 +170,8 @@ d3.json("world.json", function(error, topology) {
   var lineOne = lineAttributes(line1);
   var lineTwo = lineAttributes(line2);
   var lineThree = lineAttributes(line3);
-  var lineFour = lineAttributes(line4); 
+  var lineFour = lineAttributes(line4);
+  var lineFive = lineAttributes(line5);
 
 
   decorations = [
@@ -229,6 +247,7 @@ d3.json("world.json", function(error, topology) {
               .attr("height", function (d) { return d.height; })
               .attr("x", function (d) { return d.x; })
               .attr("y", function (d) { return d.y; })
+              .attr("cursor","pointer")
               .on("click", function(){
                 var a = d3.select(this);
                 if (a.attr("class") == "layer cloudanim") {         
