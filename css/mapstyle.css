@@ -9,6 +9,7 @@
 
 .map {
   background-color: #2d8593;
+  height:100%;
 }
 
 .overlay {
@@ -89,3 +90,24 @@ body {
   top: 100%;
   left: 0;
 }
+
+.cloudanim {
+  -webkit-animation: cloudanim linear 5s forwards  ;
+  animation: cloudanim linear 5s forwards ;
+}
+
+@-webkit-keyframes cloudanim {
+    0% {opacity: 1;}
+    30% {opacity: 0;}
+    70% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+
+  @keyframes cloudanim {
+    0% {opacity: 1;}
+    30% {opacity: 0;}
+    70% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+
+  

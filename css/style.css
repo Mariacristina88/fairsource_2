@@ -47,7 +47,7 @@ nav {
 
 .navigation {
   margin: 0 auto;
-  width: 794px;
+  width: 800px;
   height: 100%; }
 
 .onepage-wrapper {
@@ -237,6 +237,30 @@ nav {
     fill: red; }
   100% {
     fill: white; } }
+.scrolldown {
+  width: 322px;
+  height: auto;
+  margin: -50px auto 0 auto; }
+  .scrolldown p {
+    font-size: 23px;
+    color: #485956;
+    text-align: center;
+    float: left;
+    margin: 0 auto; }
+  .scrolldown span {
+    font-size: 40px;
+    color: #485956;
+    text-align: center;
+    float: left;
+    margin: 0 auto;
+    margin: 19px 10px 0 10px; }
+
+.mirror {
+  -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
+  -moz-transform: matrix(-1, 0, 0, 1, 0, 0);
+  -o-transform: matrix(-1, 0, 0, 1, 0, 0);
+  transform: matrix(-1, 0, 0, 1, 0, 0); }
+
 .line {
   width: 100px;
   margin: auto;
@@ -265,13 +289,13 @@ nav {
 .path {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
-  animation: dash 15s ease forwards;
+  animation: dash 10s ease forwards;
   animation-play-state: paused;
   transition-delay: 2s;
   animation-direction: alternate;
   -webkit-animation-direction: alternate;
   /* Chrome, Safari, Opera */
-  -webkit-animation: dash 15s ease forwards;
+  -webkit-animation: dash 10s ease forwards;
   -webkit-animation-play-state: paused;
   -webkit-transition-delay: 2s; }
 
@@ -477,7 +501,7 @@ form p {
 
 footer {
   width: 100%;
-  height: 80px;
+  height: 100%;
   background-color: #262f2d; }
   footer p {
     font-size: 11pt;

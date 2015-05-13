@@ -63,7 +63,7 @@ nav {
 
 .navigation {
 	margin: 0 auto;
-	width: 794px;
+	width: 800px;
   	height: 100%;
 }
 
@@ -187,7 +187,6 @@ nav {
 	
 	width: 60px;
 	height: 35px;
-	
 	display: block;
 	margin: 0 auto 0 auto;
 }
@@ -209,6 +208,7 @@ nav {
 	polygon:hover {
 		fill: #485956;
 	}
+
 }
 
 @keyframes arrow {
@@ -221,6 +221,36 @@ nav {
 	0% {fill:white;}
 	50% {fill:red;}
 	100% {fill:white;}
+}
+
+.scrolldown {
+		  width: 322px;
+		  height: auto;
+		  margin: -50px auto 0 auto;
+
+		p {
+			font-size: 23px;
+			color: $green;
+			text-align: center;
+			float: left;
+			margin: 0 auto;
+		}
+
+		span {
+			font-size: 40px;
+			color: $green;
+			text-align: center;
+			float:left;
+			margin: 0 auto;
+			margin: 19px 10px 0 10px;
+		}
+	}
+
+.mirror{
+     -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
+    -moz-transform: matrix(-1, 0, 0, 1, 0, 0);
+    -o-transform: matrix(-1, 0, 0, 1, 0, 0);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
 .line {
@@ -258,12 +288,12 @@ nav {
 .path {
       stroke-dasharray: 1000;
       stroke-dashoffset: 1000;
-      animation: dash 15s ease forwards;
+      animation: dash 10s ease forwards;
       animation-play-state:paused;
       transition-delay: 2s;
     animation-direction: alternate;
      -webkit-animation-direction: alternate; /* Chrome, Safari, Opera */
-      -webkit-animation: dash 15s ease forwards;
+      -webkit-animation: dash 10s ease forwards;
       -webkit-animation-play-state:paused;
       -webkit-transition-delay: 2s; 
 	    }
@@ -525,7 +555,7 @@ form p {
 
 footer {
 	width: 100%;
-	height: 80px;
+	height: 100%;
 	background-color: darken($green, 15%);
 
 	p {
