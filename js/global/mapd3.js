@@ -70,7 +70,7 @@ d3.json("world.json", function(error, topology) {
                { "x_axis": 447, "y_axis": 125, "radius": 4, "color" : "orange", "country":"The Netherlands", "image":"../img/den-haag-thumbnail.jpg", "city":"The Hague" }, //orange
                { "x_axis": 475, "y_axis": 200, "radius": 4, "color" : "red", "country":"Italy", "city":"Milan"},     //red
                { "x_axis": 485, "y_axis": 130, "radius": 4, "color" : "#006838", "country":"Germany","city":"Germany"}, //green
-               { "x_axis": 390, "y_axis": 120, "radius": 4, "color" : "#27AAE1", "country":"England","city":"Manchester"}, //blue
+               { "x_axis": 390, "y_axis": 120, "radius": 4, "color" : "#27AAE1", "country":"England","image":"../img/manchester-thumbnail.jpg","city":"Manchester"}, //blue
                { "x_axis": 673, "y_axis": 550, "radius": 4, "color" : "#805CAC", "country":"Kenya", "city":"Kenya"}, //purple
                { "x_axis": 1140, "y_axis": 472, "radius": 4, "color" : "#fde601", "country":"Cambodia", "city":"Phnom Penh"}]; //yellow
 
@@ -81,7 +81,7 @@ d3.json("world.json", function(error, topology) {
     .attr('data-300','display:none;')
     .offset([-23, 0])
     .html(function(d) {
-      return "<span>" + d.country + ": " + "</span> <span style='color:#8DC63F'>" + d.city + "</span><div><img src='" + d.image + "'/></div>";
+      return "<span>" + d.country + "</span><div id='thumbnail'><img src='" + d.image + "'/></div><span style='color:#8DC63F'>" + d.city + "</span>";
     });
 
     var circles = g.selectAll("circle")

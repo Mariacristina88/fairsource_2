@@ -69,7 +69,15 @@ body {
   font: lighter 18px "Signika";
   color: #787777;
   border-radius: 2px;
+  width: 200px;
 }
+
+.d3-tip.n span {
+    display: block;
+    text-align: center;
+    width: 200px;
+    height: auto;
+  }
 
 /* Creates a small triangle extender for the tooltip */
 .d3-tip:after {
@@ -110,4 +118,8 @@ body {
     100% {opacity: 1;}
   }
 
-  
+  .thumbnail {
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+  }
