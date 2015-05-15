@@ -39,12 +39,13 @@ nav {
     font-family: "Play"; }
   nav a {
     color: #485956;
-    text-decoration: none; }
-    nav a .active {
-      border-bottom: 2px solid #fcdb3d; }
+    text-decoration: none;
+    border-bottom-style: solid;
+    border-bottom-width: 0px;
+    border-color: #fcdb3d; }
   nav a:hover {
     border-bottom: 2px solid #fcdb3d; }
-  nav .active {
+  nav a.active {
     border-bottom: 2px solid #fcdb3d; }
 
 .navigation {

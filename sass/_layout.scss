@@ -50,17 +50,16 @@ nav {
 	a {
 		color: $green;
 		text-decoration: none;
-
-		.active {
-			border-bottom: 2px solid #fcdb3d;
-		}
+		border-bottom-style: solid;
+		border-bottom-width: 0px;
+		border-color: #fcdb3d;
 	}
 
 	a:hover {
 		border-bottom: 2px solid #fcdb3d;
 	}
 
-	.active {
+	a.active {
 		border-bottom: 2px solid #fcdb3d;
 	}
 }
