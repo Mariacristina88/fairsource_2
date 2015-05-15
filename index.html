@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	
 	<link rel="stylesheet" href="css/normalize.css">
@@ -10,7 +11,9 @@
 </head>
 
 <body> <!-- -->
-
+<div id="loading">
+<img id="loading-image" src="../img/loader4.gif" alt="Loading..."/>
+</div>
 		<div class="main">
 		<nav data-200="height:90px;" data-300="height:55px;">
 			<div class='navigation'>
@@ -317,6 +320,11 @@
 
 
 <script type="text/javascript">
+$(window).load(function() {
+	setTimeout(function(){
+                          $('#loading').hide();
+                      },1000);
+});
     var s = skrollr.init();
 
     //The options (second parameter) are all optional. The values shown are the default values.
@@ -336,6 +344,8 @@
      $("a").removeClass("active");
      $(this).addClass("active");
  });
+
+
 
 </script>
 
