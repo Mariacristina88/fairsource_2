@@ -2,7 +2,7 @@ var width = 2000, //960 1366
     height = 800; //500 764
 
 var projection = d3.geo.mercator()
-    .center([-20, 50])
+    .center([-20, 59])
     .scale(400)
     .rotate([-10,0]);
 
@@ -59,7 +59,7 @@ d3.json("world.json", function(error, topology) {
                 .data(textName)
                 .enter()
                 .append("text")
-                .attr("transform", "translate(140,100)");
+                .attr("transform", "translate(140,210)");
 
   var labelAttribute = label
               .attr("dx",function (d) { return d.x_axis; })
@@ -67,12 +67,13 @@ d3.json("world.json", function(error, topology) {
               .text(function (d) {return d.name;});
 
   var mainCircles = [
-               { "x_axis": 447, "y_axis": 125, "radius": 4, "color" : "orange", "country":"The Netherlands", "image":"../img/den-haag-thumbnail.jpg", "city":"The Hague" }, //orange
-               { "x_axis": 475, "y_axis": 200, "radius": 4, "color" : "red", "country":"Italy", "image":"../img/milan-thumbnail.jpg", "city":"Milan"},     //red
-               { "x_axis": 485, "y_axis": 130, "radius": 4, "color" : "#006838", "country":"Germany", "image":"../img/bonn-thumbnail.jpg","city":"Germany"}, //green
+               { "x_axis": 440, "y_axis": 125, "radius": 4, "color" : "orange", "country":"The Netherlands", "image":"../img/den-haag-thumbnail.jpg", "city":"The Hague" }, //orange
+               { "x_axis": 449, "y_axis": 120, "radius": 4, "color" : "brown", "country":"The Netherlands", "image":"", "city":"The Hague" }, //brown
+               { "x_axis": 475, "y_axis": 200, "radius": 4, "color" : "red", "country":"Italy", "city":"Milan"},     //red
+               { "x_axis": 485, "y_axis": 130, "radius": 4, "color" : "#006838", "country":"Germany","city":"Bonn"}, //green
                { "x_axis": 390, "y_axis": 120, "radius": 4, "color" : "#27AAE1", "country":"England","image":"../img/manchester-thumbnail.jpg","city":"Manchester"}, //blue
-               { "x_axis": 673, "y_axis": 550, "radius": 4, "color" : "#805CAC", "country":"Kenya", "image":"../img/nairobi-thumbnail.jpg", "city":"Kenya"}, //purple
-               { "x_axis": 1140, "y_axis": 472, "radius": 4, "color" : "#fde601", "country":"Cambodia", "image":"../img/phnom-penh-thumbnail.jpg", "city":"Phnom Penh"}]; //yellow
+               { "x_axis": 673, "y_axis": 550, "radius": 4, "color" : "#805CAC", "country":"Kenya", "city":"Nairobi"}, //purple
+               { "x_axis": 1140, "y_axis": 472, "radius": 4, "color" : "#fde601", "country":"Cambodia", "city":"Phnom Penh"}]; //yellow
 
   //Pupup blocks with the names of the cities 
   var tip = d3.tip()
@@ -89,7 +90,7 @@ d3.json("world.json", function(error, topology) {
                   .enter()
                   .append("circle")
                   .attr("class", "circleAnim")
-                  .attr("transform", "translate(140,100)");
+                  .attr("transform", "translate(140,210)");
 
 
     svg.call(tip);
@@ -100,27 +101,18 @@ d3.json("world.json", function(error, topology) {
                           .attr("cy", function (d) { return d.y_axis; })
                           .attr("r", function (d) { return d.radius; })
                           .style("fill", function(d) { return d.color; })
-                          .attr("transform", "translate(140,100)")
+                          .attr("transform", "translate(140,210)")
                           .attr("cursor","pointer")
-                          .on("mouseover", tip.show                           
-                             /* d3.select(this).transition()
-                              .duration(500)
-                              .style("fill", "#8DC63F")
-                              .style("cursor", "pointer") */
-                            )
-
-                          .on("mouseout", tip.hide
-                          /*  d3.select(this).transition()
-                            .duration(500)
-                            .style("fill", function(d) { return d.color; }) */                         
-                          );
+                          .on("mouseover", tip.show)
+                        
+                          .on("mouseout", tip.hide);
 
     var linecircles = g.append("g")
                       .selectAll("circle")
                       .data(mainCircles)
                       .enter()
                       .append("circle")
-                      .attr("transform", "translate(140,100)")
+                      .attr("transform", "translate(140,210)")
                       .attr("cursor","pointer")
                           .on("mouseover", tip.show                           
                              /* d3.select(this).transition()
@@ -161,7 +153,7 @@ d3.json("world.json", function(error, topology) {
     var lineAttributes = function(f) { 
                         line
                         .append("path")
-                        .attr("transform", "translate(140,100)")
+                        .attr("transform", "translate(140,210)")
                         .attr("d", lineFunction(f))
                         .style("stroke", "#8DC63F")
                         .style("stroke-width","2px") 
@@ -221,7 +213,7 @@ d3.json("world.json", function(error, topology) {
 
 
   var deco = sceneParallax.append("g")
-              .attr("transform", "translate(140,100)")
+              .attr("transform", "translate(140,210)")
               .selectAll("image")
               .data(decorations)
               .enter()
@@ -235,7 +227,7 @@ d3.json("world.json", function(error, topology) {
               .attr("y", function (d) { return d.y; });
 
   var clo = sceneParallax.append("g")
-              .attr("transform", "translate(140,100)")
+              .attr("transform", "translate(140,210)")
               .selectAll("image")
               .data(clouds)
               .enter()
@@ -279,7 +271,7 @@ var oceanArrows = g.append("g")
                   .data(arrows)
                   .enter()
                   .append("svg:image")
-                  .attr("transform", "translate(140,100)")
+                  .attr("transform", "translate(140,210)")
                   .attr("xlink:href", function (d) { return d.arrow})
                   .attr("width", function (d) { return d.width})
                   .attr("height", function (d) { return d.height})
@@ -298,7 +290,7 @@ var gradientsAttributes = g.append("g")
                           .data(gradients)
                           .enter()
                           .append("svg:image")
-                          .attr("transform", "translate(140,100)")
+                          .attr("transform", "translate(140,210)")
                           .attr("xlink:href", function (d) { return d.gradient})
                           .attr("width", function (d) { return d.width})
                           .attr("height", function (d) { return d.height})
@@ -316,7 +308,7 @@ var textAttributes = g.append("g").selectAll("image")
                       .data(oceanText)
                       .enter()
                       .append("svg:image")
-                      .attr("transform", "translate(140,100)")
+                      .attr("transform", "translate(140,210)")
                       .attr("xlink:href", function (d) { return d.text})
                       .attr("width", function (d) { return d.width})
                       .attr("height", function (d) { return d.height})
