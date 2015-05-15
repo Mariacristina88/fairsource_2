@@ -56,7 +56,9 @@ nav {
 	}
 
 	a:hover {
-		border-bottom: 2px solid #fcdb3d !important;
+		border-bottom-style: solid;
+		border-bottom-width: 2px !important;
+		border-color: #fcdb3d;
 	}
 
 	a.active {
@@ -592,10 +594,26 @@ footer {
 }
 
 #loading-image {
-	position: relative;
-	margin: auto;
-	left: 0;
-	right: 0;
-	margin-top: 300px;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	position: fixed;
+	display: block;
+	background: url("../img/logo.png") no-repeat;
+	background-position: center;
 	z-index: 600;
+
+	#loading-bar {
+		width: 100%;
+		height: 100%;
+		top: 50px;
+		left: 0px;
+		position: fixed;
+		display: block;
+		background: url("../img/loading_bar.gif") no-repeat;
+		background-position: center;
+		z-index: 600;
+	}
 }
+
