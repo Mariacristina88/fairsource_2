@@ -44,7 +44,7 @@ nav {
     border-bottom-width: 0px;
     border-color: #fcdb3d; }
   nav a:hover {
-    border-bottom: 2px solid #fcdb3d; }
+    border-bottom: 2px solid #fcdb3d !important; }
   nav a.active {
     border-bottom: 2px solid #fcdb3d; }
 
