@@ -67,7 +67,7 @@ d3.json("world.json", function(error, topology) {
               .text(function (d) {return d.name;});
 
   var mainCircles = [
-               { "x_axis": 440, "y_axis": 125, "radius": 4, "color" : "orange", "country":"The Netherlands", "image":["../img/den-haag-thumbnail.jpg","../img/rotterdam-thumbnail.jpg"], "city":["The Hague", "Rotterdam"] },
+               { "x_axis": 447, "y_axis": 125, "radius": 4, "color" : "orange", "country":"The Netherlands", "image":"../img/den-haag-rotterdam-thumbnail.png", "city":["The Hague", " Rotterdam"] },
                //{ "x_axis": 449, "y_axis": 120, "radius": 4, "color" : "brown", "country":"The Netherlands", "image":"../img/rotterdam-thumbnail.jpg", "city":"Rotterdam" }, //brown
                { "x_axis": 475, "y_axis": 200, "radius": 4, "color" : "red", "country":"Italy","image":"../img/milan-thumbnail.jpg", "city":"Milan"},     //red
                { "x_axis": 485, "y_axis": 130, "radius": 4, "color" : "#006838", "country":"Germany","image":"../img/bonn-thumbnail.jpg","city":"Bonn"}, //green
@@ -75,28 +75,25 @@ d3.json("world.json", function(error, topology) {
                { "x_axis": 673, "y_axis": 550, "radius": 4, "color" : "#805CAC", "country":"Kenya","image":"../img/nairobi-thumbnail.jpg", "city":"Nairobi"}, //purple
                { "x_axis": 1140, "y_axis": 472, "radius": 4, "color" : "#fde601", "country":"Cambodia","image":"../img/phnom-penh-thumbnail.jpg", "city":"Phnom Penh"}]; //yellow
 
-  var imageThumb = function (country) {
+/*  var imageThumb = function (country) {
       var string = "";
 
-      if(country === "The Netherlands")
-      {
+      if(country === "The Netherlands") {
           for (var j=0; j<=1; j++) {
               //console.log(mainCircles[i]);
-            string += "<img src='" + mainCircles[0].image[j] + "'/></div><span style='color:#8DC63F'>" + mainCircles[0].city[j] + "</span>";
+            string += "<div class='thumb' style='color:#8DC63F'><img src='" + mainCircles[0].image[j] + "'/>" + mainCircles[0].city[j] + "</div>";
           }
-      }
-      else
-      {
+      } else {
         for (var i=0; i<=mainCircles.length-1; i++) {
             if(mainCircles[i].country === country)
             {
-              string = "<img src='" + mainCircles[i].image + "'/></div><span style='color:#8DC63F'>" + mainCircles[i].city + "</span>";
+              string = "<div class='thumb' style='color:#8DC63F'><img src='" + mainCircles[i].image + "'/>" + mainCircles[i].city + "</div>";
             }
+          }
         }
-      }
-        
         return string;
     };
+*/
 
   //Pupup blocks with the names of the cities 
   var tip = d3.tip()
@@ -105,7 +102,7 @@ d3.json("world.json", function(error, topology) {
     .attr('data-300','display:none;')
     .offset([-23, 0])
     .html(function(d) {
-      return "<span>" + d.country + "</span><div id='thumbnail'>" + imageThumb(d.country);
+      return "<div id='thumbnail'><span>" + d.country + "</span><img src='" + d.image + "'/><span style='color:#8DC63F'>" + d.city + "</span></div>";
     });
 
     var circles = g.selectAll("circle")

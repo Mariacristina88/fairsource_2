@@ -118,8 +118,11 @@ body {
     100% {opacity: 1;}
   }
 
-  .thumbnail {
+  #thumbnail {
     width: 200px;
     height: auto;
     margin: 0 auto;
+    font: lighter 18px "Signika";
+    color: #787777;
+    text-align: center;
   }
