@@ -61,6 +61,21 @@ body {
   height: 764px; 
 }
 
+.mytooltip {
+  position:absolute;
+  text-align: center;
+  width: 200px;
+  height:auto;
+  background-color: white;
+  border-radius: 2px;
+  font: lighter 18px "Signika";
+  color: #787777;
+  padding: 12px;
+  font-weight: bold;
+  z-index:3;
+}
+
+/*
 .d3-tip {
   line-height: 1;
   font-weight: bold;
@@ -79,7 +94,7 @@ body {
     height: auto;
   }
 
-/* Creates a small triangle extender for the tooltip */
+// Creates a small triangle extender for the tooltip 
 .d3-tip:after {
   box-sizing: border-box;
   display: inline;
@@ -92,12 +107,13 @@ body {
   text-align: center;
 }
 
-/* Style northward tooltips differently */
+// Style northward tooltips differently 
 .d3-tip.n:after {
   margin: -1px 0 0 0;
   top: 100%;
   left: 0;
 }
+*/
 
 .cloudanim {
   -webkit-animation: cloudanim linear 5s forwards  ;

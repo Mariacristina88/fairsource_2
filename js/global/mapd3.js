@@ -6,15 +6,6 @@ var projection = d3.geo.mercator()
     .scale(400)
     .rotate([-10,0]);
 
-/*
-var randomX = d3.random.normal(width / 2, 80),
-    randomY = d3.random.normal(height / 2, 80);
-
-var data = d3.range(2000).map(function() {
-    return [randomX(), randomY() ];
-});
-*/
-
 var zoom = d3.behavior.zoom().scaleExtent([0.6, 1.5]).on("zoom", zoomed);
 
 var svg = d3.select(".container").append("svg")
@@ -96,7 +87,8 @@ d3.json("world.json", function(error, topology) {
 */
 
   //Pupup blocks with the names of the cities 
-  var tip = d3.tip()
+  
+/*  var tip = d3.tip()
     .attr('class', 'd3-tip')
     .attr('data-0','display:block;')
     .attr('data-300','display:none;')
@@ -104,6 +96,7 @@ d3.json("world.json", function(error, topology) {
     .html(function(d) {
       return "<div id='thumbnail'><span>" + d.country + "</span><img src='" + d.image + "'/><span style='color:#8DC63F'>" + d.city + "</span></div>";
     });
+*/
 
     var circles = g.selectAll("circle")
                   .data(mainCircles)
@@ -113,19 +106,37 @@ d3.json("world.json", function(error, topology) {
                   .attr("transform", "translate(140,210)");
 
 
-    svg.call(tip);
-
+ //   svg.call(tip);
+    var myTool = d3.select("body")
+                  .append("div")
+                  .attr("class", "mytooltip")
+                  .style("opacity", 0);
 
     var circleAttributes = circles
+                          .data(mainCircles)
                           .attr("cx", function (d) { return d.x_axis; })
                           .attr("cy", function (d) { return d.y_axis; })
                           .attr("r", function (d) { return d.radius; })
                           .style("fill", function(d) { return d.color; })
                           .attr("transform", "translate(140,210)")
                           .attr("cursor","pointer")
-                          .on("mouseover", tip.show)
+                          .on("mouseover", function(d){
+                            myTool.transition()
+                              .duration(200)
+                              .style("opacity", 0.9)
+                            myTool.html(
+                              "<div id='thumbnail'><span>" + d.country + "</span><img src='" + d.image + "'/><span style='color:#8DC63F'>" + d.city + "</span></div>"
+                              )
+                            .style("left", (d3.event.x_axis) + "px")     
+                            .style("top", (d3.event.x_axis - 28) + "px");
+                          })
                         
-                          .on("mouseout", tip.hide);
+                          .on("mouseout", function(d) {       
+                            myTool.transition()        
+                                .duration(500)      
+                                .style("opacity", 0);
+                          });
+
 
     var linecircles = g.append("g")
                       .selectAll("circle")
@@ -134,18 +145,23 @@ d3.json("world.json", function(error, topology) {
                       .append("circle")
                       .attr("transform", "translate(140,210)")
                       .attr("cursor","pointer")
-                          .on("mouseover", tip.show                           
-                             /* d3.select(this).transition()
-                              .duration(500)
-                              .style("fill", "#8DC63F")
-                              .style("cursor", "pointer") */
-                            )
-
-                          .on("mouseout", tip.hide
-                          /*  d3.select(this).transition()
-                            .duration(500)
-                            .style("fill", function(d) { return d.color; }) */                         
-                          );
+                      .on("mouseover", function(d){
+                            myTool.transition()
+                              .duration(200)
+                              .style("opacity", 0.9)
+                            myTool.html(
+                              "<div id='thumbnail'><span>" + d.country + "</span><img src='" + d.image + "'/><span style='color:#8DC63F'>" + d.city + "</span></div>"
+                              )
+                            .style("left", (d3.event.x_axis) + "px")     
+                            .style("top", (d3.event.x_axis - 28) + "px");
+                          })
+                        
+                          .on("mouseout", function(d) {       
+                            myTool.transition()        
+                                .duration(500)      
+                                .style("opacity", 0);
+                          });
+                         
                       
 
     var linecircleAttributes = linecircles

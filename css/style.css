@@ -294,7 +294,7 @@ nav {
 .path {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
-  animation: dash 10s ease forwards;
+  animation: dash 10s ease forwards alternate;
   animation-play-state: paused;
   transition-delay: 2s;
   animation-direction: alternate;
