@@ -97,14 +97,9 @@ nav {
 	padding: 0px;
 	float: left;
 	display: none;
-	
-}
-
-.logo-small {
 	-webkit-animation: rotate linear 2s forwards alternate ;
 	animation: rotate linear 2s forwards alternate;
-
-	}
+}
 
 	@-webkit-keyframes rotate {
 		from {-webkit-transform: rotateY();}

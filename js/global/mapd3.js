@@ -66,38 +66,6 @@ d3.json("world.json", function(error, topology) {
                { "x_axis": 673, "y_axis": 550, "radius": 4, "color" : "#805CAC", "country":"Kenya","image":"../img/nairobi-thumbnail.jpg", "city":"Nairobi"}, //purple
                { "x_axis": 1140, "y_axis": 472, "radius": 4, "color" : "#fde601", "country":"Cambodia","image":"../img/phnom-penh-thumbnail.jpg", "city":"Phnom Penh"}]; //yellow
 
-/*  var imageThumb = function (country) {
-      var string = "";
-
-      if(country === "The Netherlands") {
-          for (var j=0; j<=1; j++) {
-              //console.log(mainCircles[i]);
-            string += "<div class='thumb' style='color:#8DC63F'><img src='" + mainCircles[0].image[j] + "'/>" + mainCircles[0].city[j] + "</div>";
-          }
-      } else {
-        for (var i=0; i<=mainCircles.length-1; i++) {
-            if(mainCircles[i].country === country)
-            {
-              string = "<div class='thumb' style='color:#8DC63F'><img src='" + mainCircles[i].image + "'/>" + mainCircles[i].city + "</div>";
-            }
-          }
-        }
-        return string;
-    };
-*/
-
-  //Pupup blocks with the names of the cities 
-  
-/*  var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .attr('data-0','display:block;')
-    .attr('data-300','display:none;')
-    .offset([-23, 0])
-    .html(function(d) {
-      return "<div id='thumbnail'><span>" + d.country + "</span><img src='" + d.image + "'/><span style='color:#8DC63F'>" + d.city + "</span></div>";
-    });
-*/
-
     var circles = g.selectAll("circle")
                   .data(mainCircles)
                   .enter()
@@ -111,6 +79,7 @@ d3.json("world.json", function(error, topology) {
                   .data(mainCircles)
                   .append("div")
                   .attr("class", "mytooltip")
+                  .style("opacity", "0")
                   .style("display", "none");
 
     var circleAttributes = circles
@@ -124,19 +93,23 @@ d3.json("world.json", function(error, topology) {
                           .on("mouseover", function(d){
                            
                             myTool
-                              .transition()                           
+                              .transition()
+                              .duration(500)
+                              .style("opacity", "1")                           
                               .style("display", "block")
 
                             myTool
                               .html(
                               "<div id='thumbnail'><span>" + d.country + "</span><img src='" + d.image + "'/><span style='color:#8DC63F'>" + d.city + "</span></div>"
                               )
-                              .style("left", (d3.event.pageX - 110) + "px")   
-                              .style("top", (d3.event.pageY - 220) + "px")    
+                              .style("left", (d3.event.pageX - 113) + "px")   
+                              .style("top", (d3.event.pageY - 220) + "px")      
                           })
                         
                           .on("mouseout", function(d) {       
-                            myTool.transition()           
+                            myTool.transition()
+                                .duration(500)
+                                .style("opacity", "0")            
                                 .style("display", "none")
                           });
 
@@ -152,7 +125,9 @@ d3.json("world.json", function(error, topology) {
                         .on("mouseover", function(d){
                            
                             myTool
-                              .transition()                           
+                              .transition()
+                              .duration(500)
+                              .style("opacity", "1")                           
                               .style("display", "block")
 
                             myTool
@@ -164,7 +139,9 @@ d3.json("world.json", function(error, topology) {
                           })
                         
                           .on("mouseout", function(d) {       
-                            myTool.transition()           
+                            myTool.transition()
+                                .duration(500)
+                                .style("opacity", "0")            
                                 .style("display", "none")
                           });
                          

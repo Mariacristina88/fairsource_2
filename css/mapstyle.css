@@ -68,10 +68,10 @@ body {
   height:auto;
   background-color: white;
   border-radius: 2px;
-  font: lighter 18px "Signika";
+  font: lighter 16px "Signika";
   color: #787777;
-  padding: 12px;
-  font-weight: normal;
+  padding: 6px 12px;
+  font-weight: 300;
   z-index:3;
 }
 
@@ -95,49 +95,8 @@ body {
     text-align: center;
     width: 200px;
     height: auto;
+    margin: 5px auto;
   }
-
-
-
-/*
-.d3-tip {
-  line-height: 1;
-  font-weight: bold;
-  padding: 12px;
-  background: rgba(255, 255, 255, 0.8);
-  font: lighter 18px "Signika";
-  color: #787777;
-  border-radius: 2px;
-  width: 200px;
-}
-
-.d3-tip.n span {
-    display: block;
-    text-align: center;
-    width: 200px;
-    height: auto;
-  }
-
-// Creates a small triangle extender for the tooltip 
-.d3-tip:after {
-  box-sizing: border-box;
-  display: inline;
-  font-size: 20px;
-  width: 100%;
-  line-height: 1;
-  color: rgba(255, 255, 255, 0.8);
-  content: "\25BC";
-  position: absolute;
-  text-align: center;
-}
-
-// Style northward tooltips differently 
-.d3-tip.n:after {
-  margin: -1px 0 0 0;
-  top: 100%;
-  left: 0;
-}
-*/
 
 .cloudanim {
   -webkit-animation: cloudanim linear 5s forwards  ;
@@ -162,7 +121,6 @@ body {
     width: 200px;
     height: auto;
     margin: 0 auto;
-    font: lighter 18px "Signika";
     color: #787777;
     text-align: center;
   }
