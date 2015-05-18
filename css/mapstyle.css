@@ -71,9 +71,33 @@ body {
   font: lighter 18px "Signika";
   color: #787777;
   padding: 12px;
-  font-weight: bold;
+  font-weight: normal;
   z-index:3;
 }
+
+.mytooltip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 20px;
+  width: 100%;
+  line-height: 1;
+  color: white;
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+  margin: -3px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
+.mytooltip span {
+    display: block;
+    text-align: center;
+    width: 200px;
+    height: auto;
+  }
+
+
 
 /*
 .d3-tip {

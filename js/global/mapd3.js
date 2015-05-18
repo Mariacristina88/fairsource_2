@@ -108,9 +108,10 @@ d3.json("world.json", function(error, topology) {
 
  //   svg.call(tip);
     var myTool = d3.select("body")
+                  .data(mainCircles)
                   .append("div")
                   .attr("class", "mytooltip")
-                  .style("opacity", 0);
+                  .style("display", "none");
 
     var circleAttributes = circles
                           .data(mainCircles)
@@ -121,20 +122,22 @@ d3.json("world.json", function(error, topology) {
                           .attr("transform", "translate(140,210)")
                           .attr("cursor","pointer")
                           .on("mouseover", function(d){
-                            myTool.transition()
-                              .duration(200)
-                              .style("opacity", 0.9)
-                            myTool.html(
+                           
+                            myTool
+                              .transition()                           
+                              .style("display", "block")
+
+                            myTool
+                              .html(
                               "<div id='thumbnail'><span>" + d.country + "</span><img src='" + d.image + "'/><span style='color:#8DC63F'>" + d.city + "</span></div>"
                               )
-                            .style("left", (d3.event.x_axis) + "px")     
-                            .style("top", (d3.event.x_axis - 28) + "px");
+                              .style("left", (d3.event.pageX - 110) + "px")   
+                              .style("top", (d3.event.pageY - 220) + "px")    
                           })
                         
                           .on("mouseout", function(d) {       
-                            myTool.transition()        
-                                .duration(500)      
-                                .style("opacity", 0);
+                            myTool.transition()           
+                                .style("display", "none")
                           });
 
 
@@ -145,21 +148,24 @@ d3.json("world.json", function(error, topology) {
                       .append("circle")
                       .attr("transform", "translate(140,210)")
                       .attr("cursor","pointer")
-                      .on("mouseover", function(d){
-                            myTool.transition()
-                              .duration(200)
-                              .style("opacity", 0.9)
-                            myTool.html(
+                      
+                        .on("mouseover", function(d){
+                           
+                            myTool
+                              .transition()                           
+                              .style("display", "block")
+
+                            myTool
+                              .html(
                               "<div id='thumbnail'><span>" + d.country + "</span><img src='" + d.image + "'/><span style='color:#8DC63F'>" + d.city + "</span></div>"
                               )
-                            .style("left", (d3.event.x_axis) + "px")     
-                            .style("top", (d3.event.x_axis - 28) + "px");
+                              .style("left", (d3.event.pageX - 110) + "px")   
+                              .style("top", (d3.event.pageY - 220) + "px")      
                           })
                         
                           .on("mouseout", function(d) {       
-                            myTool.transition()        
-                                .duration(500)      
-                                .style("opacity", 0);
+                            myTool.transition()           
+                                .style("display", "none")
                           });
                          
                       
