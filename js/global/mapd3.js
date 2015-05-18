@@ -1,5 +1,5 @@
-var width = 2000, //960 1366
-    height = 800; //500 764
+var width = 2000,
+    height = 800; 
 
 var projection = d3.geo.mercator()
     .center([-20, 59])
