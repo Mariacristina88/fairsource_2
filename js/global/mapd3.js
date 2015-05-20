@@ -397,4 +397,4 @@ function zoomClick() {
 }
 
 
-d3.selectAll('button').on('click', zoomClick);
+d3.selectAll('.buttonzoom').on('click', zoomClick);
