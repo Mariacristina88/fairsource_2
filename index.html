@@ -19,6 +19,7 @@
 </head>
 
 <body> <!-- -->
+
 <div id="loading">
 		<div id="loading-image">
 			<div id="loading-bar"></div>
@@ -75,6 +76,32 @@
 
 		</nav>
 
+		<header id="hamburger-icon">
+			<div class="hamburger-group">
+				<a href="#about" data-menu-top="0">
+					<div class="logo" 
+					data-200="height:68px; display:block;"
+					data-300="height:40px; display:none;">
+					</div>
+				</a>
+				<button class="cmn-toggle-switch cmn-toggle-switch__rot">
+				  <span>menu</span>
+				</button>
+			</div>
+		
+		    <div class="hamburger-menu">
+		        <ul>
+		        	<li><a href="#about" data-menu-top="350">ABOUT US</a></li>
+		        	<li><a href="#partners" data-menu-top="1410">PARTNERS</a></li>
+		        	<li><a href='#providers' data-menu-top="2410">PROVIDERS</a></li>
+		        	<li><a href='#supporters' data-menu-top="3300">SUPPORTERS</a></li>
+		        	<li><a style="cursor:pointer;">WHAT IS FTS</a></li>
+		        	<li><a href='#contacts' data-menu-top="4190">CONTACTS</a></li>
+		        </ul>
+			</div>
+		</header>
+		
+
 			<div class="arrow-container">
 			  	<a href="#about" 
 			  	data-menu-top="310" 
@@ -103,8 +130,8 @@
 					data-400="position:absolute; left:0px;" 
 					data-1310="left:-600px;">
 					  <div class="controls" data-0="display:block" data-200="display:none">
-					    <button id="zoom_in">+</button>
-					    <button id="zoom_out">-</button>
+					    <button class="buttonzoom" id="zoom_in">+</button>
+					    <button class="buttonzoom" id="zoom_out">-</button>
 					  </div>
 					  
   					</div>
@@ -177,6 +204,9 @@
 					</div>
 					
 					<div class="icons" data-2100="margin-top:20px; opacity:0;" data-2400="margin-top:0; opacity:1;">
+
+					<!--	<object class="margin_right" type="image/svg+xml" data="img/tv.svg"></object>
+					-->
 						
 						<svg class="margin_right" x="0px" y="0px"
 							 width="76.237px" height="76.237px" viewBox="0 0 76.237 76.237" enable-background="new 0 0 76.237 76.237" xml:space="preserve">
@@ -192,6 +222,7 @@
 							data-2100="-webkit-animation-play-state: paused; animation-play-state: paused;" 
 							data-2300="-webkit-animation-play-state: running; running; animation-play-state: running;"/>
 						</svg>
+					
 						
 
 						<svg class="margin_right" x="0px" y="0px"
@@ -333,7 +364,6 @@
 
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script src="http://d3js.org/topojson.v0.min.js"></script>
-<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
 <script src="js/global/parallax.js"></script>
 <script src="js/global/mapd3.js"></script>
 
@@ -373,6 +403,19 @@ $(window).load(function() {
      $(this).addClass("active");
  });
 
+	$(".hamburger-group button").click(function(){
+		
+		$(".hamburger-menu").animate({
+			width: 'toggle'},
+			1500 );
+		console.log("ok");
+
+	});
+
+	$(".hamburger-menu li").click(function(){
+		$(".hamburger-menu").css("display", "none");
+		console.log("li");
+	});
 
 
 </script>

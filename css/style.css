@@ -61,7 +61,8 @@ nav {
   max-height: 100%; }
 
 .logo {
-  background: url("../img/logo.png") no-repeat;
+  background: url("../img/logo-web.png") no-repeat;
+  background-size: cover;
   background-position: top center;
   width: 140px;
   height: 66px;
@@ -158,6 +159,7 @@ nav {
   margin: 0;
   position: absolute;
   min-height: 730px;
+  background-image: url("../img/euroflag.jpg");
   background-size: cover;
   z-index: 5; }
 
@@ -216,7 +218,7 @@ nav {
   height: 35px;
   bottom: 5%;
   position: fixed;
-  z-index: 7; }
+  z-index: 6; }
   .arrow-container polygon {
     fill: #FFF;
     cursor: pointer;
@@ -375,7 +377,7 @@ nav {
 .content {
   margin: 130px auto 0 auto;
   max-width: 900px;
-  height: 62%; }
+  height: 73%; }
 
 .page6 form {
   width: 57%;
@@ -384,22 +386,22 @@ nav {
   float: left; }
 .page6 label {
   display: block;
-  font-size: 17px;
+  font-size: 20px;
   font-family: "Signika";
   font-weight: lighter;
   float: left;
   width: 90px;
   height: 26px;
-  padding-top: 1px;
+  padding-top: 4px;
   color: white;
   margin: 0 15px 22px 0; }
 .page6 input {
   display: block;
-  font-size: 17px;
+  font-size: 20px;
   font-family: "Signika";
   font-weight: lighter;
   margin: 0 0 30px 0;
-  height: 21px;
+  height: 30px;
   width: 300px;
   background-color: transparent;
   border: solid 1px white;
@@ -408,20 +410,16 @@ nav {
   position: relative; }
 .page6 textarea {
   display: block;
-  font-size: 17px;
+  font-size: 20px;
   font-family: "Signika";
   font-weight: lighter;
   clear: both;
   width: 100%;
   max-width: 100%;
-  height: 76px;
+  height: 95px;
   border: solid 1px #fcdb3d;
   color: #485956;
   padding: 10px; }
-
-#somethingSumbit {
-  width: 100%;
-  max-width: 100%; }
 
 #submit {
   background-color: transparent;
@@ -433,8 +431,7 @@ nav {
   font-size: 18px;
   text-transform: uppercase;
   padding: 0;
-  margin: 20px -20px 0 0;
-  float: right; }
+  margin: 40px auto; }
 
 #submit:hover {
   background-color: #fcdb3d;
@@ -443,7 +440,7 @@ nav {
 #contacts-info {
   display: block;
   float: left;
-  height: 315px;
+  height: 373px;
   max-width: 50.5%;
   background-color: white;
   margin: 0 0 27px 27px;
@@ -451,20 +448,20 @@ nav {
   #contacts-info h3 {
     font-family: "Signika";
     font-weight: normal;
-    font-size: 21px;
+    font-size: 23px;
     color: #485956;
     margin: 0 0 30px 0;
     line-height: 18px; }
   #contacts-info span {
     font-family: "Play";
-    font-size: 12px;
+    font-size: 13px;
     color: #485956;
     margin-top: 0;
     margin-bottom: 20px;
     text-transform: uppercase; }
   #contacts-info a {
     color: #485956;
-    font-size: 14px;
+    font-size: 15px;
     text-align: left;
     font-family: "Play";
     font-weight: bold;
@@ -476,32 +473,30 @@ nav {
     color: #fcdb3d; }
   #contacts-info p {
     color: #485956;
-    font-size: 14px;
+    font-size: 15px;
     text-align: left;
     font-family: "Play";
     background-image: url("../img/angle-brackets.png");
     background-position: 0% 20%;
     background-repeat: no-repeat;
-    padding: 0 0 0 15px;
-    line-height: 21px; }
+    padding: 0 0 0 15px; }
   #contacts-info address {
     color: #485956;
-    font-size: 14px;
+    font-size: 15px;
     text-align: left;
     font-family: "Play";
     font-style: normal;
     background-image: url("../img/angle-brackets.png");
     background-position: 0% 5%;
     background-repeat: no-repeat;
-    padding: 0 0 0 15px;
-    line-height: 21px; }
+    padding: 0 0 0 15px; }
 
 form p {
   margin: 0;
   position: absolute;
   font-size: 12px;
   color: #fcdb3d;
-  margin: -30px 0 0 0;
+  margin: -23px 0 0 0;
   position: absolute;
   font-family: "Signika"; }
 
@@ -513,13 +508,13 @@ footer {
   height: 100%;
   background-color: #262f2d; }
   footer p {
-    font-size: 10pt;
+    font-size: 11pt;
     font-family: "Signika";
     font-weight: lighter;
     width: 45%;
     height: 30px;
     float: left;
-    margin: 20px 0px 0px 40px;
+    margin: 29px 0px 0px 40px;
     color: white;
     text-align: right; }
 
@@ -558,15 +553,125 @@ footer {
     background-position: center;
     z-index: 600; }
 
-#carousel {
-  position: absolute;
-  z-index: -5;
-  margin: auto;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%; }
+/*---------HAMBURGER MENU-----------*/
+#hamburger-icon {
+  display: none; }
 
+.hamburger-menu {
+  display: none;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 8; }
+  .hamburger-menu ul {
+    width: 80%;
+    height: 80%; }
+  .hamburger-menu li {
+    width: 900px;
+    min-width: 500px;
+    height: 80px;
+    text-align: center;
+    font-size: 90px;
+    margin: 100px 0 0 0;
+    list-style: none; }
+  .hamburger-menu a {
+    text-decoration: none; }
+
+.display {
+  display: block; }
+
+.hamburger-group {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: block; }
+
+.hamburger-group button {
+  height: 150px;
+  width: 150px;
+  margin: 53px 53px 0px 0;
+  float: right;
+  border: none;
+  border-radius: 5px;
+  background-color: red;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s; }
+
+.hamburger-group button:hover {
+  background-color: orange;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg); }
+
+.cmn-toggle-switch__rot {
+  background-color: #28aadc; }
+
+.cmn-toggle-switch__rot span {
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s; }
+
+/* active state, i.e. menu open */
+.cmn-toggle-switch__rot.active {
+  background-color: #166888; }
+
+.cmn-toggle-switch__rot.active span {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg); }
+
+@media only screen and (max-device-width: 788px) {
+  #hamburger-icon {
+    display: block;
+    z-index: 7;
+    position: fixed;
+    background-color: white;
+    height: 250px;
+    width: 100%;
+    box-shadow: -1px 7px 23px 2px rgba(0, 0, 0, 0.46); }
+
+  nav {
+    display: none; }
+
+  .logo {
+    display: block !important;
+    height: 78% !important;
+    width: 40%;
+    margin: 25px 0 25px 30px; }
+
+  .logo-small {
+    display: none !important; }
+
+  .about_text {
+    width: 85%;
+    height: auto;
+    margin: 65% auto 0 auto; }
+
+  .about_text p {
+    max-width: 80%;
+    font-size: 46px;
+    line-height: 64px; }
+
+  .text p {
+    text-align: center;
+    margin: 450px auto 0 auto;
+    padding: 0 0 20px 0;
+    max-width: 80%;
+    font-size: 46px;
+    line-height: 64px; }
+
+  .icons {
+    max-width: 678px; }
+
+  .icons img {
+    width: 200px; }
+
+  .line {
+    margin: 0 auto 50px auto; }
+
+  .page3 {
+    /*PROVIDERS*/
+    padding: 200px 0 0 0; } }
 .left {
   float: left;
   cursor: pointer;
@@ -579,25 +684,20 @@ footer {
 
 .frame {
   white-space: nowrap;
-  overflow: hidden;
-  width: 100%;
-  height: 100%; }
+  overflow: hidden; }
 
 #slider {
-  height: 100%;
-  width: 100%;
   left: 0px;
   position: relative;
   transition: 1s;
-  margin-top: -14%;
-  background-color: green; }
+  margin-top: -14%; }
 
 .slide {
-  min-height: 100%;
-  min-width: 100%;
+  width: 100%;
+  height: 100%;
   margin: 0 -0.36% 0 0;
   padding: 0;
-  float: left;
+  display: inline-block;
   transition: 1s; }
 
 .slide img {
@@ -606,30 +706,5 @@ footer {
   padding: 0;
   width: 100%;
   height: 100%; }
-
-#euroflagImg {
-  background-position: center;
-  background-size: cover;
-  background-image: url("../img/euroflag2.jpg"); }
-
-#manchesterImg {
-  background-position: center;
-  background-size: cover;
-  background-image: url("../img/manchester.jpg"); }
-
-#oxfordImg {
-  background-position: center;
-  background-size: cover;
-  background-image: url("../img/oxford.jpg"); }
-
-#denhaagImg {
-  background-position: center;
-  background-size: cover;
-  background-image: url("../img/denhaag.jpg"); }
-
-#milanImg {
-  background-position: center;
-  background-size: cover;
-  background-image: url("../img/milan_2.jpg"); }
 
 /*# sourceMappingURL=style.css.map */
