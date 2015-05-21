@@ -145,7 +145,6 @@ nav {
 /*SUPPORTERS*/
 .page4 { 
 	@include sectpage;
-	background-image: url("../img/euroflag.jpg");
 	background-size: cover;
 	z-index: 5;
 }
@@ -405,7 +404,7 @@ nav {
 .content {
 	margin: 130px auto 0 auto;
 	max-width: 900px;
-	height: 73%;
+	height: 62%;
 }
 
 .page6 {
@@ -422,7 +421,7 @@ nav {
 		float: left;
 		width: 90px;
 		height: 26px;
-		padding-top: 4px;
+		padding-top: 1px;
 		color: white;
 		margin: 0 15px 22px 0;
 	}
@@ -430,7 +429,7 @@ nav {
 	input {
 		@include label;
 		margin:0 0 30px 0;
-		height: 30px;
+		height: 21px;
 		width: 300px;
 		background-color: transparent;
 		border: solid 1px white;
@@ -444,11 +443,16 @@ nav {
 		clear: both;
 		width: 100%;
 		max-width: 100%;
-		height: 95px;
+		height: 76px;
 		border: solid 1px #fcdb3d;
 		color: $green;
 		padding: 10px;
 	}
+}
+
+#somethingSumbit {
+	width: 100%;
+	max-width: 100%;
 }
 
 #submit {
@@ -461,7 +465,8 @@ nav {
 	font-size: 18px;
 	text-transform: uppercase;
 	padding: 0;
-	margin: 40px auto;
+	margin: 20px -20px 0 0;
+	float: right;
 }			
 
 #submit:hover {
@@ -474,7 +479,7 @@ nav {
 
 	display: block;
 	float: left;
-	height: 373px;
+	height: 315px;
 	max-width: 50.5%;
 	background-color: white;
 	margin: 0 0 27px 27px;
@@ -483,7 +488,7 @@ nav {
 	h3 {
 		font-family: "Signika";
 		font-weight: normal;
-		font-size: 23px;
+		font-size: 21px;
 		color: $green;
 		margin: 0 0 30px 0;
 		line-height: 18px;
@@ -491,7 +496,7 @@ nav {
 
 	span {
 		font-family: "Play";
-		font-size: 13px;
+		font-size: 12px;
 		color: $green;
 		margin-top: 0;
 		margin-bottom: 20px;
@@ -500,7 +505,7 @@ nav {
 
 	a {
 		color: $green;
-		font-size: 15px;
+		font-size: 14px;
 		text-align: left;
 		font-family: "Play";
 		font-weight: bold;
@@ -516,18 +521,19 @@ nav {
 
 	p {
 		color: $green;
-		font-size: 15px;
+		font-size: 14px;
 		text-align: left;
 		font-family: "Play";
 		background-image: url("../img/angle-brackets.png");
 		background-position: 0% 20%;
 		background-repeat: no-repeat;
 		padding: 0 0 0 15px;
+		line-height: 21px;
 	}
 
 	address {
 		color: $green;
-		font-size: 15px;
+		font-size: 14px;
 		text-align: left;
 		font-family: "Play";
 		font-style: normal;
@@ -535,6 +541,7 @@ nav {
 		background-position: 0% 5%;
 		background-repeat: no-repeat;
 		padding: 0 0 0 15px;
+		line-height: 21px;
 	}
 
 }
@@ -545,7 +552,7 @@ form p {
 	position: absolute;
 	font-size: 12px;
 	color: $yellow;
-	margin: -23px 0 0 0;
+	margin: -30px 0 0 0;
 	position: absolute;
 	font-family: "Signika";
 }
@@ -561,13 +568,13 @@ footer {
 	background-color: darken($green, 15%);
 
 	p {
-		font-size: 11pt;
+		font-size: 10pt;
 	  font-family: "Signika";
 	  font-weight: lighter;
 	  width: 45%;
 	  height: 30px;
 	  float: left;
-	  margin: 29px 0px 0px 40px;
+	  margin: 20px 0px 0px 40px;
 	  color: white;
 	  text-align: right;
 	}
