@@ -79,7 +79,8 @@ nav {
 }
 
 .logo {
-	background: url("../img/logo.png") no-repeat;
+	background: url("../img/logo-web.png") no-repeat;
+	background-size: cover;
 	background-position: top center;
 	width: 140px;
 	height: 66px;
@@ -635,9 +636,17 @@ footer {
 	}
 
 	li {
-		width: 100%;
-		height: 40px;
-		text-align: center;
+	  width: 900px;
+	  min-width: 500px;
+	  height: 80px;
+	  text-align: center;
+	  font-size: 90px;
+	  margin: 100px 0 0 0;
+	  list-style: none;
+	}
+
+	a {
+		text-decoration: none;
 	}
 }
 
@@ -647,20 +656,21 @@ footer {
 
 
 .hamburger-group{
-  width: 250px;
-  height: 90px;
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
   display: block;
 
 }
 
 .hamburger-group button {
-	  margin: 10px 0 0 0;
-	  width: 66px;
-	  height: 66px;
-	  border: none;
-	  border-radius: 5px;
-	  background-color: red;
+	    height: 150px;
+  width: 150px;
+  margin: 53px 53px 0px 0;
+  float: right;
+  border: none;
+  border-radius: 5px;
+  background-color: red;
 	 -webkit-transition: -webkit-transform 0.3s;
           transition: transform 0.3s;
 }
@@ -693,13 +703,14 @@ footer {
 }
 
 
-@media screen and (max-width: 788px) {
+@media only screen and (max-device-width: 788px) {
+
     #hamburger-icon {
 		  display: block;
 		  z-index: 7;
 		  position: fixed;
 		  background-color: white;
-		  height: 90px;
+		  height: 250px;
 		  width: 100%;
 		  box-shadow: -1px 7px 23px 2px rgba(0, 0, 0, 0.46);
 	}
@@ -709,12 +720,56 @@ footer {
 	}
 
 	.logo {
-	display: block !important;
-	height: 66px !important;
+	    display: block !important;
+		  height: 78% !important;
+		  width: 40%;
+		  margin: 25px 0 25px 30px;
 	}
 
 	.logo-small {
 		display: none !important;
 	}
-}	
+
+	.about_text {
+		width: 85%;
+  		height: auto;
+  		margin: 65% auto 0 auto;
+	}
+
+	.about_text p {
+		max-width: 80%;
+		font-size: 46px;
+  		line-height: 64px;
+	}
+
+	.text p {
+	  text-align: center;
+	  margin: 450px auto 0 auto;
+	  padding: 0 0 20px 0;
+	  max-width: 80%;
+	  font-size: 46px;
+  	  line-height: 64px;
+	}
+
+	.icons {
+		  max-width: 678px;
+	}
+
+	.icons img {
+		  width: 200px;
+	}
+
+	.line {
+		  margin: 0 auto 50px auto;
+	}
+
+	.page3 { /*PROVIDERS*/
+		  padding: 200px 0 0 0;
+	}
+}
+
+
+
+
+
 
