@@ -132,6 +132,7 @@ var Carousel = function (frameSelector, sliderSelector, slidesSelector, btnLeftS
 	function makeActive(city) {
 		document.querySelector('#' + city).style.color = '#fcdb3d';
 		document.querySelector('#' + city).style.background = 'url("../img/' + city + '-hover.png") center top no-repeat';
+		document.querySelector('#' + city).style.backgroundSize = '100% auto';
 	}
 
 	function removeActive(city1, city2, city3) {
