@@ -287,7 +287,7 @@ nav {
 
 .icons {
   margin: 15px auto 0 auto;
-  max-width: 308px; }
+  max-width: 311px; }
 
 .path {
   stroke-dasharray: 1000;
@@ -383,6 +383,10 @@ nav {
   height: 62%;
   margin: 0 27px;
   float: left; }
+  @media only screen and (max-device-width: 788px) and (orientation: portrait) {
+    .page6 form {
+      min-width: 95.5%;
+      min-height: 252%; } }
 .page6 label {
   display: block;
   font-size: 17px;
@@ -391,9 +395,16 @@ nav {
   float: left;
   width: 90px;
   height: 26px;
-  padding-top: 1px;
+  padding-top: 5px;
   color: white;
   margin: 0 15px 22px 0; }
+  @media only screen and (max-device-width: 788px) and (orientation: portrait) {
+    .page6 label {
+      font-size: 47px; } }
+  @media only screen and (max-device-width: 788px) and (orientation: portrait) {
+    .page6 label {
+      height: 56px;
+      margin: 0 135px 22px 0; } }
 .page6 input {
   display: block;
   font-size: 17px;
@@ -407,6 +418,13 @@ nav {
   color: #fcdb3d;
   padding: 0 5px;
   position: relative; }
+  @media only screen and (max-device-width: 788px) and (orientation: portrait) {
+    .page6 input {
+      font-size: 47px; } }
+  @media only screen and (max-device-width: 788px) and (orientation: portrait) {
+    .page6 input {
+      min-height: 61px;
+      min-width: 600px; } }
 .page6 textarea {
   display: block;
   font-size: 17px;
@@ -419,10 +437,21 @@ nav {
   border: solid 1px #fcdb3d;
   color: #485956;
   padding: 10px; }
+  @media only screen and (max-device-width: 788px) and (orientation: portrait) {
+    .page6 textarea {
+      font-size: 47px; } }
+  @media only screen and (max-device-width: 788px) and (orientation: portrait) {
+    .page6 textarea {
+      min-height: 120px;
+      max-width: 95.5%; } }
 
 #somethingSumbit {
   width: 100%;
   max-width: 100%; }
+  @media only screen and (max-device-width: 788px) and (orientation: portrait) {
+    #somethingSumbit {
+      width: 95.5%;
+      max-width: 95.5%; } }
 
 #submit {
   background-color: transparent;
@@ -449,6 +478,10 @@ nav {
   background-color: white;
   margin: 0 0 27px 27px;
   padding: 22px; }
+  @media only screen and (max-device-width: 788px) and (orientation: portrait) {
+    #contacts-info {
+      height: 535px;
+      min-width: 88.5%; } }
   #contacts-info h3 {
     font-family: "Signika";
     font-weight: normal;
@@ -456,6 +489,10 @@ nav {
     color: #485956;
     margin: 0 0 30px 0;
     line-height: 18px; }
+    @media only screen and (max-device-width: 788px) and (orientation: portrait) {
+      #contacts-info h3 {
+        font-size: 51px;
+        line-height: 48px; } }
   #contacts-info span {
     font-family: "Play";
     font-size: 12px;
@@ -463,6 +500,9 @@ nav {
     margin-top: 0;
     margin-bottom: 20px;
     text-transform: uppercase; }
+    @media only screen and (max-device-width: 788px) and (orientation: portrait) {
+      #contacts-info span {
+        font-size: 32px; } }
   #contacts-info a {
     color: #485956;
     font-size: 14px;
@@ -473,6 +513,9 @@ nav {
     background-position: 0% 50%;
     background-repeat: no-repeat;
     padding: 0 0 0 15px; }
+    @media only screen and (max-device-width: 788px) and (orientation: portrait) {
+      #contacts-info a {
+        font-size: 34px; } }
   #contacts-info a:hover {
     color: #fcdb3d; }
   #contacts-info p {
@@ -485,6 +528,10 @@ nav {
     background-repeat: no-repeat;
     padding: 0 0 0 15px;
     line-height: 21px; }
+    @media only screen and (max-device-width: 788px) and (orientation: portrait) {
+      #contacts-info p {
+        font-size: 34px;
+        line-height: 41px; } }
   #contacts-info address {
     color: #485956;
     font-size: 14px;
@@ -496,6 +543,10 @@ nav {
     background-repeat: no-repeat;
     padding: 0 0 0 15px;
     line-height: 21px; }
+    @media only screen and (max-device-width: 788px) and (orientation: portrait) {
+      #contacts-info address {
+        font-size: 34px;
+        line-height: 41px; } }
 
 form p {
   margin: 0;
@@ -513,6 +564,9 @@ footer {
   width: 100%;
   height: 100%;
   background-color: #262f2d; }
+  @media only screen and (max-device-width: 788px) and (orientation: portrait) {
+    footer {
+      margin-top: 300px; } }
   footer p {
     font-size: 10pt;
     font-family: "Signika";
@@ -565,29 +619,24 @@ footer {
 
 .hamburger-menu {
   display: none;
-  background-color: rgba(22, 119, 133, 0.9);
+  background-color: white;
   width: 100%;
   height: 100%;
   position: fixed;
-  z-index: 8;
-  padding-top: 50px;
-  margin-top: -3px; }
+  z-index: 8; }
   .hamburger-menu ul {
     width: 80%;
-    height: 80%;
-    padding: 0;
-    margin: 0 auto; }
+    height: 80%; }
   .hamburger-menu li {
-    width: 100px;
+    width: 900px;
     min-width: 500px;
     height: 80px;
     text-align: center;
     font-size: 90px;
-    margin: 100px auto 0 auto;
+    margin: 100px 0 0 0;
     list-style: none; }
   .hamburger-menu a {
-    text-decoration: none;
-    color: white; }
+    text-decoration: none; }
 
 .display {
   display: block; }
@@ -605,12 +654,18 @@ footer {
   float: right;
   border: none;
   border-radius: 5px;
-  background-color: #2D8593;
+  background-color: red;
   -webkit-transition: -webkit-transform 0.3s;
   transition: transform 0.3s; }
 
+.hamburger-group button:hover {
+  background-color: orange;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg); }
+
 .cmn-toggle-switch__rot {
-  background-color: white; }
+  background-color: #28aadc; }
 
 .cmn-toggle-switch__rot span {
   -webkit-transition: -webkit-transform 0.3s;
@@ -618,18 +673,14 @@ footer {
 
 /* active state, i.e. menu open */
 .cmn-toggle-switch__rot.active {
-  background-color: #2e8795;
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg); }
+  background-color: #166888; }
 
 .cmn-toggle-switch__rot.active span {
-  background-color: red;
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg); }
 
-@media only screen and (max-device-width: 788px) {
+@media only screen and (max-device-width: 788px) and (orientation: portrait) {
   #hamburger-icon {
     display: block;
     z-index: 7;
@@ -670,23 +721,27 @@ footer {
     line-height: 64px; }
 
   .icons {
-    max-width: 678px; }
+    max-width: 695px; }
 
   .icons img {
     width: 200px; }
 
+  .icons svg {
+    height: 28% !important;
+    width: 28% !important; }
+
   .line {
     margin: 0 auto 50px auto; }
 
+  .margin_right {
+    margin-right: 34px; }
+
+  .margin_right:first-child {
+    margin-left: 17px; }
+
   .page3 {
     /*PROVIDERS*/
-    padding: 200px 0 0 0; }
-
-  .page1 {
-    background-size: auto 240%; } }
-@media only screen and (max-device-width: 1300px) {
-  .buttonzoom {
-    display: none; } }
+    padding: 200px 0 0 0; } }
 #carousel {
   position: absolute;
   z-index: -5;
@@ -707,26 +762,24 @@ footer {
   margin-top: 25px; }
 
 .frame {
-  white-space: nowrap;
-  overflow: hidden;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  white-space: nowrap;
+  overflow: hidden; }
 
 #slider {
-  height: 100%;
-  width: 100%;
   left: 0px;
   position: relative;
   transition: 1s;
-  margin-top: -14%;
-  background-color: green; }
+  height: 110%;
+  margin-top: -2%; }
 
 .slide {
-  min-height: 100%;
-  min-width: 100%;
-  margin: 0 -0.36% 0 0;
+  width: 100%;
+  height: 100%;
+  margin: 0 -5px 0 0;
   padding: 0;
-  float: left;
+  display: inline-block;
   transition: 1s; }
 
 .slide img {
@@ -737,26 +790,31 @@ footer {
   height: 100%; }
 
 #euroflagImg {
+  min-height: 100vh;
   background-position: center;
   background-size: cover;
   background-image: url("../img/euroflag2.jpg"); }
 
 #manchesterImg {
+  min-height: 100vh;
   background-position: center;
   background-size: cover;
   background-image: url("../img/manchester.jpg"); }
 
 #oxfordImg {
+  min-height: 100vh;
   background-position: center;
   background-size: cover;
   background-image: url("../img/oxford.jpg"); }
 
 #denhaagImg {
+  min-height: 100vh;
   background-position: center;
   background-size: cover;
   background-image: url("../img/denhaag.jpg"); }
 
 #milanImg {
+  min-height: 100vh;
   background-position: center;
   background-size: cover;
   background-image: url("../img/milan_2.jpg"); }

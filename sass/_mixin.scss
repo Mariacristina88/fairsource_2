@@ -13,6 +13,9 @@
 
 @mixin label {
 	display: block;
+	@media only screen and (max-device-width: 788px) and (orientation: portrait) {
+		font-size: 47px;
+	}
 	font-size: 17px;
 	font-family: "Signika";
 	font-weight: lighter;

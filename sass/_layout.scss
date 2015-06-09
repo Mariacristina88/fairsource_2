@@ -155,7 +155,6 @@ nav {
 	@include sectpage;
 	background-color: $green;
 	z-index: 6;
-
 }
 
 .box {
@@ -282,7 +281,7 @@ nav {
 
 .icons {
 	margin: 15px auto 0 auto;
-	max-width: 308px;
+	max-width: 311px;
 }
 
 .path {
@@ -411,6 +410,10 @@ nav {
 .page6 {
 
 	form {
+		@media only screen and (max-device-width: 788px) and (orientation: portrait) {
+			min-width: 95.5%;
+			min-height: 252%;
+		}
 		width: 57%;
 		height: 62%;
 		margin: 0 27px;
@@ -421,8 +424,12 @@ nav {
 		@include label;
 		float: left;
 		width: 90px;
+		@media only screen and (max-device-width: 788px) and (orientation: portrait) {
+			height: 56px;
+			margin: 0 135px 22px 0;
+		}
 		height: 26px;
-		padding-top: 1px;
+		padding-top: 5px;
 		color: white;
 		margin: 0 15px 22px 0;
 	}
@@ -430,6 +437,10 @@ nav {
 	input {
 		@include label;
 		margin:0 0 30px 0;
+		@media only screen and (max-device-width: 788px) and (orientation: portrait) {
+			min-height: 61px;
+			min-width: 600px;
+		}
 		height: 21px;
 		width: 300px;
 		background-color: transparent;
@@ -444,6 +455,10 @@ nav {
 		clear: both;
 		width: 100%;
 		max-width: 100%;
+		@media only screen and (max-device-width: 788px) and (orientation: portrait) {
+			min-height: 120px;
+			max-width: 95.5%;
+		}
 		height: 76px;
 		border: solid 1px #fcdb3d;
 		color: $green;
@@ -452,6 +467,10 @@ nav {
 }
 
 #somethingSumbit {
+	@media only screen and (max-device-width: 788px) and (orientation: portrait) {
+		width: 95.5%;
+		max-width: 95.5%;
+	}
 	width: 100%;
 	max-width: 100%;
 }
@@ -477,9 +496,12 @@ nav {
 }		
 
 #contacts-info {
-
 	display: block;
 	float: left;
+	@media only screen and (max-device-width: 788px) and (orientation: portrait){
+			height: 535px;
+			min-width: 88.5%;
+	}
 	height: 315px;
 	max-width: 50.5%;
 	background-color: white;
@@ -489,6 +511,10 @@ nav {
 	h3 {
 		font-family: "Signika";
 		font-weight: normal;
+		@media only screen and (max-device-width: 788px) and (orientation: portrait){
+			font-size: 51px;
+			line-height: 48px;
+		}
 		font-size: 21px;
 		color: $green;
 		margin: 0 0 30px 0;
@@ -497,6 +523,9 @@ nav {
 
 	span {
 		font-family: "Play";
+		@media only screen and (max-device-width: 788px) and (orientation: portrait){
+			font-size: 32px;
+		}
 		font-size: 12px;
 		color: $green;
 		margin-top: 0;
@@ -507,6 +536,9 @@ nav {
 	a {
 		color: $green;
 		font-size: 14px;
+		@media only screen and (max-device-width: 788px) and (orientation: portrait){
+			font-size: 34px;
+		}
 		text-align: left;
 		font-family: "Play";
 		font-weight: bold;
@@ -523,6 +555,10 @@ nav {
 	p {
 		color: $green;
 		font-size: 14px;
+		@media only screen and (max-device-width: 788px) and (orientation: portrait){
+			font-size: 34px;
+			line-height: 41px;
+		}
 		text-align: left;
 		font-family: "Play";
 		background-image: url("../img/angle-brackets.png");
@@ -534,6 +570,10 @@ nav {
 
 	address {
 		color: $green;
+		@media only screen and (max-device-width: 788px) and (orientation: portrait){
+			font-size: 34px;
+			line-height: 41px;
+		}
 		font-size: 14px;
 		text-align: left;
 		font-family: "Play";
@@ -543,8 +583,7 @@ nav {
 		background-repeat: no-repeat;
 		padding: 0 0 0 15px;
 		line-height: 21px;
-	}
-
+	}	
 }
 
 
@@ -562,8 +601,10 @@ form p {
 	margin-top: 0px;
 }
 
-
 footer {
+	@media only screen and (max-device-width: 788px) and (orientation: portrait){
+		margin-top: 300px;
+	}
 	width: 100%;
 	height: 100%;
 	background-color: darken($green, 15%);
@@ -714,7 +755,7 @@ footer {
 }
 
 
-@media only screen and (max-device-width: 788px) {
+@media only screen and (max-device-width: 788px) and (orientation: portrait){
 
     #hamburger-icon {
 		  display: block;
@@ -763,15 +804,28 @@ footer {
 	}
 
 	.icons {
-		  max-width: 678px;
+		  max-width: 695px;
 	}
 
 	.icons img {
 		  width: 200px;
 	}
 
+	.icons svg {
+		height: 28% !important;
+		width: 28% !important;
+	}
+
 	.line {
 		  margin: 0 auto 50px auto;
+	}
+	
+	.margin_right {
+		margin-right: 34px;
+	}
+
+	.margin_right:first-child {
+		margin-left: 17px;
 	}
 
 	.page3 { /*PROVIDERS*/
