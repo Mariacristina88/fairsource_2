@@ -368,34 +368,42 @@ nav {
 
 #milan {
 	background: url("../img/milan.png") center top no-repeat;
+	background-size: 100% auto;
 }
 
 #milan:hover {
 	background: url("../img/milan-hover.png") center top no-repeat;
+	background-size: 100% auto;
 }
 
 #oxford {
 	background: url("../img/oxford.png") center top no-repeat;
+	background-size: 100% auto;
 }
 
 #oxford:hover {
 	background: url("../img/oxford-hover.png") center top no-repeat;
+	background-size: 100% auto;
 }
 
 #manchester {
 	background: url("../img/manchester.png") center top no-repeat;
+	background-size: 100% auto;
 }
 
 #manchester:hover {
 	background: url("../img/manchester-hover.png") center top no-repeat;
+	background-size: 100% auto;
 }
 
 #denhaag {
 	background: url("../img/denhaag.png") center top no-repeat;
+	background-size: 100% auto;
 }
 
 #denhaag:hover {
 	background: url("../img/denhaag-hover.png") center top no-repeat;
+	background-size: 100% auto;
 }
 
 
@@ -732,23 +740,26 @@ footer {
 
 .cmn-toggle-switch__rot {
   background-color: white;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 .cmn-toggle-switch__rot span {
 	  font-size: 100px;
 	  color: white;
 	  display: block;
-	  margin: auto;
-  -webkit-transition: -webkit-transform 0.3s;
-          transition: transform 0.3s;
+	  margin: 4px auto auto auto;
+	  	-webkit-transition: -webkit-transform 0.3s;
+      transition: transform 0.3s;
 }
 
 /* active state, i.e. menu open */
 .cmn-toggle-switch__rot.active {
   background-color: lighten(#2D8593, 0.6);
-  -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-          transform: rotate(90deg);
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 /*
@@ -829,7 +840,7 @@ footer {
 		margin-right: 34px;
 	}
 
-	.margin_right:first-child {
+	.icons.margin_right:first-child {
 		margin-left: 17px;
 	}
 
@@ -837,7 +848,43 @@ footer {
 		  padding: 200px 0 0 0;
 	}
 	.page1 {
-	  background-size: auto 240%;
+	    background-size: auto 90%;
+  		margin-top: 13%;
+	}
+
+	.scrolldown {
+		width: 665px;
+  		margin: -100px auto 0 auto;
+	}
+
+	.scrolldown span {
+		font-size: 106px;
+		margin: 50px 10px 0 10px;
+	}
+
+	.scrolldown p {
+		font-size: 47px;
+	}
+
+	.arrow-container {
+		width: 100%;
+  		height: 100px;
+	}
+
+	.arrow-container svg {
+		width: 174px;
+  		height: 100px;
+  		margin: 0 auto;
+  		display: block;
+	}
+
+	.arrow-container polygon {
+		-webkit-transform: scale(3);
+	}
+
+	.arrow-down {
+		width: 100%;
+  		height: 100px;
 	}
 
 }
