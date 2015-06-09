@@ -735,6 +735,10 @@ footer {
 }
 
 .cmn-toggle-switch__rot span {
+	  font-size: 100px;
+	  color: white;
+	  display: block;
+	  margin: auto;
   -webkit-transition: -webkit-transform 0.3s;
           transition: transform 0.3s;
 }
@@ -747,12 +751,13 @@ footer {
           transform: rotate(90deg);
 }
 
+/*
 .cmn-toggle-switch__rot.active span {
-	 background-color: red;
+	 
   -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
           transform: rotate(90deg);
-}
+}*/
 
 
 @media only screen and (max-device-width: 788px) and (orientation: portrait){

@@ -619,24 +619,29 @@ footer {
 
 .hamburger-menu {
   display: none;
-  background-color: white;
+  background-color: rgba(22, 119, 133, 0.9);
   width: 100%;
   height: 100%;
   position: fixed;
-  z-index: 8; }
+  z-index: 8;
+  padding-top: 50px;
+  margin-top: -3px; }
   .hamburger-menu ul {
     width: 80%;
-    height: 80%; }
+    height: 80%;
+    padding: 0;
+    margin: 0 auto; }
   .hamburger-menu li {
-    width: 900px;
+    width: 100px;
     min-width: 500px;
     height: 80px;
     text-align: center;
     font-size: 90px;
-    margin: 100px 0 0 0;
+    margin: 100px auto 0 auto;
     list-style: none; }
   .hamburger-menu a {
-    text-decoration: none; }
+    text-decoration: none;
+    color: white; }
 
 .display {
   display: block; }
@@ -654,32 +659,35 @@ footer {
   float: right;
   border: none;
   border-radius: 5px;
-  background-color: red;
+  background-color: #2D8593;
   -webkit-transition: -webkit-transform 0.3s;
   transition: transform 0.3s; }
 
-.hamburger-group button:hover {
-  background-color: orange;
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg); }
-
 .cmn-toggle-switch__rot {
-  background-color: #28aadc; }
+  background-color: white; }
 
 .cmn-toggle-switch__rot span {
+  font-size: 100px;
+  color: white;
+  display: block;
+  margin: auto;
   -webkit-transition: -webkit-transform 0.3s;
   transition: transform 0.3s; }
 
 /* active state, i.e. menu open */
 .cmn-toggle-switch__rot.active {
-  background-color: #166888; }
-
-.cmn-toggle-switch__rot.active span {
+  background-color: #2e8795;
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg); }
 
+/*
+.cmn-toggle-switch__rot.active span {
+	 
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}*/
 @media only screen and (max-device-width: 788px) and (orientation: portrait) {
   #hamburger-icon {
     display: block;
@@ -741,7 +749,13 @@ footer {
 
   .page3 {
     /*PROVIDERS*/
-    padding: 200px 0 0 0; } }
+    padding: 200px 0 0 0; }
+
+  .page1 {
+    background-size: auto 240%; } }
+@media only screen and (max-device-width: 1300px) {
+  .buttonzoom {
+    display: none; } }
 #carousel {
   position: absolute;
   z-index: -5;
