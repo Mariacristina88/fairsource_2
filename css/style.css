@@ -735,7 +735,7 @@ footer {
     text-align: center;
     margin: 450px auto 0 auto;
     padding: 0 0 20px 0;
-    max-width: 72%;
+    max-width: 80%;
     font-size: 46px;
     line-height: 64px; }
 
@@ -806,7 +806,15 @@ footer {
 
   #three img {
     height: 60px;
-    margin-top: 83px; } }
+    margin-top: 83px; }
+
+  #three p {
+    max-width: 72%;
+    text-align: center;
+    margin: 450px auto 0 auto;
+    padding: 0 0 20px 0;
+    font-size: 46px;
+    line-height: 64px; } }
 @media only screen and (max-device-width: 1300px) {
   .buttonzoom {
     display: none; } }
