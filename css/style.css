@@ -159,7 +159,6 @@ nav {
   margin: 0;
   position: absolute;
   min-height: 730px;
-  background-image: url("../img/euroflag.jpg");
   background-size: cover;
   z-index: 5; }
 
@@ -288,7 +287,7 @@ nav {
 
 .icons {
   margin: 15px auto 0 auto;
-  max-width: 308px; }
+  max-width: 311px; }
 
 .path {
   stroke-dasharray: 1000;
@@ -377,49 +376,82 @@ nav {
 .content {
   margin: 130px auto 0 auto;
   max-width: 900px;
-  height: 73%; }
+  height: 62%; }
 
 .page6 form {
   width: 57%;
   height: 62%;
   margin: 0 27px;
   float: left; }
+  @media only screen and (max-device-width: 788px) and (orientation: portrait) {
+    .page6 form {
+      min-width: 95.5%;
+      min-height: 252%; } }
 .page6 label {
   display: block;
-  font-size: 20px;
+  font-size: 17px;
   font-family: "Signika";
   font-weight: lighter;
   float: left;
   width: 90px;
   height: 26px;
-  padding-top: 4px;
+  padding-top: 5px;
   color: white;
   margin: 0 15px 22px 0; }
+  @media only screen and (max-device-width: 788px) and (orientation: portrait) {
+    .page6 label {
+      font-size: 47px; } }
+  @media only screen and (max-device-width: 788px) and (orientation: portrait) {
+    .page6 label {
+      height: 56px;
+      margin: 0 135px 22px 0; } }
 .page6 input {
   display: block;
-  font-size: 20px;
+  font-size: 17px;
   font-family: "Signika";
   font-weight: lighter;
   margin: 0 0 30px 0;
-  height: 30px;
+  height: 21px;
   width: 300px;
   background-color: transparent;
   border: solid 1px white;
   color: #fcdb3d;
   padding: 0 5px;
   position: relative; }
+  @media only screen and (max-device-width: 788px) and (orientation: portrait) {
+    .page6 input {
+      font-size: 47px; } }
+  @media only screen and (max-device-width: 788px) and (orientation: portrait) {
+    .page6 input {
+      min-height: 61px;
+      min-width: 600px; } }
 .page6 textarea {
   display: block;
-  font-size: 20px;
+  font-size: 17px;
   font-family: "Signika";
   font-weight: lighter;
   clear: both;
   width: 100%;
   max-width: 100%;
-  height: 95px;
+  height: 76px;
   border: solid 1px #fcdb3d;
   color: #485956;
   padding: 10px; }
+  @media only screen and (max-device-width: 788px) and (orientation: portrait) {
+    .page6 textarea {
+      font-size: 47px; } }
+  @media only screen and (max-device-width: 788px) and (orientation: portrait) {
+    .page6 textarea {
+      min-height: 120px;
+      max-width: 95.5%; } }
+
+#somethingSumbit {
+  width: 100%;
+  max-width: 100%; }
+  @media only screen and (max-device-width: 788px) and (orientation: portrait) {
+    #somethingSumbit {
+      width: 95.5%;
+      max-width: 95.5%; } }
 
 #submit {
   background-color: transparent;
@@ -431,7 +463,8 @@ nav {
   font-size: 18px;
   text-transform: uppercase;
   padding: 0;
-  margin: 40px auto; }
+  margin: 20px -20px 0 0;
+  float: right; }
 
 #submit:hover {
   background-color: #fcdb3d;
@@ -440,28 +473,39 @@ nav {
 #contacts-info {
   display: block;
   float: left;
-  height: 373px;
+  height: 315px;
   max-width: 50.5%;
   background-color: white;
   margin: 0 0 27px 27px;
   padding: 22px; }
+  @media only screen and (max-device-width: 788px) and (orientation: portrait) {
+    #contacts-info {
+      height: 535px;
+      min-width: 88.5%; } }
   #contacts-info h3 {
     font-family: "Signika";
     font-weight: normal;
-    font-size: 23px;
+    font-size: 21px;
     color: #485956;
     margin: 0 0 30px 0;
     line-height: 18px; }
+    @media only screen and (max-device-width: 788px) and (orientation: portrait) {
+      #contacts-info h3 {
+        font-size: 51px;
+        line-height: 48px; } }
   #contacts-info span {
     font-family: "Play";
-    font-size: 13px;
+    font-size: 12px;
     color: #485956;
     margin-top: 0;
     margin-bottom: 20px;
     text-transform: uppercase; }
+    @media only screen and (max-device-width: 788px) and (orientation: portrait) {
+      #contacts-info span {
+        font-size: 32px; } }
   #contacts-info a {
     color: #485956;
-    font-size: 15px;
+    font-size: 14px;
     text-align: left;
     font-family: "Play";
     font-weight: bold;
@@ -469,34 +513,47 @@ nav {
     background-position: 0% 50%;
     background-repeat: no-repeat;
     padding: 0 0 0 15px; }
+    @media only screen and (max-device-width: 788px) and (orientation: portrait) {
+      #contacts-info a {
+        font-size: 34px; } }
   #contacts-info a:hover {
     color: #fcdb3d; }
   #contacts-info p {
     color: #485956;
-    font-size: 15px;
+    font-size: 14px;
     text-align: left;
     font-family: "Play";
     background-image: url("../img/angle-brackets.png");
     background-position: 0% 20%;
     background-repeat: no-repeat;
-    padding: 0 0 0 15px; }
+    padding: 0 0 0 15px;
+    line-height: 21px; }
+    @media only screen and (max-device-width: 788px) and (orientation: portrait) {
+      #contacts-info p {
+        font-size: 34px;
+        line-height: 41px; } }
   #contacts-info address {
     color: #485956;
-    font-size: 15px;
+    font-size: 14px;
     text-align: left;
     font-family: "Play";
     font-style: normal;
     background-image: url("../img/angle-brackets.png");
     background-position: 0% 5%;
     background-repeat: no-repeat;
-    padding: 0 0 0 15px; }
+    padding: 0 0 0 15px;
+    line-height: 21px; }
+    @media only screen and (max-device-width: 788px) and (orientation: portrait) {
+      #contacts-info address {
+        font-size: 34px;
+        line-height: 41px; } }
 
 form p {
   margin: 0;
   position: absolute;
   font-size: 12px;
   color: #fcdb3d;
-  margin: -23px 0 0 0;
+  margin: -30px 0 0 0;
   position: absolute;
   font-family: "Signika"; }
 
@@ -507,14 +564,17 @@ footer {
   width: 100%;
   height: 100%;
   background-color: #262f2d; }
+  @media only screen and (max-device-width: 788px) and (orientation: portrait) {
+    footer {
+      margin-top: 300px; } }
   footer p {
-    font-size: 11pt;
+    font-size: 10pt;
     font-family: "Signika";
     font-weight: lighter;
     width: 45%;
     height: 30px;
     float: left;
-    margin: 29px 0px 0px 40px;
+    margin: 20px 0px 0px 40px;
     color: white;
     text-align: right; }
 
@@ -620,7 +680,7 @@ footer {
   -ms-transform: rotate(90deg);
   transform: rotate(90deg); }
 
-@media only screen and (max-device-width: 788px) {
+@media only screen and (max-device-width: 788px) and (orientation: portrait) {
   #hamburger-icon {
     display: block;
     z-index: 7;
@@ -661,17 +721,36 @@ footer {
     line-height: 64px; }
 
   .icons {
-    max-width: 678px; }
+    max-width: 695px; }
 
   .icons img {
     width: 200px; }
 
+  .icons svg {
+    height: 28% !important;
+    width: 28% !important; }
+
   .line {
     margin: 0 auto 50px auto; }
+
+  .margin_right {
+    margin-right: 34px; }
+
+  .margin_right:first-child {
+    margin-left: 17px; }
 
   .page3 {
     /*PROVIDERS*/
     padding: 200px 0 0 0; } }
+#carousel {
+  position: absolute;
+  z-index: -5;
+  margin: auto;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%; }
+
 .left {
   float: left;
   cursor: pointer;
@@ -683,6 +762,8 @@ footer {
   margin-top: 25px; }
 
 .frame {
+  width: 100%;
+  height: 100%;
   white-space: nowrap;
   overflow: hidden; }
 
@@ -690,12 +771,13 @@ footer {
   left: 0px;
   position: relative;
   transition: 1s;
-  margin-top: -14%; }
+  height: 110%;
+  margin-top: -2%; }
 
 .slide {
   width: 100%;
   height: 100%;
-  margin: 0 -0.36% 0 0;
+  margin: 0 -5px 0 0;
   padding: 0;
   display: inline-block;
   transition: 1s; }
@@ -706,5 +788,35 @@ footer {
   padding: 0;
   width: 100%;
   height: 100%; }
+
+#euroflagImg {
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../img/euroflag2.jpg"); }
+
+#manchesterImg {
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../img/manchester.jpg"); }
+
+#oxfordImg {
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../img/oxford.jpg"); }
+
+#denhaagImg {
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../img/denhaag.jpg"); }
+
+#milanImg {
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../img/milan_2.jpg"); }
 
 /*# sourceMappingURL=style.css.map */
