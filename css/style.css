@@ -159,7 +159,6 @@ nav {
   margin: 0;
   position: absolute;
   min-height: 730px;
-  background-image: url("../img/euroflag.jpg");
   background-size: cover;
   z-index: 5; }
 
@@ -377,7 +376,7 @@ nav {
 .content {
   margin: 130px auto 0 auto;
   max-width: 900px;
-  height: 73%; }
+  height: 62%; }
 
 .page6 form {
   width: 57%;
@@ -386,22 +385,22 @@ nav {
   float: left; }
 .page6 label {
   display: block;
-  font-size: 20px;
+  font-size: 17px;
   font-family: "Signika";
   font-weight: lighter;
   float: left;
   width: 90px;
   height: 26px;
-  padding-top: 4px;
+  padding-top: 1px;
   color: white;
   margin: 0 15px 22px 0; }
 .page6 input {
   display: block;
-  font-size: 20px;
+  font-size: 17px;
   font-family: "Signika";
   font-weight: lighter;
   margin: 0 0 30px 0;
-  height: 30px;
+  height: 21px;
   width: 300px;
   background-color: transparent;
   border: solid 1px white;
@@ -410,16 +409,20 @@ nav {
   position: relative; }
 .page6 textarea {
   display: block;
-  font-size: 20px;
+  font-size: 17px;
   font-family: "Signika";
   font-weight: lighter;
   clear: both;
   width: 100%;
   max-width: 100%;
-  height: 95px;
+  height: 76px;
   border: solid 1px #fcdb3d;
   color: #485956;
   padding: 10px; }
+
+#somethingSumbit {
+  width: 100%;
+  max-width: 100%; }
 
 #submit {
   background-color: transparent;
@@ -431,7 +434,8 @@ nav {
   font-size: 18px;
   text-transform: uppercase;
   padding: 0;
-  margin: 40px auto; }
+  margin: 20px -20px 0 0;
+  float: right; }
 
 #submit:hover {
   background-color: #fcdb3d;
@@ -440,7 +444,7 @@ nav {
 #contacts-info {
   display: block;
   float: left;
-  height: 373px;
+  height: 315px;
   max-width: 50.5%;
   background-color: white;
   margin: 0 0 27px 27px;
@@ -448,20 +452,20 @@ nav {
   #contacts-info h3 {
     font-family: "Signika";
     font-weight: normal;
-    font-size: 23px;
+    font-size: 21px;
     color: #485956;
     margin: 0 0 30px 0;
     line-height: 18px; }
   #contacts-info span {
     font-family: "Play";
-    font-size: 13px;
+    font-size: 12px;
     color: #485956;
     margin-top: 0;
     margin-bottom: 20px;
     text-transform: uppercase; }
   #contacts-info a {
     color: #485956;
-    font-size: 15px;
+    font-size: 14px;
     text-align: left;
     font-family: "Play";
     font-weight: bold;
@@ -473,30 +477,32 @@ nav {
     color: #fcdb3d; }
   #contacts-info p {
     color: #485956;
-    font-size: 15px;
+    font-size: 14px;
     text-align: left;
     font-family: "Play";
     background-image: url("../img/angle-brackets.png");
     background-position: 0% 20%;
     background-repeat: no-repeat;
-    padding: 0 0 0 15px; }
+    padding: 0 0 0 15px;
+    line-height: 21px; }
   #contacts-info address {
     color: #485956;
-    font-size: 15px;
+    font-size: 14px;
     text-align: left;
     font-family: "Play";
     font-style: normal;
     background-image: url("../img/angle-brackets.png");
     background-position: 0% 5%;
     background-repeat: no-repeat;
-    padding: 0 0 0 15px; }
+    padding: 0 0 0 15px;
+    line-height: 21px; }
 
 form p {
   margin: 0;
   position: absolute;
   font-size: 12px;
   color: #fcdb3d;
-  margin: -23px 0 0 0;
+  margin: -30px 0 0 0;
   position: absolute;
   font-family: "Signika"; }
 
@@ -508,13 +514,13 @@ footer {
   height: 100%;
   background-color: #262f2d; }
   footer p {
-    font-size: 11pt;
+    font-size: 10pt;
     font-family: "Signika";
     font-weight: lighter;
     width: 45%;
     height: 30px;
     float: left;
-    margin: 29px 0px 0px 40px;
+    margin: 20px 0px 0px 40px;
     color: white;
     text-align: right; }
 
@@ -559,24 +565,29 @@ footer {
 
 .hamburger-menu {
   display: none;
-  background-color: white;
+  background-color: rgba(22, 119, 133, 0.9);
   width: 100%;
   height: 100%;
   position: fixed;
-  z-index: 8; }
+  z-index: 8;
+  padding-top: 50px;
+  margin-top: -3px; }
   .hamburger-menu ul {
     width: 80%;
-    height: 80%; }
+    height: 80%;
+    padding: 0;
+    margin: 0 auto; }
   .hamburger-menu li {
-    width: 900px;
+    width: 100px;
     min-width: 500px;
     height: 80px;
     text-align: center;
     font-size: 90px;
-    margin: 100px 0 0 0;
+    margin: 100px auto 0 auto;
     list-style: none; }
   .hamburger-menu a {
-    text-decoration: none; }
+    text-decoration: none;
+    color: white; }
 
 .display {
   display: block; }
@@ -594,18 +605,12 @@ footer {
   float: right;
   border: none;
   border-radius: 5px;
-  background-color: red;
+  background-color: #2D8593;
   -webkit-transition: -webkit-transform 0.3s;
   transition: transform 0.3s; }
 
-.hamburger-group button:hover {
-  background-color: orange;
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg); }
-
 .cmn-toggle-switch__rot {
-  background-color: #28aadc; }
+  background-color: white; }
 
 .cmn-toggle-switch__rot span {
   -webkit-transition: -webkit-transform 0.3s;
@@ -613,9 +618,13 @@ footer {
 
 /* active state, i.e. menu open */
 .cmn-toggle-switch__rot.active {
-  background-color: #166888; }
+  background-color: #2e8795;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg); }
 
 .cmn-toggle-switch__rot.active span {
+  background-color: red;
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg); }
@@ -671,7 +680,22 @@ footer {
 
   .page3 {
     /*PROVIDERS*/
-    padding: 200px 0 0 0; } }
+    padding: 200px 0 0 0; }
+
+  .page1 {
+    background-size: auto 240%; } }
+@media only screen and (max-device-width: 1300px) {
+  .buttonzoom {
+    display: none; } }
+#carousel {
+  position: absolute;
+  z-index: -5;
+  margin: auto;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%; }
+
 .left {
   float: left;
   cursor: pointer;
@@ -684,20 +708,25 @@ footer {
 
 .frame {
   white-space: nowrap;
-  overflow: hidden; }
+  overflow: hidden;
+  width: 100%;
+  height: 100%; }
 
 #slider {
+  height: 100%;
+  width: 100%;
   left: 0px;
   position: relative;
   transition: 1s;
-  margin-top: -14%; }
+  margin-top: -14%;
+  background-color: green; }
 
 .slide {
-  width: 100%;
-  height: 100%;
+  min-height: 100%;
+  min-width: 100%;
   margin: 0 -0.36% 0 0;
   padding: 0;
-  display: inline-block;
+  float: left;
   transition: 1s; }
 
 .slide img {
@@ -706,5 +735,30 @@ footer {
   padding: 0;
   width: 100%;
   height: 100%; }
+
+#euroflagImg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../img/euroflag2.jpg"); }
+
+#manchesterImg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../img/manchester.jpg"); }
+
+#oxfordImg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../img/oxford.jpg"); }
+
+#denhaagImg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../img/denhaag.jpg"); }
+
+#milanImg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../img/milan_2.jpg"); }
 
 /*# sourceMappingURL=style.css.map */

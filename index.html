@@ -409,11 +409,13 @@ $(window).load(function() {
 			width: 'toggle'},
 			1500 );
 		console.log("ok");
+		$(".hamburger-group button").toggleClass("active");
 
 	});
 
 	$(".hamburger-menu li").click(function(){
 		$(".hamburger-menu").css("display", "none");
+		$(".hamburger-group button").removeClass("active");
 		console.log("li");
 	});
 
