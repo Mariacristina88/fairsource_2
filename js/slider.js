@@ -46,27 +46,27 @@ var Carousel = function (frameSelector, sliderSelector, slidesSelector, btnLeftS
 		    {    
 		        if (value === 1)
 		        {
-		        	removeActive('#oxford', '#denhaag', '#milan');
+		        	removeActive('#oxford', '#oxford span', '#denhaag', '#denhaag span', '#milan', '#milan span');
 					makeActive('manchester');
 		        }   
 		        else if (value === 2)
 		        {
-					removeActive('#manchester', '#denhaag', '#milan');
+					removeActive('#manchester div', '#manchester span', '#denhaag div', '#denhaag span', '#milan div', '#milan span');
 					makeActive('oxford');
 		        }
 		        else if (value === 3)
 		        {
-					removeActive('#manchester', '#oxford', '#milan');
+					removeActive('#manchester div', '#manchester span', '#oxford div', '#oxford span', '#milan div', '#milan span');
 					makeActive('denhaag');
 		        }
 		        else if (value === 4)
 		        {
-					removeActive('#manchester', '#oxford', '#denhaag');
+					removeActive('#manchester div', '#manchester span', '#oxford div', '#oxford span', '#denhaag div', '#denhaag span');
 					makeActive('milan');
 		        }
 		        else
 		        {
-					removeActive('#manchester', '#oxford', '#milan');
+					removeActive('#manchester div', '#manchester span', '#oxford div', '#oxford span', '#milan div', '#milan span');
 		        }
 		    };
 	    
@@ -106,39 +106,41 @@ var Carousel = function (frameSelector, sliderSelector, slidesSelector, btnLeftS
 	var carousel = new Carousel('#frame', '#slider', '#slider .slide', '.left', '.right');
 
 	document.querySelector('#manchester').addEventListener("click", function(){ 
-		removeActive('#oxford', '#denhaag', '#milan');
+		removeActive('#oxford div', '#oxford span', '#denhaag div', '#denhaag span', '#milan div', '#milan span');
 		makeActive('manchester');
 		carousel.moveToSlide(-1); 
 	});
 
 	document.querySelector('#oxford').addEventListener("click", function(){ 
-		removeActive('#manchester', '#denhaag', '#milan');
+		removeActive('#manchester div', '#manchester span', '#denhaag div', '#denhaag span', '#milan div', '#milan span');
 		makeActive('oxford');
 		carousel.moveToSlide(-2); 
 	});
 
 	document.querySelector('#denhaag').addEventListener("click", function(){ 
-		removeActive('#manchester', '#oxford', '#milan');
+		removeActive('#manchester div', '#manchester span', '#oxford div', '#oxford span', '#milan div', '#milan span');
 		makeActive('denhaag');
 		carousel.moveToSlide(-3); 
 	});
 
 	document.querySelector('#milan').addEventListener("click", function(){ 
-		removeActive('#manchester', '#oxford', '#denhaag');
+		removeActive('#manchester div', '#manchester span', '#oxford div', '#oxford span', '#denhaag div', '#denhaag span');
 		makeActive('milan');
 		carousel.moveToSlide(-4); 
 	});
 
 	function makeActive(city) {
-		document.querySelector('#' + city).style.color = '#fcdb3d';
-		document.querySelector('#' + city).style.background = 'url("../img/' + city + '-hover.png") center top no-repeat';
-		document.querySelector('#' + city).style.backgroundSize = '100% auto';
+		document.querySelector('#' + city + ' ' +'span').style.color = '#fcdb3d';
+		document.querySelector('#' + city + ' ' + 'div').style.backgroundPosition = 'center top';
 	}
 
-	function removeActive(city1, city2, city3) {
+	function removeActive(city1, city2, city3, city4, city5, city6) {
 		document.querySelector(city1).removeAttribute('style');
 	    document.querySelector(city2).removeAttribute('style');
 		document.querySelector(city3).removeAttribute('style');
+		document.querySelector(city4).removeAttribute('style');
+	    document.querySelector(city5).removeAttribute('style');
+		document.querySelector(city6).removeAttribute('style');
 	}
 
 
