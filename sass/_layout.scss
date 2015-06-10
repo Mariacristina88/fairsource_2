@@ -329,81 +329,71 @@ nav {
 
 /*----------------- SKYLINE BUTTONS ------------------*/
 
-
-
-.skylines {
-	margin: 15px auto 0 auto;
-	max-width: 374px;
-	cursor:pointer;
-
-	div {
-
+.group {
 		width: 170px;
-		height: 102px;
 		display: block;
 		float: left;
-		background-position: 0px 0px;
-		background-repeat: no-repeat;
-		text-transform: uppercase;
-		height: 31%;
-		font-size: 13px;
-		font-family: "Play";
-		font-weight: 700;
+		height: 80px;
 		color: white;
-		text-align: center;
-		margin: 0;
-  		padding: 58px 0 0 0;
-  		
-  		&:hover {
+
+		div {
+
+			width: 100%;
+			height: 51px;
+			display: block;
+			background-position: center 96%;
+			background-repeat: no-repeat;
+			margin: 0 0 0 0;
+			background-size: 100% auto;
+	  		
+		}
+
+		span {
+			width: 170px;
+			display: block;
+			color: white;
+			font-size: 13px;
+			font-family: "Play";
 			font-weight: 700;
-			color: $yellow;
+			text-transform: uppercase;
+			text-align: center;
+
 		}
 	}
 
-	.margin_right {
-		margin-right: 34px;
-	}
-
+.group:hover div {
+	background-position: center top;
 }
 
-#milan {
-	background: url("../img/milan.png") center top no-repeat;
-	background-size: 100% auto;
+.group:hover span {
+	font-weight: 700;
+	color: $yellow;
 }
 
-#milan:hover {
-	background: url("../img/milan-hover.png") center top no-repeat;
-	background-size: 100% auto;
+.skylines {
+	margin: 15px auto 0 auto;
+	width: 374px;
+	cursor:pointer;
 }
 
-#oxford {
-	background: url("../img/oxford.png") center top no-repeat;
-	background-size: 100% auto;
+.margin_right {
+	margin-right: 34px;
 }
 
-#oxford:hover {
-	background: url("../img/oxford-hover.png") center top no-repeat;
-	background-size: 100% auto;
+#milan div {
+	background-image: url("../img/milan.png");
 }
 
-#manchester {
-	background: url("../img/manchester.png") center top no-repeat;
-	background-size: 100% auto;
+#oxford div {
+	background-image: url("../img/oxford.png");
 }
 
-#manchester:hover {
-	background: url("../img/manchester-hover.png") center top no-repeat;
-	background-size: 100% auto;
+#manchester div {
+	background-image: url("../img/manchester.png");
 }
 
-#denhaag {
-	background: url("../img/denhaag.png") center top no-repeat;
-	background-size: 100% auto;
-}
-
-#denhaag:hover {
-	background: url("../img/denhaag-hover.png") center top no-repeat;
-	background-size: 100% auto;
+#denhaag div {
+	background-image: url("../img/denhaag.png");
 }
 
 
@@ -885,6 +875,48 @@ footer {
 	.arrow-down {
 		width: 100%;
   		height: 100px;
+	}
+
+	.skylines {
+		  width: 90%;
+		  height: 350%;
+		}
+
+	.group {
+		  width: 48%;
+		  height: 140px;
+		  margin-bottom: 50px;
+	}
+
+	.group div {
+		  margin: 0 0 0 0;
+		  height: 128px;
+		  margin-bottom: 15px;
+	}
+
+	.group span {
+		width: 100%;
+		font-size: 32px;
+		margin: 0 0 0 0;
+	}
+
+	#three img {
+    	height: 60px;
+    	margin-top: 83px;
+	}
+
+	#three p {
+    	max-width: 72%;
+    	text-align: center;
+	  margin: 450px auto 0 auto;
+	  padding: 0 0 20px 0;
+	  font-size: 46px;
+  	  line-height: 64px;
+	}
+
+	.line {
+		-webkit-transform: scale(2);
+		 padding: 15px 0 10px 0;
 	}
 
 }
