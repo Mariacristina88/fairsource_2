@@ -965,7 +965,7 @@ form {
 		@media only screen and (max-device-width: 788px) and (orientation: portrait) {
 			min-height: 281px;
 			min-width: 400px;
-			font-size: 20px !important;
+			font-size: 3em !important;
 		}
 		font-size: 20px;
 		height: 21px;
@@ -992,4 +992,7 @@ form {
 		padding: 10px;
 	}
 
-
+	.popup {
+		position: absolute;
+		width: 100%;
+	}
