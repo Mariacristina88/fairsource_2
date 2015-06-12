@@ -157,6 +157,10 @@ nav {
 	z-index: 6;
 }
 
+.ui-dialog-titlebar {
+	display: none;
+}
+
 .box {
 	@include sectpage;
 	background-color: rgba(0,0,0,0);
@@ -927,6 +931,65 @@ footer {
 	}
 }
 
+// .ui-widget {
+//     font-size:30px !important;
+// }
 
+form {
+		@media only screen and (max-device-width: 788px) and (orientation: portrait) {
+			min-width: 98.5%;
+		}
+		width: 57%;
+		height: 62%;
+		margin: 0 27px;
+		float:left;
+		font-size: 20px !important;
+	}
+
+	label {
+		float: left;
+		width: 90px;
+		@media only screen and (max-device-width: 788px) and (orientation: portrait) {
+			height: 56px;
+			margin: 0 135px 22px 0;
+		}
+		height: 26px;
+		padding-top: 5px;
+		color: black;
+		margin: 0 15px 22px 0;
+		clear: both;
+	}
+
+	input {
+		margin:0 0 30px 0;
+		@media only screen and (max-device-width: 788px) and (orientation: portrait) {
+			min-height: 281px;
+			min-width: 400px;
+			font-size: 20px !important;
+		}
+		font-size: 20px;
+		height: 21px;
+		width: 300px;
+		background-color: transparent;
+		border: solid 1px black;
+		color: $yellow;
+		padding:0 5px;
+		float: left;
+	}
+
+	textarea {
+		@include label;
+		clear: both;
+		width: 100%;
+		max-width: 100%;
+		@media only screen and (max-device-width: 788px) and (orientation: portrait) {
+			min-height: 120px;
+			max-width: 95.5%;
+		}
+		height: 76px;
+		border: solid 1px #fcdb3d;
+		color: $green;
+		padding: 10px;
+	}
 
 
