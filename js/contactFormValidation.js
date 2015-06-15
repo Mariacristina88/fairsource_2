@@ -57,8 +57,10 @@ var showError = function(field, value, validator, errorElement) {
 * When submit button is clicked the form is validated.
 */
 document.getElementById('submit').addEventListener('click', function() {
+    console.log("a");
     fields = ['name', 'email', 'telephone', 'subject', 'message'];
     fields.forEach(validateField);
+
 
 /**
 * Form elements
@@ -81,3 +83,5 @@ for (var i = 0; i < formElems.length; i++) {
     formElems[i].addEventListener('keyup', onKeyUpValidate.bind(formElems[i]), false);
 }
 });
+
+

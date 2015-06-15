@@ -177,6 +177,9 @@ nav {
   background-color: #485956;
   z-index: 6; }
 
+.ui-dialog-titlebar {
+  display: none; }
+
 .box {
   height: 100%;
   width: 100%;
@@ -376,18 +379,24 @@ nav {
 /*---------CONTACTS SECTION-----------*/
 .content {
   margin: 130px auto 0 auto;
-  max-width: 900px;
+  width: 900px;
   height: 62%; }
+  @media only screen and (max-device-width: 788px) and (orientation: portrait) {
+    .content {
+      margin: 278px auto 0 auto; } }
 
 .page6 form {
   width: 57%;
+  min-width: 522px;
   height: 62%;
   margin: 0 27px;
   float: left; }
   @media only screen and (max-device-width: 788px) and (orientation: portrait) {
     .page6 form {
-      min-width: 95.5%;
-      min-height: 252%; } }
+      min-width: 89%;
+      height: auto;
+      padding: 30px;
+      margin-top: -257px; } }
 .page6 label {
   display: block;
   font-size: 17px;
@@ -405,7 +414,7 @@ nav {
   @media only screen and (max-device-width: 788px) and (orientation: portrait) {
     .page6 label {
       height: 56px;
-      margin: 0 135px 22px 0; } }
+      margin: 18px 135px 22px 0; } }
 .page6 input {
   display: block;
   font-size: 17px;
@@ -424,8 +433,9 @@ nav {
       font-size: 47px; } }
   @media only screen and (max-device-width: 788px) and (orientation: portrait) {
     .page6 input {
-      min-height: 61px;
-      min-width: 600px; } }
+      height: 61px;
+      min-width: 614px;
+      margin: 46px 0 86px 0; } }
 .page6 textarea {
   display: block;
   font-size: 17px;
@@ -437,14 +447,17 @@ nav {
   height: 76px;
   border: solid 1px #fcdb3d;
   color: #485956;
-  padding: 10px; }
+  padding: 10px;
+  overflow-y: scroll; }
   @media only screen and (max-device-width: 788px) and (orientation: portrait) {
     .page6 textarea {
       font-size: 47px; } }
   @media only screen and (max-device-width: 788px) and (orientation: portrait) {
     .page6 textarea {
-      min-height: 120px;
-      max-width: 95.5%; } }
+      min-height: 100px;
+      max-width: 95.5%;
+      margin-bottom: 13px;
+      line-height: 60px; } }
 
 #somethingSumbit {
   width: 100%;
@@ -466,6 +479,15 @@ nav {
   padding: 0;
   margin: 20px -20px 0 0;
   float: right; }
+  @media only screen and (max-device-width: 788px) and (orientation: portrait) {
+    #submit {
+      width: 102%;
+      height: 115px;
+      font-size: 50px;
+      margin-top: 75px;
+      background-color: #fcdb3d;
+      color: white;
+      border: none; } }
 
 #submit:hover {
   background-color: #fcdb3d;
@@ -557,12 +579,17 @@ form p {
   margin: -30px 0 0 0;
   position: absolute;
   font-family: "Signika"; }
+  @media only screen and (max-device-width: 788px) and (orientation: portrait) {
+    form p {
+      font-size: 45px;
+      margin: -67px 0 0 0; } }
 
 .margin {
   margin-top: 0px; }
 
 footer {
   width: 100%;
+  min-width: 800px;
   height: 100%;
   background-color: #262f2d; }
   @media only screen and (max-device-width: 788px) and (orientation: portrait) {
@@ -572,7 +599,7 @@ footer {
     font-size: 10pt;
     font-family: "Signika";
     font-weight: lighter;
-    width: 45%;
+    width: 43%;
     height: 30px;
     float: left;
     margin: 20px 0px 0px 40px;
@@ -613,6 +640,12 @@ footer {
     background: url("../img/loading_bar.gif") no-repeat;
     background-position: center;
     z-index: 600; }
+
+#touch {
+  display: none; }
+
+#close {
+  display: none; }
 
 /*---------HAMBURGER MENU-----------*/
 #hamburger-icon {
@@ -671,7 +704,8 @@ footer {
   transform: rotate(90deg); }
 
 .cmn-toggle-switch__rot span {
-  font-size: 100px;
+  font-size: 85px;
+  font-weight: bold;
   color: white;
   display: block;
   margin: 4px auto auto auto;
@@ -820,7 +854,43 @@ footer {
 
   .line {
     -webkit-transform: scale(2);
-    padding: 15px 0 10px 0; } }
+    padding: 15px 0 10px 0; }
+
+  form {
+    min-width: 95.5%;
+    min-height: 82%;
+    background-color: #485956;
+    position: absolute;
+    top: 282px;
+    right: -5px;
+    padding: 10px; }
+
+  #form {
+    display: none; }
+
+  #touch {
+    font-size: 50px;
+    text-transform: uppercase;
+    color: white;
+    display: block;
+    min-width: 93.5%;
+    height: 115px;
+    background-color: #fcdb3d;
+    margin: 0 0 27px 27px; }
+
+  #close {
+    font-size: 55px;
+    color: white;
+    display: block;
+    width: 70px;
+    height: 70px;
+    background-color: #fcdb3d;
+    margin: 20px 20px 20px auto;
+    padding: 5px;
+    border: none; }
+
+  footer {
+    display: none; } }
 @media only screen and (max-device-width: 1300px) {
   .buttonzoom {
     display: none; } }

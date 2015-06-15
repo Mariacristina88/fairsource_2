@@ -82,7 +82,7 @@
 						</div>
 					</a>
 					<button class="cmn-toggle-switch cmn-toggle-switch__rot">
-					  	<span>Ⅲ</span>
+					  	<span>|||</span>
 					</button>
 				</div>
 			
@@ -290,37 +290,6 @@
 			<!-- Contacts -->
 			
 				<section class="page6" id="contacts" data-3400="top:100%;" data-4190="top:0%;">
-					
-					<!--
-					<div class="popup">
-						<div id="dialog">
-						  	<form name="contactform2" method="POST">
-								<label>Name</label><br/>
-								<input type="text" name="name">
-								<p id="error_name"></p>
-
-								<label>Email</label><br/>
-								<input type="email" name="email">
-								<p id="error_email"></p>
-
-								<label>Telephone</label><br/>
-								<input type="text" name="telephone">
-								<p id="error_telephone"></p>
-
-								<label>Subject</label><br/>
-								<input type="text" name="subject">
-								<p id="error_subject"></p>
-
-								<label>Message</label><br/>
-								<textarea type="text" name="message"></textarea>
-								<p id="error_message" class="margin"></p>
-								<div id="somethingSumbit">
-									<button type="button" id="submit">Submit</button>
-								</div>
-							</form>
-						</div>
-					</div>
-					-->
 
 					<div class="content">
 						<div id="contacts-info">
@@ -336,7 +305,11 @@
 								<br/>SK10 1JE
 							</address>
 						</div>
-						<form name="contactform" method="POST">
+
+						<button type="button" id="touch">Get in touch</button>
+
+						 <form name="contactform" method="POST" id="form">
+						 	<button type="button" id="close">X</button>
 							<label>Name</label>
 							<input type="text" name="name" data-3400="width:0px;" data-4190="width:300px;">
 							<p id="error_name"></p>
@@ -360,22 +333,21 @@
 								<button type="button" id="submit">Submit</button>
 							</div>
 						</form>
+					
+					
+
 					</div>
 					<footer>
 						<p class="text-left">World Fair Trade Organisation membership is applied for.</p>
 						<p>2015 Fair Source</p>
 					</footer>
 				</section>
-			</div>
 
 
 	
 <script type="text/javascript" src="js/global/html5shiv-printshiv.js"></script>
 <script type="text/javascript" src="js/global/html5shiv.js"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-		<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" />
-		<script src="//code.jquery.com/jquery-1.10.2.js"></script>
-		<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <script type="text/javascript" src="js/global/modernizr.js"></script>
 
 <script src="http://d3js.org/d3.v3.min.js"></script>
@@ -399,6 +371,25 @@ $(window).load(function() {
                           $('#loading').hide();
                       },1000);
 });
+
+var form = document.getElementById("form");
+var nav = document.getElementById("hamburger-icon");
+	document.getElementById("touch").addEventListener("click", function(){
+		console.log("ok");
+		form.style.display="block";
+		nav.style.display="none";
+	    window.onhashchange = function() { 
+	    	form.style.display="none";
+	    	nav.style.display="block" };
+
+	});
+
+	document.getElementById("close").addEventListener("click", function(){
+		form.style.display="none";
+		nav.style.display="block";
+	});
+
+
     var s = skrollr.init();
 
     //The options (second parameter) are all optional. The values shown are the default values.
@@ -434,6 +425,7 @@ $(window).load(function() {
 		$(".hamburger-group button").removeClass("active");
 		console.log("li");
 	});
+
 
 /*
 	  $(function() {
