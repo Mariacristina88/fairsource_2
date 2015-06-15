@@ -405,44 +405,47 @@ nav {
 
 .content {
 	margin: 130px auto 0 auto;
-	max-width: 900px;
+	width: 900px;
 	height: 62%;
+	@media only screen and (max-device-width: 788px) and (orientation: portrait) {
+			  margin: 278px auto 0 auto;
+	}
+
 }
 
 .page6 {
 
 	form {
-		@media only screen and (max-device-width: 788px) and (orientation: portrait) {
-			min-width: 95.5%;
-			min-height: 252%;
-		}
 		width: 57%;
+		min-width: 522px;
 		height: 62%;
 		margin: 0 27px;
 		float:left;
+		@media only screen and (max-device-width: 788px) and (orientation: portrait) {
+			  min-width: 89%;
+			  height: auto;
+			  padding: 30px;
+			  margin-top: -257px;
+		}
 	}
 
 	label {
 		@include label;
 		float: left;
 		width: 90px;
-		@media only screen and (max-device-width: 788px) and (orientation: portrait) {
-			height: 56px;
-			margin: 0 135px 22px 0;
-		}
 		height: 26px;
 		padding-top: 5px;
 		color: white;
 		margin: 0 15px 22px 0;
+		@media only screen and (max-device-width: 788px) and (orientation: portrait) {
+			height: 56px;
+			margin: 18px 135px 22px 0;
+		}
 	}
 
 	input {
 		@include label;
 		margin:0 0 30px 0;
-		@media only screen and (max-device-width: 788px) and (orientation: portrait) {
-			min-height: 61px;
-			min-width: 600px;
-		}
 		height: 21px;
 		width: 300px;
 		background-color: transparent;
@@ -450,6 +453,11 @@ nav {
 		color: $yellow;
 		padding:0 5px;
 		position: relative;
+		@media only screen and (max-device-width: 788px) and (orientation: portrait) {
+			height: 61px;
+  			min-width: 614px;
+  			margin: 46px 0 86px 0;
+		}
 	}
 
 	textarea {
@@ -457,14 +465,17 @@ nav {
 		clear: both;
 		width: 100%;
 		max-width: 100%;
-		@media only screen and (max-device-width: 788px) and (orientation: portrait) {
-			min-height: 120px;
-			max-width: 95.5%;
-		}
 		height: 76px;
 		border: solid 1px #fcdb3d;
 		color: $green;
 		padding: 10px;
+		  overflow-y: scroll;
+		@media only screen and (max-device-width: 788px) and (orientation: portrait) {
+			min-height: 100px;
+			max-width: 95.5%;
+			margin-bottom: 13px;
+			line-height: 60px;
+		}
 	}
 }
 
@@ -489,6 +500,16 @@ nav {
 	padding: 0;
 	margin: 20px -20px 0 0;
 	float: right;
+	@media only screen and (max-device-width: 788px) and (orientation: portrait) {
+		  width: 102%;
+		  height: 115px;
+		  font-size: 50px;
+		  margin-top: 75px;
+		  background-color: $yellow;
+		  color:white;
+		  border: none;
+	}
+
 }			
 
 #submit:hover {
@@ -597,6 +618,10 @@ form p {
 	margin: -30px 0 0 0;
 	position: absolute;
 	font-family: "Signika";
+	@media only screen and (max-device-width: 788px) and (orientation: portrait){
+		font-size: 45px;
+		margin: -67px 0 0 0;
+	}
 }
 
 .margin {
@@ -608,6 +633,7 @@ footer {
 		margin-top: 300px;
 	}
 	width: 100%;
+	min-width: 800px;
 	height: 100%;
 	background-color: darken($green, 15%);
 
@@ -615,7 +641,7 @@ footer {
 		font-size: 10pt;
 	  font-family: "Signika";
 	  font-weight: lighter;
-	  width: 45%;
+	  width: 43%;
 	  height: 30px;
 	  float: left;
 	  margin: 20px 0px 0px 40px;
@@ -663,6 +689,14 @@ footer {
 		background-position: center;
 		z-index: 600;
 	}
+}
+
+#touch {
+		display: none;
+		}
+
+#close {
+	display: none;
 }
 
 
@@ -740,7 +774,8 @@ footer {
 }
 
 .cmn-toggle-switch__rot span {
-	  font-size: 100px;
+	  font-size: 85px;
+	  font-weight: bold;
 	  color: white;
 	  display: block;
 	  margin: 4px auto auto auto;
@@ -923,6 +958,47 @@ footer {
 		 padding: 15px 0 10px 0;
 	}
 
+	form {
+		min-width: 95.5%;
+		  min-height: 82%;
+		  background-color: #485956;
+		  position: absolute;
+		  top: 282px;
+		  right: -5px;
+		  padding: 10px;
+	}
+
+	#form {
+		display: none;
+	}
+
+	#touch {
+	  font-size: 50px;
+	  text-transform: uppercase;
+	  color: white;
+	  display: block;
+	  min-width: 93.5%;
+	  height: 115px;
+	  background-color: #fcdb3d;
+	  margin: 0 0 27px 27px;
+	}
+
+	#close {
+	  font-size: 55px;
+	  color: white;
+	  display: block;
+	  width: 70px;
+	  height: 70px;
+	  background-color: #fcdb3d;
+	  margin: 20px 20px 20px auto;
+	  padding: 5px;
+	  border: none;
+	}
+
+	footer {
+		display: none;
+	}
+
 }
 
 @media only screen and (max-device-width: 1300px) {
@@ -935,64 +1011,5 @@ footer {
 //     font-size:30px !important;
 // }
 
-form {
-		@media only screen and (max-device-width: 788px) and (orientation: portrait) {
-			min-width: 98.5%;
-		}
-		width: 57%;
-		height: 62%;
-		margin: 0 27px;
-		float:left;
-		font-size: 20px !important;
-	}
 
-	label {
-		float: left;
-		width: 90px;
-		@media only screen and (max-device-width: 788px) and (orientation: portrait) {
-			height: 56px;
-			margin: 0 135px 22px 0;
-		}
-		height: 26px;
-		padding-top: 5px;
-		color: black;
-		margin: 0 15px 22px 0;
-		clear: both;
-	}
 
-	input {
-		margin:0 0 30px 0;
-		@media only screen and (max-device-width: 788px) and (orientation: portrait) {
-			min-height: 281px;
-			min-width: 400px;
-			font-size: 3em !important;
-		}
-		font-size: 20px;
-		height: 21px;
-		width: 300px;
-		background-color: transparent;
-		border: solid 1px black;
-		color: $yellow;
-		padding:0 5px;
-		float: left;
-	}
-
-	textarea {
-		@include label;
-		clear: both;
-		width: 100%;
-		max-width: 100%;
-		@media only screen and (max-device-width: 788px) and (orientation: portrait) {
-			min-height: 120px;
-			max-width: 95.5%;
-		}
-		height: 76px;
-		border: solid 1px #fcdb3d;
-		color: $green;
-		padding: 10px;
-	}
-
-	.popup {
-		position: absolute;
-		width: 100%;
-	}
