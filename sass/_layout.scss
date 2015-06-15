@@ -122,6 +122,10 @@ nav {
 	right: 0;
 	left: 0;
 	z-index: 3;
+	@media only screen and (max-device-width: 1300px) and (orientation: landscape){
+			background-position: center 50px;
+			background-size: 1500px auto;
+		}
 }
 
 /*PARTNERS*/
@@ -524,6 +528,8 @@ nav {
 	@media only screen and (max-device-width: 788px) and (orientation: portrait){
 			height: 535px;
 			min-width: 88.5%;
+			height: auto;
+			padding: 40px 30px 40px 30px;
 	}
 	height: 315px;
 	max-width: 50.5%;
@@ -535,8 +541,9 @@ nav {
 		font-family: "Signika";
 		font-weight: normal;
 		@media only screen and (max-device-width: 788px) and (orientation: portrait){
-			font-size: 51px;
-			line-height: 48px;
+			font-size: 3em;
+			line-height: 70px;
+			margin-bottom: 80px;
 		}
 		font-size: 21px;
 		color: $green;
@@ -547,7 +554,7 @@ nav {
 	span {
 		font-family: "Play";
 		@media only screen and (max-device-width: 788px) and (orientation: portrait){
-			font-size: 32px;
+			font-size: 0.8em;
 		}
 		font-size: 12px;
 		color: $green;
@@ -560,7 +567,9 @@ nav {
 		color: $green;
 		font-size: 14px;
 		@media only screen and (max-device-width: 788px) and (orientation: portrait){
-			font-size: 34px;
+			font-size: 2.5em;
+			background-size: 20px;
+			padding: 0 0 0 45px;
 		}
 		text-align: left;
 		font-family: "Play";
@@ -579,8 +588,10 @@ nav {
 		color: $green;
 		font-size: 14px;
 		@media only screen and (max-device-width: 788px) and (orientation: portrait){
-			font-size: 34px;
-			line-height: 41px;
+			line-height: 1.2em;
+			font-size: 2.5em;
+			background-size: 20px;
+			padding: 0 0 0 45px;
 		}
 		text-align: left;
 		font-family: "Play";
@@ -594,8 +605,10 @@ nav {
 	address {
 		color: $green;
 		@media only screen and (max-device-width: 788px) and (orientation: portrait){
-			font-size: 34px;
-			line-height: 41px;
+			font-size: 2.5em;
+			background-size: 20px;
+			line-height: 1.2em;
+			padding: 0 0 0 45px;
 		}
 		font-size: 14px;
 		text-align: left;
@@ -728,8 +741,8 @@ footer {
 	  min-width: 500px;
 	  height: 80px;
 	  text-align: center;
-	  font-size: 90px;
-	  margin: 100px auto 0 auto;
+	  font-size: 4em;
+	  margin: 1.3em auto 0 auto;
 	  list-style: none;
 	}
 

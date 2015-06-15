@@ -111,6 +111,10 @@ nav {
   right: 0;
   left: 0;
   z-index: 3; }
+  @media only screen and (max-device-width: 1300px) and (orientation: landscape) {
+    .page1 {
+      background-position: center 50px;
+      background-size: 1500px auto; } }
 
 /*PARTNERS*/
 .page2 {
@@ -504,7 +508,9 @@ nav {
   @media only screen and (max-device-width: 788px) and (orientation: portrait) {
     #contacts-info {
       height: 535px;
-      min-width: 88.5%; } }
+      min-width: 88.5%;
+      height: auto;
+      padding: 40px 30px 40px 30px; } }
   #contacts-info h3 {
     font-family: "Signika";
     font-weight: normal;
@@ -514,8 +520,9 @@ nav {
     line-height: 18px; }
     @media only screen and (max-device-width: 788px) and (orientation: portrait) {
       #contacts-info h3 {
-        font-size: 51px;
-        line-height: 48px; } }
+        font-size: 3em;
+        line-height: 70px;
+        margin-bottom: 80px; } }
   #contacts-info span {
     font-family: "Play";
     font-size: 12px;
@@ -525,7 +532,7 @@ nav {
     text-transform: uppercase; }
     @media only screen and (max-device-width: 788px) and (orientation: portrait) {
       #contacts-info span {
-        font-size: 32px; } }
+        font-size: 0.8em; } }
   #contacts-info a {
     color: #485956;
     font-size: 14px;
@@ -538,7 +545,9 @@ nav {
     padding: 0 0 0 15px; }
     @media only screen and (max-device-width: 788px) and (orientation: portrait) {
       #contacts-info a {
-        font-size: 34px; } }
+        font-size: 2.5em;
+        background-size: 20px;
+        padding: 0 0 0 45px; } }
   #contacts-info a:hover {
     color: #fcdb3d; }
   #contacts-info p {
@@ -553,8 +562,10 @@ nav {
     line-height: 21px; }
     @media only screen and (max-device-width: 788px) and (orientation: portrait) {
       #contacts-info p {
-        font-size: 34px;
-        line-height: 41px; } }
+        line-height: 1.2em;
+        font-size: 2.5em;
+        background-size: 20px;
+        padding: 0 0 0 45px; } }
   #contacts-info address {
     color: #485956;
     font-size: 14px;
@@ -568,8 +579,10 @@ nav {
     line-height: 21px; }
     @media only screen and (max-device-width: 788px) and (orientation: portrait) {
       #contacts-info address {
-        font-size: 34px;
-        line-height: 41px; } }
+        font-size: 2.5em;
+        background-size: 20px;
+        line-height: 1.2em;
+        padding: 0 0 0 45px; } }
 
 form p {
   margin: 0;
@@ -670,8 +683,8 @@ footer {
     min-width: 500px;
     height: 80px;
     text-align: center;
-    font-size: 90px;
-    margin: 100px auto 0 auto;
+    font-size: 4em;
+    margin: 1.3em auto 0 auto;
     list-style: none; }
   .hamburger-menu a {
     text-decoration: none;
