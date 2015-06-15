@@ -378,7 +378,10 @@ var nav = document.getElementById("hamburger-icon");
 		console.log("ok");
 		form.style.display="block";
 		nav.style.display="none";
-		
+	    window.onhashchange = function() { 
+	    	form.style.display="none";
+	    	nav.style.display="block" };
+
 	});
 
 	document.getElementById("close").addEventListener("click", function(){
