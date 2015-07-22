@@ -398,7 +398,7 @@ nav {
   @media only screen and (max-device-width: 788px) and (orientation: portrait) {
     .page6 form {
       min-width: 89%;
-      height: auto;
+      height: 100%;
       padding: 30px;
       margin-top: -257px; } }
 .page6 label {
@@ -643,6 +643,9 @@ footer {
   background: url("../img/logo.png") no-repeat;
   background-position: center;
   z-index: 600; }
+  @media only screen and (max-device-width: 788px) and (orientation: portrait) {
+    #loading-image {
+      background-size: 40%; } }
   #loading-image #loading-bar {
     width: 100%;
     height: 100%;
@@ -653,6 +656,9 @@ footer {
     background: url("../img/loading_bar.gif") no-repeat;
     background-position: center;
     z-index: 600; }
+    @media only screen and (max-device-width: 788px) and (orientation: portrait) {
+      #loading-image #loading-bar {
+        top: 8%; } }
 
 #touch {
   display: none; }
@@ -683,7 +689,7 @@ footer {
     min-width: 500px;
     height: 80px;
     text-align: center;
-    font-size: 4em;
+    font-size: 3em;
     margin: 1.3em auto 0 auto;
     list-style: none; }
   .hamburger-menu a {
@@ -906,6 +912,218 @@ footer {
     display: none; } }
 @media only screen and (max-device-width: 1300px) {
   .buttonzoom {
+    display: none; } }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  #loading-image {
+    background-size: 30%; }
+    #loading-image #loading-bar {
+      top: 8%; }
+
+  #hamburger-icon {
+    display: block;
+    z-index: 7;
+    position: fixed;
+    background-color: white;
+    height: 13%;
+    width: 100%;
+    box-shadow: -1px 7px 23px 2px rgba(0, 0, 0, 0.46); }
+
+  .hamburger-group button {
+    height: 110px;
+    width: 110px;
+    margin: 20px 20px 0px 0; }
+
+  .hamburger-menu li {
+    font-size: 2.5em; }
+
+  .cmn-toggle-switch__rot span {
+    font-size: 45px; }
+
+  nav {
+    display: none; }
+
+  .logo {
+    display: block !important;
+    height: 78% !important;
+    width: 25%;
+    margin: 15px 0 15px 30px; }
+
+  .logo-small {
+    display: none !important; }
+
+  .about_text {
+    width: 85%;
+    height: auto;
+    margin: 40% auto 0 auto; }
+
+  .about_text p {
+    max-width: 80%;
+    font-size: 36px;
+    line-height: 54px; }
+
+  .text p {
+    text-align: center;
+    margin: 22% auto 0 auto;
+    padding: 0 0 20px 0;
+    max-width: 80%;
+    font-size: 36px;
+    line-height: 54px; }
+
+  .icons {
+    max-width: 438px; }
+
+  .icons img {
+    width: 120px; }
+
+  .icons svg {
+    height: 27% !important;
+    width: 27% !important; }
+
+  .line {
+    margin: 0 auto 50px auto; }
+
+  .margin_right {
+    margin-right: 34px; }
+
+  .icons.margin_right:first-child {
+    margin-left: 17px; }
+
+  .page3 {
+    /*PROVIDERS*/
+    padding: 200px 0 0 0; }
+
+  .page1 {
+    background-size: auto 100%;
+    margin-top: 10%; }
+
+  .scrolldown {
+    width: 665px;
+    margin: -100px auto 0 auto; }
+
+  .scrolldown span {
+    font-size: 106px;
+    margin: 50px 10px 0 10px; }
+
+  .scrolldown p {
+    font-size: 47px; }
+
+  .arrow-container {
+    width: 100%;
+    height: 100px; }
+
+  .arrow-container svg {
+    width: 174px;
+    height: 100px;
+    margin: 0 auto;
+    display: block; }
+
+  .arrow-container polygon {
+    -webkit-transform: scale(3); }
+
+  .arrow-down {
+    width: 100%;
+    height: 100px; }
+
+  .skylines {
+    width: 90%;
+    height: 350%; }
+
+  .group {
+    width: 48%;
+    height: 140px;
+    margin-bottom: 50px; }
+
+  .group div {
+    margin: 0 0 0 0;
+    height: 128px;
+    margin-bottom: 15px; }
+
+  .group span {
+    width: 100%;
+    font-size: 32px;
+    margin: 0 0 0 0; }
+
+  #three img {
+    height: 60px;
+    margin-top: 83px; }
+
+  #three p {
+    max-width: 72%;
+    text-align: center;
+    margin: 22% auto 0 auto;
+    padding: 0 0 20px 0;
+    font-size: 36px;
+    line-height: 54px; }
+
+  .line {
+    -webkit-transform: scale(2);
+    padding: 15px 0 10px 0; }
+
+  .content {
+    margin: 20% auto 0 auto; }
+
+  #contacts-info {
+    max-height: 90%;
+    min-width: 88.5%;
+    height: auto;
+    padding: 30px 30px 30px 30px; }
+    #contacts-info h3 {
+      font-size: 2.2em;
+      line-height: 70px;
+      margin-bottom: 40px; }
+    #contacts-info span {
+      font-size: 0.8em; }
+    #contacts-info a {
+      font-size: 1.8em;
+      background-size: 20px;
+      padding: 0 0 0 45px; }
+    #contacts-info a:hover {
+      color: #fcdb3d; }
+    #contacts-info p {
+      line-height: 1.2em;
+      font-size: 1.8em;
+      background-size: 20px;
+      padding: 0 0 0 45px; }
+    #contacts-info address {
+      font-size: 1.8em;
+      background-size: 20px;
+      line-height: 1.2em;
+      padding: 0 0 0 45px; }
+
+  form {
+    min-width: 95.5%;
+    min-height: 82%;
+    background-color: #485956;
+    position: absolute;
+    top: 20%;
+    right: -5px;
+    padding: 10px; }
+
+  #form {
+    display: none; }
+
+  #touch {
+    font-size: 50px;
+    text-transform: uppercase;
+    color: white;
+    display: block;
+    min-width: 93.5%;
+    height: 115px;
+    background-color: #fcdb3d;
+    margin: 0 0 27px 27px; }
+
+  #close {
+    font-size: 55px;
+    color: white;
+    display: block;
+    width: 70px;
+    height: 70px;
+    background-color: #fcdb3d;
+    margin: 10px 10px 10px auto;
+    padding: 5px;
+    border: none; }
+
+  footer {
     display: none; } }
 #carousel {
   position: absolute;
