@@ -4,8 +4,7 @@
 */
 
 var errortext = document.getElementsByClassName('errortext');
-console.log(typeof errortext)
-console.log( errortext.length)
+
 
 var validateField = function(field) {
     var validators = fieldValidatorMapping[field];
