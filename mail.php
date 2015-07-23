@@ -7,7 +7,7 @@
 $mailSuccess = null;
 $mailFailed = null;
 $mailMessage = null;
-$redirect   = "http://fairsource.co.uk/#contacts";
+$redirect   = "http://www.fairsource.uk/#contacts";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     function sendMail()
@@ -55,14 +55,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (mail($to = 'andy@competa.com', $title, $message, $headers)) {
             $mailSuccess = true;
             
+            
         } else {
             $mailFailed = true;
             $mailMessage = 'Email sending failed';
         }
     }
 
+    //info@codepamoja.org
+
     sendMail();
-    header("Location: $redirect");
+     header("Location: $redirect");
 }
 
 ?>
