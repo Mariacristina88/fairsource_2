@@ -94,8 +94,9 @@ document.getElementById('submit').addEventListener('click', function(event) {
     errortextarray.forEach(function(element, index){
         if (element.innerHTML !== '') {
             event.preventDefault();
+            console.log("stop");
         } 
-
+        console.log("ok");
     });
 
 
